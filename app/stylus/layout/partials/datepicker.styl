@@ -1,0 +1,50 @@
+.ui-datepicker-prev, .ui-datepicker-next
+  position absolute
+  top 0
+  left 0
+  span
+    position relative
+    font-size 0
+    color $white
+    line-height 0
+    width 20px
+    height 20px
+    display block
+    cursor pointer
+    &:before, &:after
+      pseudo(block, absolute)
+      width 10px
+      height 2px
+      background red
+      top 6px
+      left 0
+    &:before
+      transform rotate(45deg)
+    &:after
+      transform rotate(-45deg)
+      top 12px
+
+
+.ui-datepicker-next
+  right 0
+  left auto
+
+
+.ui-datepicker-prev span
+  &:before
+    transform rotate(-45deg)
+  &:after
+    transform rotate(45deg)
+    top 12px
+
+.ui-datepicker-title
+  text-align center
+
+.ui-datepicker
+  background $white
+
+.ui-state-default
+  color $black
+
+.ui-state-default.ui-priority-secondary
+  color $gray
