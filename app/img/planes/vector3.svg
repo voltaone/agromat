@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="537px" height="464px" viewBox="0 0 537 464" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Traektoria</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M1156.767,210 C1206.52502,321.301595 1175.6878,581.989927 997.924287,637.462793 C820.160777,692.935659 677.359397,628.353864 650,608.88265" id="path-1"></path>
+        <filter x="-1.9%" y="-1.8%" width="103.8%" height="104.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="3" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="3" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.503957986   0 0 0 0 0.657621142   0 0 0 0 0.83678784  0 0 0 0.395776721 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-dasharray="15,25">
+        <g id="Large-Device_Order_Form_Step2_design" transform="translate(-649.000000, -205.000000)">
+            <g id="Traektoria">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use stroke="#FFFFFF" stroke-width="6" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
