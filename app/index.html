@@ -60,14 +60,33 @@
     <nav>
       <div class="container">
         <div class="row">
-          <div class="col-6 col-md-2"><a class="link-logo" href="./" title=""><img src="img/logo/logo.png" title="" alt=""></a></div>
+          <div class="col-6 col-md-2"><a class="link-logo" href="./" title=""><img src="img/logo/logo.svg" title="" alt=""></a></div>
           <div class="col-6 nav-mobile">
             <div class="nav-icon" id="menu-trigger"><span></span><span></span><span></span><span></span></div>
           </div>
-          <div class="col-md-10 nav-panel">
+          <div class="col-md-5">
             <ul class="menu">
-              <li><a class="smooth" href="#link4" title="">Link 4</a></li>
-              <li><a class="smooth" href="#link5" title="">Link 5</a></li>
+              <li><a href="tickets.html" title="">Авиабилеты</a></li>
+              <li><a href="tours.html" title="">Туры</a></li>
+              <li><a href="news.html" title="">Новости</a></li>
+              <li><a href="faq.html" title="">FAQ</a></li>
+              <li><a href="about.html" title="">О нас</a></li>
+              <li><a href="contacts.html" title="">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <p>ул. Шота Руставели, 23  09:00 — 20:00</p>
+          </div>
+          <div class="col-md-1">
+            <ul>
+              <li><a href="//www.facebook.com" title="">fb</a></li>
+              <li><a href="//www.instagram.com" title="">inst</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <ul>
+              <li><a href="tel:" title="">+38 (044) 501 02 36</a></li>
+              <li><a href="tel:" title="">+38 (044) 501 02 37</a></li>
             </ul>
           </div>
         </div>
@@ -75,18 +94,692 @@
     </nav>
     <main>
       <header></header>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <p>Hello</p>
+      <header>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-5">
+              <ul>
+                <li><a href="" title="">В одну сторону</a></li>
+                <li><a href="" title="">Туда и обратно</a></li>
+                <li><a href="" title="">Сложный маршрут</a></li>
+              </ul>
+            </div>
+            <div class="col-12">
+              <form class="form-tickets">
+                <div class="form-tickets--left">
+                  <div class="form-tickets--inputs">
+                    <select>
+                      <option></option>
+                      <optgroup label="Киев (Все) — Украина">
+                        <option>Киев, Борисполь (KBP)</option>
+                        <option>Киев, Жуляны (IEV)</option>
+                      </optgroup>
+                      <optgroup label="Берлин (Все) — Германия">
+                        <option>Берлин, Тегель (TXL)</option>
+                        <option>Берлин, Schoenefeld (SXF)</option>
+                      </optgroup>
+                    </select>
+                    <select>
+                      <option></option>
+                      <optgroup label="Киев (Все) — Украина">
+                        <option>Киев, Борисполь (KBP)</option>
+                        <option>Киев, Жуляны (IEV)</option>
+                      </optgroup>
+                      <optgroup label="Берлин (Все) — Германия">
+                        <option>Берлин, Тегель (TXL)</option>
+                        <option>Берлин, Schoenefeld (SXF)</option>
+                      </optgroup>
+                    </select>
+                    <input class="datepicker">
+                    <div class="form-tickets--passangers">
+                      <div class="form-tickets--passangers-select">1М, 2Р, 2В, 1П</div>
+                      <div class="form-tickets--passangers-options">
+                        <div class="form-tickets--passangers-options--option">
+                          <div class="form-tickets--passangers-options--option-head">Младенец  (М)</div>
+                          <div class="form-tickets--passangers-options--option-text">от 0 до 2 лет</div>
+                          <div class="form-tickets--passangers-options--option-counter">
+                            <div class="plus"></div>
+                            <input type="number">
+                            <div class="minus"></div>
+                          </div>
+                        </div>
+                        <div class="form-tickets--passangers-options--option">
+                          <div class="form-tickets--passangers-options--option-head">Ребенок  (Р)</div>
+                          <div class="form-tickets--passangers-options--option-text">от 2 до 11 лет</div>
+                          <div class="form-tickets--passangers-options--option-counter">
+                            <div class="plus"></div>
+                            <input type="number">
+                            <div class="minus"></div>
+                          </div>
+                        </div>
+                        <div class="form-tickets--passangers-options--option">
+                          <div class="form-tickets--passangers-options--option-head">Юный  (Ю)</div>
+                          <div class="form-tickets--passangers-options--option-text">от 12 до 24 лет</div>
+                          <div class="form-tickets--passangers-options--option-counter">
+                            <div class="plus"></div>
+                            <input type="number">
+                            <div class="minus"></div>
+                          </div>
+                        </div>
+                        <div class="form-tickets--passangers-options--option">
+                          <div class="form-tickets--passangers-options--option-head">Взрослый  (В)</div>
+                          <div class="form-tickets--passangers-options--option-text">от 25 до 59 лет</div>
+                          <div class="form-tickets--passangers-options--option-counter">
+                            <div class="plus"></div>
+                            <input type="number">
+                            <div class="minus"></div>
+                          </div>
+                        </div>
+                        <div class="form-tickets--passangers-options--option">
+                          <div class="form-tickets--passangers-options--option-head">Пожилой  (П)</div>
+                          <div class="form-tickets--passangers-options--option-text">от 60 лет</div>
+                          <div class="form-tickets--passangers-options--option-counter">
+                            <div class="plus"></div>
+                            <input type="number">
+                            <div class="minus"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-tickets--more-options">
+                    <div class="form-tickets--more-options--section">
+                      <div class="form-tickets--more-options--section-head">Turkish Airlines</div>
+                      <div class="form-tickets--more-options--section-block">
+                        <ul>
+                          <li><a href="" title="">WizzAir</a></li>
+                          <li><a href="" title="">Rainair</a></li>
+                          <li><a href="" title="">EasyJet</a></li>
+                          <li><a href="" title="">Air France</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-tickets--more-options--section">
+                      <div class="form-tickets--more-options--section-head">Премиум Эконом</div>
+                      <div class="form-tickets--more-options--section-block">
+                        <ul>
+                          <li><a href="" title="">Эконом</a></li>
+                          <li><a href="" title="">Премиум Эконом</a></li>
+                          <li><a href="" title="">Бизнес</a></li>
+                          <li><a href="" title="">Первый</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-tickets--more-options--section">
+                      <div class="form-tickets--more-options--section-head">Время вылета</div>
+                      <div class="form-tickets--more-options--section-block">
+                        <ul>
+                          <li><a href="" title="">01:00</a></li>
+                          <li><a href="" title="">02:00</a></li>
+                          <li><a href="" title="">03:00</a></li>
+                          <li><a href="" title="">04:00</a></li>
+                          <li><a href="" title="">05:00</a></li>
+                          <li><a href="" title="">06:00</a></li>
+                          <li><a href="" title="">07:00</a></li>
+                          <li><a href="" title="">08:00</a></li>
+                          <li><a href="" title="">09:00</a></li>
+                          <li><a href="" title="">10:00</a></li>
+                          <li><a href="" title="">11:00</a></li>
+                          <li><a href="" title="">12:00</a></li>
+                          <li><a href="" title="">13:00</a></li>
+                          <li><a href="" title="">14:00</a></li>
+                          <li><a href="" title="">15:00</a></li>
+                          <li><a href="" title="">16:00</a></li>
+                          <li><a href="" title="">17:00</a></li>
+                          <li><a href="" title="">18:00</a></li>
+                          <li><a href="" title="">19:00</a></li>
+                          <li><a href="" title="">20:00</a></li>
+                          <li><a href="" title="">21:00</a></li>
+                          <li><a href="" title="">22:00</a></li>
+                          <li><a href="" title="">23:00</a></li>
+                          <li><a href="" title="">00:00</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-tickets--more-options--section">
+                      <div class="form-tickets--more-options--section-head">Время прилета</div>
+                      <div class="form-tickets--more-options--section-block">
+                        <ul>
+                          <li><a href="" title="">01:00</a></li>
+                          <li><a href="" title="">02:00</a></li>
+                          <li><a href="" title="">03:00</a></li>
+                          <li><a href="" title="">04:00</a></li>
+                          <li><a href="" title="">05:00</a></li>
+                          <li><a href="" title="">06:00</a></li>
+                          <li><a href="" title="">07:00</a></li>
+                          <li><a href="" title="">08:00</a></li>
+                          <li><a href="" title="">09:00</a></li>
+                          <li><a href="" title="">10:00</a></li>
+                          <li><a href="" title="">11:00</a></li>
+                          <li><a href="" title="">12:00</a></li>
+                          <li><a href="" title="">13:00</a></li>
+                          <li><a href="" title="">14:00</a></li>
+                          <li><a href="" title="">15:00</a></li>
+                          <li><a href="" title="">16:00</a></li>
+                          <li><a href="" title="">17:00</a></li>
+                          <li><a href="" title="">18:00</a></li>
+                          <li><a href="" title="">19:00</a></li>
+                          <li><a href="" title="">20:00</a></li>
+                          <li><a href="" title="">21:00</a></li>
+                          <li><a href="" title="">22:00</a></li>
+                          <li><a href="" title="">23:00</a></li>
+                          <li><a href="" title="">00:00</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-tickets--right">
+                  <div class="form-tickets--options">
+                    <ul>
+                      <li>
+                        <div class="radiocheck">
+                          <input class="error" id="checkbox1" type="checkbox">
+                          <label for="checkbox1">Прямые рейсы</label>
+                        </div>
+                      </li>
+                      <li><a href="" title="">Показать больше опций</a></li>
+                    </ul>
+                  </div>
+                  <button class="button" type="submit">Поиск</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="slider-full">
+                <div class="slide">
+                  <div class="slide-image"><img src="" title="" alt=""></div>
+                  <div class="slide-description">
+                    <ul>
+                      <li>Испания</li>
+                      <li>15 000 грн</li>
+                    </ul>
+                    <p>c 15 по 23 ноября</p><a class="button" href="" title="">Заказать</a>
+                  </div>
+                </div>
+                <div class="slide">
+                  <div class="slide-image"><img src="" title="" alt=""></div>
+                  <div class="slide-description">
+                    <ul>
+                      <li>Испания</li>
+                      <li>15 000 грн</li>
+                    </ul>
+                    <p>c 15 по 23 ноября</p><a class="button" href="" title="">Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>Преимущества работы с Агромат Тур</h2>
+            </div>
+            <div class="offset-md-2 col-md-4">
+              <div class="advantage-block">
+                <div class="advantage-block--image"><img src="" title="" alt=""></div>
+                <div class="advantage-block--text">
+                  <p>Забота о комфорте  клиента полная проработка путешествия</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="advantage-block">
+                <div class="advantage-block--image"><img src="" title="" alt=""></div>
+                <div class="advantage-block--text">
+                  <p>Консультирование клиента по вопросам получения визы и въезда в страну</p>
+                </div>
+              </div>
+            </div>
+            <div class="offset-md-2 col-md-4">
+              <div class="advantage-block">
+                <div class="advantage-block--image"><img src="" title="" alt=""></div>
+                <div class="advantage-block--text">
+                  <p>Подбор наиболее выгодного предложения для клиента</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="advantage-block">
+                <div class="advantage-block--image"><img src="" title="" alt=""></div>
+                <div class="advantage-block--text">
+                  <p>Возможность осуществлять путешествия в любую точку земного шара</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12"><a class="button" href="" title="">Узнать больше про Агромат Тур</a></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>Популярное сегодня</h2>
+              <div class="link-blog-all">Все статьи</div>
+            </div>
+            <div class="col-md-6">
+              <div class="blog-block">
+                <div class="blog-block--image"></div>
+                <div class="blog-block--text">
+                  <h3>По фьордам на каяках: подготовка  к путешествию и экипировка</h3>
+                  <p>Всё чаще сегодня можно увидеть людей, плавающих по водоёмам на небольших лодочках, и по лицам которых можно сразу же понять, что они получают истинное удовольствие от того, чем занимаются. Но с чего начинать?</p>
+                </div>
+                <div class="blog-block--panel">
+                  <div class="blog-block--panel-right">
+                    <ul>
+                      <li>11/11/17</li>
+                      <li>1 101</li>
+                    </ul>
+                  </div>
+                  <div class="blog-block--panel-left"><a class="button" href="" title="">Читать больше</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="blog-block">
+                <div class="blog-block--image"></div>
+                <div class="blog-block--text">
+                  <h3>По фьордам на каяках: подготовка  к путешествию и экипировка</h3>
+                  <p>Всё чаще сегодня можно увидеть людей, плавающих по водоёмам на небольших лодочках, и по лицам которых можно сразу же понять, что они получают истинное удовольствие от того, чем занимаются. Но с чего начинать?</p>
+                </div>
+                <div class="blog-block--panel">
+                  <div class="blog-block--panel-right">
+                    <ul>
+                      <li>11/11/17</li>
+                      <li>1 101</li>
+                    </ul>
+                  </div>
+                  <div class="blog-block--panel-left"><a class="button" href="" title="">Читать больше</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <footer>
         <div class="container">
           <div class="row">
-            <div class="col-6"></div>
-            <div class="col-6"><a class="volta" href="//volta.one" title="Volta Agency" target="_blank"><span class="volta--text">created by</span><span class="volta--visible">
+            <div class="col-md-5">
+              <script type="text/javascript">
+                function init() {
+                    var mapOptions = {
+                        zoom: 15,
+                        center: new google.maps.LatLng(50.4393844, 30.5012227),
+                        styles:
+                            [
+                                {
+                                    "featureType": "all",
+                                    "elementType": "labels.text.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#000000"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "all",
+                                    "elementType": "labels.text.stroke",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        },
+                                        {
+                                            "color": "#ffffff"
+                                        },
+                                        {
+                                            "weight": "4"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "all",
+                                    "elementType": "labels.icon",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        },
+                                        {
+                                            "saturation": "-100"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "administrative",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#ffffff"
+                                        },
+                                        {
+                                            "lightness": 20
+                                        },
+                                        {
+                                            "visibility": "on"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "administrative",
+                                    "elementType": "geometry.stroke",
+                                    "stylers": [
+                                        {
+                                            "color": "#000000"
+                                        },
+                                        {
+                                            "lightness": 17
+                                        },
+                                        {
+                                            "weight": 1.2
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "administrative.locality",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "administrative.neighborhood",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "administrative.land_parcel",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        },
+                                        {
+                                            "lightness": "80"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "landscape",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "visibility": "simplified"
+                                        },
+                                        {
+                                            "color": "#797979"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "landscape",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#ffffff"
+                                        },
+                                        {
+                                            "lightness": 20
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "landscape.man_made",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "landscape.natural.landcover",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "landscape.natural.terrain",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "visibility": "off"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "poi",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#dfdfdf"
+                                        },
+                                        {
+                                            "lightness": 21
+                                        },
+                                        {
+                                            "visibility": "on"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.highway",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [
+                                        {
+                                            "color": "#fed41c"
+                                        },
+                                        {
+                                            "visibility": "on"
+                                        },
+                                        {
+                                            "weight": "3.00"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.highway",
+                                    "elementType": "geometry.stroke",
+                                    "stylers": [
+                                        {
+                                            "color": "#fed41c"
+                                        },
+                                        {
+                                            "gamma": "0.6"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.highway.controlled_access",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        },
+                                        {
+                                            "color": "#fed41c"
+                                        },
+                                        {
+                                            "weight": "4.00"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.highway.controlled_access",
+                                    "elementType": "geometry.stroke",
+                                    "stylers": [
+                                        {
+                                            "weight": "1"
+                                        },
+                                        {
+                                            "gamma": "0.6"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.arterial",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#aeaeae"
+                                        },
+                                        {
+                                            "lightness": 18
+                                        },
+                                        {
+                                            "visibility": "on"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.arterial",
+                                    "elementType": "geometry.stroke",
+                                    "stylers": [
+                                        {
+                                            "color": "#b6b6b6"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.local",
+                                    "elementType": "all",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        },
+                                        {
+                                            "color": "#656565"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.local",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#c6c6c6"
+                                        },
+                                        {
+                                            "lightness": 16
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.local",
+                                    "elementType": "geometry.stroke",
+                                    "stylers": [
+                                        {
+                                            "color": "#b1b1b1"
+                                        },
+                                        {
+                                            "visibility": "on"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.local",
+                                    "elementType": "labels.text.stroke",
+                                    "stylers": [
+                                        {
+                                            "visibility": "on"
+                                        },
+                                        {
+                                            "color": "#ffffff"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "transit",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#bdbdbd"
+                                        },
+                                        {
+                                            "lightness": 19
+                                        },
+                                        {
+                                            "visibility": "on"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "water",
+                                    "elementType": "geometry",
+                                    "stylers": [
+                                        {
+                                            "color": "#c0d8e3"
+                                        },
+                                        {
+                                            "lightness": 17
+                                        },
+                                        {
+                                            "visibility": "on"
+                                        }
+                                    ]
+                                }
+                            ],
+                        scrollwheel: false,
+                        navigationControl: false,
+                        scaleControl: false,
+                        draggable: false
+                    };
+                    var mapElement = document.getElementById('map');
+                    var map = new google.maps.Map(mapElement, mapOptions);
+                    var marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(50.4393913, 30.5030251),
+                        map: map,
+                        title: 'Study and Journey',
+                        animation: google.maps.Animation.DROP,
+                        // icon: 'https://study-and-journey.com/img/icons/marker.png'
+                    });
+                }
+              </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCghHhOudfnxm7aSYdRnLaR_Wk3-IBQox8&amp;callback=init" async="" defer=""></script>
+            </div>
+            <div class="offset-md-1 col-2">
+              <h6>Агромат-Тур</h6>
+              <p>01033,  Украина, г. Киев,  ул. Шота Руставели, 23 09:00 — 20:00</p>
+              <p>тел. +38 (044) 501 02 36 <br>тел. +38 (044) 501 02 37</p>
+              <p><a href="" title="">avia@agromat-tour.com.ua</a></p>
+            </div>
+            <div class="col-md-3">
+              <h6>Заказать звонок</h6>
+              <form>
+                <input type="text" placeholder="Ваше имя">
+                <input type="text" placeholder="Телефон">
+                <button type="submit">Заказать звонок</button>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="offset-md-3 col-md-6">
+              <ul>
+                <li><a href="" title="">Авиабилеты</a></li>
+                <li><a href="" title="">Туры</a></li>
+                <li><a href="" title="">Новости</a></li>
+                <li><a href="" title="">FAQ</a></li>
+                <li><a href="" title="">О компании</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3"><a class="volta" href="//volta.one" title="Volta Agency" target="_blank"><span class="volta--text">created by</span><span class="volta--visible">
                   <svg width="62px" height="14px" viewbox="0 0 62 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g transform="translate(-1094.000000, -1241.000000)" fill="#BEBEBE">
@@ -107,7 +800,7 @@
                   </svg></span></a></div>
           </div>
         </div>
-      </footer><a class="link-up smooth" href="#index" title="Вверх"><i class="fa fa-angle-up"></i></a>
+      </footer>
       <script type="text/javascript" src="js/jquery.js"></script>
       <script type="text/javascript" src="js/vendor.js"></script>
       <script type="text/javascript" src="js/scripts.js"></script>

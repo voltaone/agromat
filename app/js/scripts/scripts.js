@@ -67,10 +67,10 @@ $(document).ready(function () {
     // ----- SELECT -----
 
     //CHOSEN
-    $(".chosen-select").chosen({
+    // $(".chosen-select").chosen({
         // disable_search_threshold: 10,
-        no_results_text: "Нічого не знайдено"
-    });
+        // no_results_text: "Нічого не знайдено"
+    // });
     // $(".chosen-image").chosenImage({disable_search_threshold: 10});
 
     // ----- MODAL -----
