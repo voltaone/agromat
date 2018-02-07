@@ -314,7 +314,7 @@
                     <ul>
                       <li>
                         <div class="radiocheck">
-                          <input id="checkbox1" type="checkbox">
+                          <input id="checkbox1" type="checkbox" checked="">
                           <label for="checkbox1">Прямые рейсы</label>
                         </div>
                       </li>
@@ -454,7 +454,7 @@
       </section>
       <footer>
         <div class="container">
-          <div class="row">
+          <div class="row footer-border">
             <div class="col-md-5">
               <script type="text/javascript">
                 function init() {
@@ -794,30 +794,37 @@
                         map: map,
                         title: 'Study and Journey',
                         animation: google.maps.Animation.DROP,
-                        // icon: 'https://study-and-journey.com/img/icons/marker.png'
+                         icon: 'https://dev.volta.one/img/icons/mappin.svg'
                     });
                 }
               </script>
               <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCghHhOudfnxm7aSYdRnLaR_Wk3-IBQox8&amp;callback=init" async="" defer=""></script>
+              <div id="map"></div>
             </div>
-            <div class="offset-md-1 col-2">
+            <div class="offset-md-1 col-3">
               <h6>Агромат-Тур</h6>
-              <p>01033,  Украина, г. Киев,  ул. Шота Руставели, 23 09:00 — 20:00</p>
-              <p>тел. +38 (044) 501 02 36 <br>тел. +38 (044) 501 02 37</p>
+              <p>01033,  Украина, г. Киев,<br> ул. Шота Руставели, 23 <br>09:00 — 20:00</p>
+              <p>тел.<a href="tel: " title=""> +38 (044) 501 02 36 </a><br>тел.<a href="tel: " title=""> +38 (044) 501 02 37</a></p>
               <p><a href="" title="">avia@agromat-tour.com.ua</a></p>
             </div>
             <div class="col-md-3">
               <h6>Заказать звонок</h6>
-              <form>
-                <input type="text" placeholder="Ваше имя">
-                <input type="text" placeholder="Телефон">
-                <button type="submit">Заказать звонок</button>
+              <form class="form-call">
+                <div class="input-group">
+                  <label for="name"><img src="img/icons/name.svg"></label>
+                  <input type="text" placeholder="Ваше имя" id="name">
+                </div>
+                <div class="input-group">
+                  <label for="phone"><img src="img/icons/phone.svg"></label>
+                  <input type="text" placeholder="Телефон" id="phone">
+                </div>
+                <button class="button button-light" type="submit">Заказать звонок</button>
               </form>
             </div>
           </div>
-          <div class="row">
+          <div class="row footer-copyright">
             <div class="offset-md-3 col-md-6">
-              <ul>
+              <ul class="footer-nav">
                 <li><a href="" title="">Авиабилеты</a></li>
                 <li><a href="" title="">Туры</a></li>
                 <li><a href="" title="">Новости</a></li>

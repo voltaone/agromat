@@ -3,3 +3,39 @@
 
 footer
   background $blue-footer
+  padding-top 60px
+
+  p
+    color $white
+    font-size: $s14
+    line-height: 1.43;
+    margin-bottom 1.25rem
+    a
+      color $white
+      &:hover
+        color $blue-back3
+
+.footer-border
+  position relative
+  padding-bottom 31px
+  &:after
+    pseudo(block, absolute)
+    background $blue-back3
+    height 1px
+    bottom 0
+    left 15px
+    right 15px
+
+.footer-nav
+  display flex
+  justify-content space-around
+  li
+    a
+      color $blue-back3
+      font-size $s14
+      &:hover
+        color $white
+
+.footer-copyright
+  padding-top 23px
+  padding-bottom 27px

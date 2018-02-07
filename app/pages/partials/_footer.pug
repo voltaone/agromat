@@ -1,29 +1,43 @@
 footer
     .container
-        .row
+        .row.footer-border
             .col-md-5
                 include _snazzymap
-            .offset-md-1.col-2
-                h6 Агромат-Тур
-                p 01033,  Украина, г. Киев,  ул. Шота Руставели, 23 09:00 — 20:00
+                #map
 
-                p тел. +38 (044) 501 02 36 
+            .offset-md-1.col-3
+                h6 Агромат-Тур
+                p 01033,  Украина, г. Киев,
                     br
-                    | тел. +38 (044) 501 02 37
+                    |  ул. Шота Руставели, 23 
+                    br
+                    | 09:00 — 20:00
+
+                p тел.
+                    a(href='tel: ' title='')  +38 (044) 501 02 36 
+                    br
+                    | тел.
+                    a(href='tel: ' title='')  +38 (044) 501 02 37
 
                 p
                     a(href='' title='') avia@agromat-tour.com.ua
 
             .col-md-3
                 h6 Заказать звонок
-                form
-                    input(type='text' placeholder='Ваше имя')
-                    input(type='text' placeholder='Телефон')
-                    button(type='submit') Заказать звонок
+                form.form-call
+                    .input-group
+                        label(for='name')
+                            img(src='img/icons/name.svg')
+                        input(type='text' placeholder='Ваше имя' id='name')
+                    .input-group
+                        label(for='phone')
+                            img(src='img/icons/phone.svg')
+                        input(type='text' placeholder='Телефон' id='phone')
+                    button(type='submit').button.button-light Заказать звонок
 
-        .row
+        .row.footer-copyright
             .offset-md-3.col-md-6
-                ul
+                ul.footer-nav
                     li
                         a(href='' title='') Авиабилеты
                     li

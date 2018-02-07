@@ -208,11 +208,11 @@ h5 {
 }
 h6 {
 	font-family: 'Circe', sans-serif;
-	font-size: 1.125rem;
-	font-weight: 400;
-	color: #000;
-	line-height: normal;
-	margin-bottom: 1.25rem;
+	font-size: 1.375rem;
+	font-weight: 700;
+	color: #fff;
+	line-height: 1.36;
+	margin-bottom: .688rem;
 }
 p {
 	font-family: 'Circe', sans-serif;
@@ -278,11 +278,19 @@ a:focus {
 .link-logo img {
 	width: 100%;
 }
+.link-logo:hover {
+	opacity: .5;
+}
 .link-more-options {
 	font-size: .875rem;
 	line-height: 1.07;
 	color: #241ff0;
 	text-decoration: underline;
+}
+.link-more-options:hover {
+	text-decoration: none;
+	color: #241ff0;
+	opacity: .5;
 }
 .link-blog-all {
 	color: #000fcf;
@@ -294,6 +302,9 @@ a:focus {
 .link-blog-all img {
 	margin-left: 9px;
 	margin-top: -1px;
+}
+.link-blog-all:hover {
+	opacity: .5;
 }
 button {
 	border: none;
@@ -321,8 +332,8 @@ button:focus {
 	        transition: all .4s ease;
 }
 .button:hover {
-	color: #000;
-	background: #a9a9a9;
+	color: #000fcf;
+	background: #d6e8ff;
 }
 .button-switch {
 	position: absolute;
@@ -337,6 +348,10 @@ button:focus {
 	letter-spacing: .7px;
 	color: #000fcf;
 	background: #d6e8ff;
+}
+.button-light:hover {
+	background: #000fcf;
+	color: #fff;
 }
 .button-advantage {
 	margin: 89px auto 8px;
@@ -552,6 +567,14 @@ ol {
 	font-size: .875rem;
 	letter-spacing: normal;
 }
+.form-call .input-group {
+	margin-bottom: 5px;
+}
+.form-call .button {
+	margin: 20px 0 10px;
+	padding: 10px 0 9px;
+	letter-spacing: 1.4px;
+}
 input {
 	-webkit-appearance: none;
 	width: 100%;
@@ -609,6 +632,17 @@ textarea::-webkit-input-placeholder {
 textarea:focus {
 	outline: none;
 	border-color: #008000;
+}
+.input-group {
+	position: relative;
+}
+.input-group input {
+	padding: 10px 15px 11px 59px;
+}
+.input-group label {
+	position: absolute;
+	top: 9px;
+	left: 20px;
 }
 .input-container-datepicker {
 	position: relative;
@@ -907,14 +941,9 @@ video {
 	height: 320px;
 	margin-bottom: 1rem;
 }
-.map {
-	width: 100%;
-	height: 450px;
-}
 #map {
 	width: 100%;
-	height: 450px;
-	margin-bottom: 1rem;
+	height: 200px;
 }
 section {
 	margin-bottom: 162px;
@@ -1007,6 +1036,9 @@ nav.scroll {
 .menu-social li a {
 	display: block;
 }
+.menu-social li a:hover {
+	opacity: .5;
+}
 .menu-phones {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1025,7 +1057,7 @@ nav.scroll {
 	line-height: 1;
 }
 .menu-phones li a:hover {
-	opacity: .8;
+	opacity: .5;
 }
 .nav-mobile {
 	display: none;
@@ -1112,6 +1144,51 @@ header {
 }
 footer {
 	background: #1e2c42;
+	padding-top: 60px;
+}
+footer p {
+	color: #fff;
+	font-size: .875rem;
+	line-height: 1.43;
+	margin-bottom: 1.25rem;
+}
+footer p a {
+	color: #fff;
+}
+footer p a:hover {
+	color: #80b4f8;
+}
+.footer-border {
+	position: relative;
+	padding-bottom: 31px;
+}
+.footer-border:after {
+	content: '';
+	display: block;
+	position: absolute;
+	background: #80b4f8;
+	height: 1px;
+	bottom: 0;
+	left: 15px;
+	right: 15px;
+}
+.footer-nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+}
+.footer-nav li a {
+	color: #80b4f8;
+	font-size: .875rem;
+}
+.footer-nav li a:hover {
+	color: #fff;
+}
+.footer-copyright {
+	padding-top: 23px;
+	padding-bottom: 27px;
 }
 .breadcrumbs {
 	display: -webkit-box;
@@ -1203,6 +1280,12 @@ footer {
 	z-index: 100;
 	top: 41%;
 	cursor: pointer;
+	-webkit-transition: all .4s ease;
+	     -o-transition: all .4s ease;
+	        transition: all .4s ease;
+}
+.slider .arrow:hover {
+	opacity: .5;
 }
 .slider .arrow.left {
 	left: 0;
@@ -1686,6 +1769,9 @@ footer {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
+	-webkit-transition: all .4s ease;
+	     -o-transition: all .4s ease;
+	        transition: all .4s ease;
 }
 .blog-block--image img {
 	min-height: 100%;
@@ -1738,4 +1824,16 @@ footer {
 	-ms-flex: 1 1 263px;
 	    flex: 1 1 263px;
 	max-width: 263px;
+	opacity: 0;
+	-webkit-transition: all .4s ease;
+	     -o-transition: all .4s ease;
+	        transition: all .4s ease;
+	visibility: hidden;
+}
+.blog-block:hover .blog-block--panel-right {
+	opacity: 1;
+	visibility: visible;
+}
+.blog-block:hover .blog-block--image {
+	opacity: .7;
 }

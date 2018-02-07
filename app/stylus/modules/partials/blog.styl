@@ -6,6 +6,7 @@
     display flex
     justify-content center
     align-items center
+    transitions()
     img
       min-height 100%
   &--text
@@ -38,3 +39,13 @@
     &-right
       flex 1 1 263px
       max-width: 263px;
+      opacity 0
+      transitions()
+      visibility hidden
+
+  &:hover
+    .blog-block--panel-right
+      opacity 1
+      visibility visible
+    .blog-block--image
+      opacity .7
