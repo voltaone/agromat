@@ -1,32 +1,66 @@
 @import '../../utilities/vars'
 @import '../../utilities/mixins'
 
-@import "../libs/rew-sidenav/sidenav.styl"
+//@import "../libs/rew-sidenav/sidenav.styl"
 //@import "../libs/rew-downnav/downnav.styl"
 
 nav
-  background $white
+  background $blue-back
+  padding 26px 0 3px
+  position fixed
+  top 0
+  left 0
+  right 0
+  z-index 9999
   transitions()
+
+nav.scroll
+  padding 14px 0
 
 .menu
   list-flex(row)
-  justify-content flex-end
+  justify-content space-between
   align-items center
   height 100%
-  +mobile()
-    flex-direction column
-    justify-content flex-start
-    align-items flex-start
+  padding-bottom 16px
+  transitions()
   li
-    margin 0 4px
-    +mobile()
-      margin 0
-    &:last-child
-      margin-right 0
     a
       display block
-    .selected
-      color $black
+      font-size $s14
+      color $blue-darktext
+      &:hover
+        color $white
+
+.menu-address
+  color $white
+  font-size $s14
+  display flex
+  align-items center
+  margin-bottom 0
+
+.menu-social
+  list-flex(row)
+  justify-content flex-end
+  align-items center
+  padding 3px 0
+  li
+    margin-left 16px
+    a
+      display block
+
+.menu-phones
+  list-flex(col)
+  li
+    a
+      color $white
+      display inline-block
+      font-size: $s18
+      font-weight: bold;
+      letter-spacing: 0.6px
+      line-height 1
+      &:hover
+        opacity .8
 
 .nav-mobile
   display none

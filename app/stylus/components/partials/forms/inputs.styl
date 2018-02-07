@@ -4,8 +4,7 @@
 input
   -webkit-appearance none
   width 100%
-  margin-bottom 1rem
-  border 1px solid $black
+  border 0
   border-radius: 0;
   padding 11px 15px 12px
   transitions()
@@ -16,7 +15,8 @@ input
     -webkit-box-shadow: inset 0 0 0 50px #fff !important
     -webkit-text-fill-color: #999 !important  
   +placeholder()
-    color $gray
+    color rgba(47,47,47,.5)
+    font-size $s14
 
 textarea
   -webkit-appearance none
@@ -32,3 +32,12 @@ textarea
     border-color green
 
 label {}
+
+.input-container-datepicker
+  position relative
+  img
+    position absolute
+    top: 9px;
+    left: 27px;
+  input
+    padding-left: 57px;

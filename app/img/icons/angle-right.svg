@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="30px" viewBox="0 0 17 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.94">
+        <g id="Banner" transform="translate(-780.000000, -278.000000)" fill="#FFFFFF">
+            <g id="Slider_left_right">
+                <g transform="translate(343.000000, 278.000000)">
+                    <path d="M453.7211,15 C453.753885,14.4893555 453.575147,13.9676704 453.184886,13.5774089 L440.147503,0.540026079 L440.147503,0.540026079 C439.427468,-0.180008693 438.260061,-0.180008693 437.540026,0.540026079 L437.540026,0.540026079 L437.540026,0.540026079 C436.819991,1.26006085 436.819991,2.42746788 437.540026,3.14750265 L449.392523,15 L437.540026,26.8524974 L437.540026,26.8524974 C436.819991,27.5725321 436.819991,28.7399391 437.540026,29.4599739 L437.540026,29.4599739 L437.540026,29.4599739 C438.260061,30.1800087 439.427468,30.1800087 440.147503,29.4599739 L453.184886,16.4225911 C453.575147,16.0323296 453.753885,15.5106445 453.7211,15 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

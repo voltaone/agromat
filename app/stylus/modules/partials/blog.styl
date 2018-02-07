@@ -1,0 +1,40 @@
+.blog-block
+  display block
+  &--image
+    height 250px
+    margin-bottom 40px
+    display flex
+    justify-content center
+    align-items center
+    img
+      min-height 100%
+  &--text
+    height 174px
+    overflow hidden
+    p
+      font-size: $s14
+      color: $black-text;
+
+  &--panel
+    display flex
+    justify-content space-between
+    ul
+      display flex
+      margin: 11px 0;
+      li
+        color rgba(47,47,47, .5)
+        font-size: $s14
+        letter-spacing: 1px;
+        margin-right 16px
+        display flex
+        align-items center
+        img
+          margin-right 11px
+
+    &-left
+      flex 1 1 calc(100% - 263px)
+      max-width calc(100% - 263px)
+
+    &-right
+      flex 1 1 263px
+      max-width: 263px;

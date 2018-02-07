@@ -17,3 +17,37 @@
       a
         background $black
         color $white
+
+.tabs-tickets
+  display flex
+  justify-content center
+  margin-bottom 18px
+  li
+    flex 1 1 129px
+    max-width 129px
+    a
+      font-size: $s12
+      color $white
+      line-height: 1.25
+      text-align center
+      display block
+      padding: 3px 2px 4px
+      border-top 2px solid $blue-back
+      border-bottom 2px solid $blue-back
+      background $blue-lightback
+      &:hover
+        border-radius: 4px
+        border-color $blue-darkback
+        background $blue-darkback
+        box-shadow: 0 2px 13px 0 rgba(74, 129, 199, 0.7);
+    .active
+      border-radius: 4px
+      border-color $blue-darkback
+      background $blue-darkback
+      box-shadow: 0 2px 13px 0 rgba(74, 129, 199, 0.7);
+
+
+.ss
+  flex 1 1 50%
+  max-width 50%
+

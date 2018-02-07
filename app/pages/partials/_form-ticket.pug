@@ -1,10 +1,10 @@
-header
+header.header-ticket
     .container
         .row.justify-content-center
             .col-md-5
-                ul
+                ul.tabs-tickets
                     li
-                        a(href='' title='') В одну сторону
+                        a(href='' title='').active В одну сторону
                     li
                         a(href='' title='') Туда и обратно
                     li
@@ -13,59 +13,66 @@ header
                 form.form-tickets
                     .form-tickets--left
                         .form-tickets--inputs
-                            select
-                                option
-                                optgroup(label='Киев (Все) — Украина')
-                                    option Киев, Борисполь (KBP)
-                                    option Киев, Жуляны (IEV)
-                                optgroup(label='Берлин (Все) — Германия')
-                                    option Берлин, Тегель (TXL)
-                                    option Берлин, Schoenefeld (SXF)
-                            select
-                                option
-                                optgroup(label='Киев (Все) — Украина')
-                                    option Киев, Борисполь (KBP)
-                                    option Киев, Жуляны (IEV)
-                                optgroup(label='Берлин (Все) — Германия')
-                                    option Берлин, Тегель (TXL)
-                                    option Берлин, Schoenefeld (SXF)
-                            input.datepicker
-                            .form-tickets--passangers
-                                .form-tickets--passangers-select
-                                    | 1М, 2Р, 2В, 1П
-                                .form-tickets--passangers-options
-                                    .form-tickets--passangers-options--option
-                                        .form-tickets--passangers-options--option-head Младенец  (М)
-                                        .form-tickets--passangers-options--option-text от 0 до 2 лет
-                                        .form-tickets--passangers-options--option-counter
+                            .select-container-select2.from
+                                select.select2-select.from
+                                    option
+                                    optgroup(label='Киев (Все) — Украина')
+                                        option Киев, Борисполь (KBP)
+                                        option Киев, Жуляны (IEV)
+                                    optgroup(label='Берлин (Все) — Германия')
+                                        option Берлин, Тегель (TXL)
+                                        option Берлин, Schoenefeld (SXF)
+                                a(href='' title='').button-switch
+                                    img(src='img/icons/change.svg')
+                            .select-container-select2.to
+                                select.select2-select.to
+                                    option
+                                    optgroup(label='Киев (Все) — Украина')
+                                        option Киев, Борисполь (KBP)
+                                        option Киев, Жуляны (IEV)
+                                    optgroup(label='Берлин (Все) — Германия')
+                                        option Берлин, Тегель (TXL)
+                                        option Берлин, Schoenefeld (SXF)
+                            .input-container-datepicker
+                                img(src='img/icons/calendar.svg')
+                                input.datepicker(placeholder='Дата')
+                            .form-tickets--passengers
+                                .form-tickets--passengers-select
+                                    img(src='img/icons/human.svg')
+                                    | Пассажиры
+                                .form-tickets--passengers-options
+                                    .form-tickets--passengers-options--option
+                                        .form-tickets--passengers-options--option-head Младенец  (М)
+                                        .form-tickets--passengers-options--option-text от 0 до 2 лет
+                                        .form-tickets--passengers-options--option-counter
                                             .plus
                                             input(type='number')
                                             .minus
-                                    .form-tickets--passangers-options--option
-                                        .form-tickets--passangers-options--option-head Ребенок  (Р)
-                                        .form-tickets--passangers-options--option-text от 2 до 11 лет
-                                        .form-tickets--passangers-options--option-counter
+                                    .form-tickets--passengers-options--option
+                                        .form-tickets--passengers-options--option-head Ребенок  (Р)
+                                        .form-tickets--passengers-options--option-text от 2 до 11 лет
+                                        .form-tickets--passengers-options--option-counter
                                             .plus
                                             input(type='number')
                                             .minus
-                                    .form-tickets--passangers-options--option
-                                        .form-tickets--passangers-options--option-head Юный  (Ю)
-                                        .form-tickets--passangers-options--option-text от 12 до 24 лет
-                                        .form-tickets--passangers-options--option-counter
+                                    .form-tickets--passengers-options--option
+                                        .form-tickets--passengers-options--option-head Юный  (Ю)
+                                        .form-tickets--passengers-options--option-text от 12 до 24 лет
+                                        .form-tickets--passengers-options--option-counter
                                             .plus
                                             input(type='number')
                                             .minus
-                                    .form-tickets--passangers-options--option
-                                        .form-tickets--passangers-options--option-head Взрослый  (В)
-                                        .form-tickets--passangers-options--option-text от 25 до 59 лет
-                                        .form-tickets--passangers-options--option-counter
+                                    .form-tickets--passengers-options--option
+                                        .form-tickets--passengers-options--option-head Взрослый  (В)
+                                        .form-tickets--passengers-options--option-text от 25 до 59 лет
+                                        .form-tickets--passengers-options--option-counter
                                             .plus
                                             input(type='number')
                                             .minus
-                                    .form-tickets--passangers-options--option
-                                        .form-tickets--passangers-options--option-head Пожилой  (П)
-                                        .form-tickets--passangers-options--option-text от 60 лет
-                                        .form-tickets--passangers-options--option-counter
+                                    .form-tickets--passengers-options--option
+                                        .form-tickets--passengers-options--option-head Пожилой  (П)
+                                        .form-tickets--passengers-options--option-text от 60 лет
+                                        .form-tickets--passengers-options--option-counter
                                             .plus
                                             input(type='number')
                                             .minus
@@ -207,8 +214,9 @@ header
                             ul
                                 li
                                     .radiocheck
-                                        input#checkbox1(type='checkbox').error
+                                        input#checkbox1(type='checkbox')
                                         label(for='checkbox1') Прямые рейсы
                                 li
-                                    a(href='' title='') Показать больше опций
-                        button(type='submit').button Поиск
+                                    a(href='' title='').link-more-options Показать больше опций
+                        .form-tickets--submit
+                            button(type='submit').button Поиск

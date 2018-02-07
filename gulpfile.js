@@ -15,7 +15,7 @@ var runSequence = require("run-sequence");
 
 //browser sync
 gulp.task("browserSync", function () {
-    browserSync({
+    browserSync.init({
         server: {
             baseDir: "app"
         }
@@ -26,27 +26,34 @@ gulp.task("browserSync", function () {
 //stylus compilation
 gulp.task("stylus", function () {
     return gulp.src(["app/stylus/style.styl", 'app/stylus/vendor.styl'])
+
         .pipe(stylus({"include css": true}).on("error", notify.onError(function (error) {
             return "An error occurred while compiling stylus.\nLook in the console for details.\n" + error;
         })))
+
         .pipe(autoprefixer({
             browsers: ["last 5 versions", "ie 8", "ie 9", "ie 10"],
             cascade: false
         }))
+
         .pipe(csscomb())
+
         .pipe(gulp.dest("app/css"))
-        .pipe(browserSync.reload({
-            stream: true
-        }));
+
+        .pipe(browserSync.stream());
 });
 
 //pug compilation
 gulp.task("pug", function buildHTML() {
     return gulp.src("app/pages/*.pug")
+
         .pipe(pug({pretty: true}).on("error", notify.onError(function (error) {
             return "An error occurred while compiling jade.\nLook in the console for details.\n" + error;
         })))
-        .pipe(gulp.dest("app/"));
+
+        .pipe(gulp.dest("app/"))
+
+        .pipe(browserSync.stream());
 });
 
 //js concat jquery
@@ -95,12 +102,14 @@ gulp.task("scripts2", function () {
 gulp.task("scripts3", function () {
     return gulp.src([
         // "app/libs/rew-downnav/downnav.js",
-        "app/libs/rew-sidenav/sidenav.js",
+        // "app/libs/rew-sidenav/sidenav.js",
         "app/js/scripts/mail.js",
         "app/js/scripts/scripts.js"
     ])
         .pipe(concat("scripts.js"))
-        .pipe(gulp.dest("app/js"));
+        .pipe(gulp.dest("app/js"))
+
+        .pipe(browserSync.stream());
 });
 
 //--------BUILD
@@ -174,10 +183,10 @@ gulp.task("build", function (callback) {
 //watch
 gulp.task("watch", ["scripts1", "scripts2", "scripts3", "pug", "browserSync", "stylus"], function () { //запуск browser-sync та sass відслідковувачів
     gulp.watch("app/stylus/**/*.styl", ["stylus"]); //пошук scss файлів
-    gulp.watch("app/libs/rew-sidenav/*.styl", ["stylus"]); //пошук scss файлів
+    // gulp.watch("app/libs/rew-sidenav/*.styl", ["stylus"]); //пошук scss файлів
     gulp.watch("app/pages/**/*.pug", ["pug"]); //пошук html файлів
     gulp.watch(["app/js/scripts/*.js"], ["scripts3"]); //пошук html файлів
-    gulp.watch(["app/libs/rew-sidenav/*.js"], ["scripts3"]); //пошук html файлів
-    gulp.watch("app/*.html", browserSync.reload); //пошук html файлів
-    gulp.watch("app/js/*.js", browserSync.reload); //пошук js файлів
+    // gulp.watch(["app/libs/rew-sidenav/*.js"], ["scripts3"]); //пошук html файлів
+    // gulp.watch("app/*.html", browserSync.reload); //пошук html файлів
+    // gulp.watch("app/js/*.js", browserSync.reload); //пошук js файлів
 });

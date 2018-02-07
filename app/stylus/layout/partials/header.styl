@@ -1,4 +1,15 @@
 @import '../../utilities/vars'
 @import '../../utilities/mixins'
 
-header {}
+header
+  position relative
+
+.header-ticket
+  background $blue-back
+  &:after
+    pseudo(block, absolute)
+    background $blue-back
+    left 0
+    right 0
+    top 100%
+    height 137px

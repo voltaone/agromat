@@ -17,15 +17,12 @@
 .slider
   position relative
   overflow hidden
-  margin-bottom 1rem
   .arrow
     position absolute
     text-align center
     z-index 100
     top 41%
     cursor pointer
-    .fa
-      font-size 2rem
 
   .arrow.left
     left 0
@@ -38,7 +35,6 @@
     align-items center
     height 100%
     overflow hidden
-    margin 0 15px
     &:focus
       outline none
 
@@ -73,3 +69,70 @@
     .slick-active
       button
         background $black
+
+.slider-full
+  .arrow
+    top auto
+    bottom 29.5%
+  .arrow.left
+    left 30%
+  .arrow.right
+    right 30%
+  .slide
+    height: 429px
+    position relative
+    .slide-image
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      overflow hidden
+      img
+        min-height 100%
+    .slide-description
+      position absolute
+      left 0
+      right 0
+      bottom 0
+      z-index 1000
+      text-align center
+      &:after
+        pseudo(block, absolute)
+        opacity: 0.4;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #00000d);
+        left 0
+        right 0
+        bottom 0
+        height 297px
+        z-index -1
+      ul
+        display flex
+        max-width 360px
+        justify-content center
+        margin 0 auto
+        li
+          font-size $s30
+          color $white
+          font-weight 700
+          flex 1 1 50%
+          max-width 50%
+          &:first-child
+            position relative
+            padding-left 20px
+            &:after
+              pseudo(block, absolute)
+              background $white
+              right: -3px;
+              top: 7px;
+              width: 2px;
+              height: 27px;
+
+
+      p
+        color $white
+        font-size $s19
+        margin-bottom 11px
+
+      .button
+        margin 0 auto 20px
