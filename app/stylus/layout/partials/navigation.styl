@@ -15,7 +15,33 @@ nav
   transitions()
 
 nav.scroll
-  padding 14px 0
+  padding 4px 0
+  background $white
+  box-shadow none
+  box-shadow: 3px 4px 13px 0px rgba(47,47,47, .1);
+  .link-logo
+    max-width 102px
+    svg
+      g
+        fill #6EADFF
+  .menu
+    padding-bottom 0
+    li
+      a
+        color $black-text
+  .menu-address
+    color #6EADFF
+    padding-top 11px
+  .menu-phones
+    height: 100%;
+    padding-top 9px
+    li a
+      color #6EADFF
+  .menu-social
+    padding-top 10px
+    li a svg g
+      fill #6EADFF
+
 
 .menu
   list-flex(row)
@@ -36,14 +62,15 @@ nav.scroll
   color $white
   font-size $s14
   display flex
-  align-items center
   margin-bottom 0
+  transitions()
 
 .menu-social
   list-flex(row)
   justify-content flex-end
   align-items center
   padding 3px 0
+  transitions()
   li
     margin-left 16px
     a
@@ -53,6 +80,7 @@ nav.scroll
 
 .menu-phones
   list-flex(col)
+  transitions()
   li
     a
       color $white

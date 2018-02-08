@@ -12,76 +12,7 @@ form {}
       flex 1 1 100%
       max-width 100%
 
-.form-tickets
-  display flex
-  justify-content space-between
-  margin-bottom 18px
-  &--left
-    max-width calc(67.6% - 9px)
-    flex 1 1 calc(67.6% - 9px)
-  &--right
-    max-width calc(32.4% - 9px)
-    flex 1 1 calc(32.4% - 9px)
-    display flex
-    justify-content space-between
 
-  &--inputs
-    display flex
-    justify-content space-between
-    .select-container-select2
-      flex 1 1 calc(25% - 7px)
-      max-width calc(25% - 7px)
-
-    .input-group-datepicker, .form-tickets--passengers
-      flex 1 1 calc(25% - 2px)
-      max-width calc(25% - 2px)
-
-  &--passengers
-    position relative
-    background $white
-    &-options
-      position absolute
-      visibility hidden
-      z-index -1
-      opacity 0
-    &-select
-      height 100%
-      position relative
-      padding 12px 45px
-      font-size $s14
-      color rgba(47,47,47,.5)
-      &:after, &:before
-        pseudo(block, absolute)
-        background $blue-lighttext
-        width 10px
-        height 2px
-        right 23px
-        top 22px
-      &:after
-        transform rotate(45deg)
-        right 29px
-      &:before
-        transform rotate(-45deg)
-      img
-        top: 9px;
-        left: 27px;
-        position absolute
-
-
-  &--more
-    &-options
-      display none
-
-  &--submit
-    flex 1 1 165px
-    max-width 165px
-    .button
-      padding-top 11px
-      padding-bottom 13px
-
-      font-size $s14
-
-      letter-spacing normal
 
 .form-call
   .input-group

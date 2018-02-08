@@ -1,0 +1,198 @@
+.form-tickets
+  display flex
+  justify-content space-between
+  margin-bottom 10px
+
+  &--left
+    max-width calc(72.75% - 9px)
+    flex 1 1 calc(72.75% - 9px)
+  &--right
+    max-width calc(27% - 9px)
+    flex 1 1 calc(27% - 9px)
+    display flex
+    justify-content space-between
+
+  &--inputs
+    display none
+    justify-content space-between
+    margin-bottom 10px
+    .select-container-select2, .input-group-datepicker, .form-tickets--passengers
+      flex 1 1 160px
+      max-width 160px
+
+  &--options
+    ul
+      li
+        line-height: 1.4;
+
+  &--more-options
+    display none
+    &--section
+      flex 1 1 160px
+      max-width 160px
+      margin-right 5px
+      margin-bottom 10px
+      &-block
+        height 97px
+        background #f0f6ff
+        padding-top 7px
+        padding-bottom 7px
+
+        ul
+          li
+            a
+              background #f0f6ff
+              color $black-text
+              font-size $s12
+              display block
+              padding: 1px 5px 2px 18px;
+              &:hover
+                background $white
+            .active
+              background $white
+
+      &-head
+        display flex
+        align-items center
+        opacity: 0.5;
+        background-color: #b6d6ff
+        padding: 10px 5px 14px 19px;
+        &--text
+          color $black-text
+          font-size: $s14
+        &--image
+          margin-right 9px
+          height 20px
+          svg
+            height 100%
+            g
+              fill $black-text
+              opacity 1
+
+  &--more-options.active
+    display flex
+
+  &--passengers
+    position relative
+    background $white
+    height 44px
+    &-options
+      position absolute
+      visibility hidden
+      z-index -1
+      opacity 0
+      transitions()
+      padding 6px 0
+      background #f0f6ff
+
+      &--option
+        padding-left 13px
+        padding-top: 3px;
+        padding-bottom 5px
+        background #f0f6ff
+        transitions()
+        display flex
+        &-description
+          flex 1 1 80%
+          max-width 80%
+          padding-top 3px
+          &-head
+            font-size $s10
+            color: #4f9cff;
+            line-height 1
+            margin-bottom 4px
+          &-text
+            font-size $s12
+            line-height 1
+            color $black-text
+            font-weight 700
+        &-counter
+          flex 1 1 20%
+          max-width 20%
+          input
+            padding 0
+            text-align center
+            background $trans
+            color $black-text
+            font-size $s14
+            display block
+          .plus, .minus
+            cursor pointer
+            text-align center
+            display flex
+            justify-content center
+            position relative
+
+        &:hover
+          background $white
+
+    &-select
+      height 100%
+      position relative
+      padding 12px 36px
+      font-size $s14
+      color rgba(47, 47, 47, .5)
+      cursor pointer
+      &:after, &:before
+        pseudo(block, absolute)
+        background $blue-lighttext
+        width 10px
+        height 2px
+        right 10px
+        top 22px
+        transitions()
+      &:after
+        transform rotate(45deg)
+        right 16px
+      &:before
+        transform rotate(-45deg)
+      svg
+        top: 9px;
+        left: 17px;
+        position absolute
+
+  &--submit
+    flex 1 1 165px
+    max-width 165px
+    .button
+      padding-top 11px
+      padding-bottom 13px
+
+      font-size $s14
+
+      letter-spacing normal
+
+.form-tickets--passengers-options.active
+  visibility visible
+  opacity 1
+  z-index 400
+
+.form-tickets--passengers-select.active
+  &:after
+    transform rotate(-45deg)
+  &:before
+    transform rotate(45deg)
+
+.form-tickets--inputs.visible, .form-tickets--inputs.first
+  display flex
+
+.form-tickets.way-one
+  .form-tickets--left
+    flex 1 1 57.5%
+    max-width 57.5%
+  .form-tickets--right
+    flex 1 1 39%
+    max-width 39%
+  .form-tickets--options
+    flex 1 1 54%
+    max-width 54%
+    ul
+      display flex
+      justify-content space-between
+      align-items center
+      height 100%
+  .input-group.input-group-datepicker.to
+    display none
+
+.form-tickets.way-hard {
+}

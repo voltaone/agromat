@@ -18,6 +18,14 @@ input
     color rgba(47,47,47,.5)
     font-size $s14
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none;
+  margin: 0;
+
+input[type=number]
+  -moz-appearance:textfield;
+
 textarea
   -webkit-appearance none
   resize none
@@ -31,6 +39,11 @@ textarea
     outline none
     border-color green
 
+label
+  margin-bottom 0
+
+
+
 
 .input-group
   position relative
@@ -43,6 +56,8 @@ textarea
 
 .input-group-datepicker
   label
-    left: 27px;
+    left: 19px
+    svg g
+      transitions()
   input
-    padding-left: 57px;
+    padding-left: 49px;

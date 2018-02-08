@@ -90,6 +90,7 @@ gulp.task("scripts2", function () {
         // 'app/libs/fullpage.js/vendors/jquery.easings.min.js',
         // 'app/libs/fullpage.js/vendors/scrolloverflow.js',
         // 'app/libs/fullpage.js/dist/jquery.fullpage.js',
+        'app/libs/jquery-slimscroll/jquery.slimscroll.js',
         'app/libs/nouislider/distribute/nouislider.js',
         'app/libs/wnumb/wNumb.js',
         'app/libs/select2/dist/js/select2.full.js'

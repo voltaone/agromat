@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     // SCROLLING CLASS CHANGE
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
+        if ($(this).scrollTop() > 10) {
             $("nav").addClass("scroll");
         }
         else {
@@ -41,8 +41,7 @@ $(document).ready(function () {
     $('.select2-select.from').select2({
         dropdownParent: $('.select-container-select2.from'),
         placeholder: "<img src='img/icons/from.svg'> Откуда",
-        tags: ['a', 'b', 'c'],
-        escapeMarkup : function(markup) {
+        escapeMarkup: function (markup) {
             return markup;
         }
     });
@@ -50,16 +49,110 @@ $(document).ready(function () {
     $('.select2-select.to').select2({
         dropdownParent: $('.select-container-select2.to'),
         placeholder: "<img src='img/icons/to.svg'> Куда",
-        tags: ['a', 'b', 'c'],
-        escapeMarkup : function(markup) {
+        escapeMarkup: function (markup) {
+            return markup;
+        }
+    });
+    $('.select2-select.from2').select2({
+        dropdownParent: $('.select-container-select2.from2'),
+        placeholder: "<img src='img/icons/from.svg'> Откуда",
+        escapeMarkup: function (markup) {
+            return markup;
+        }
+    });
+
+    $('.select2-select.to2').select2({
+        dropdownParent: $('.select-container-select2.to2'),
+        placeholder: "<img src='img/icons/to.svg'> Куда",
+        escapeMarkup: function (markup) {
             return markup;
         }
     });
 
 
+    // ----- PASSANGERS -----
+    $(document).mouseup(function (e) {
+
+        if ($(".form-tickets--passengers").has(e.target).length === 0) {
+            $('.form-tickets--passengers-select, .form-tickets--passengers-options').removeClass('active');
+        }
+    });
+
+    $('.form-tickets--passengers-select').click(function (e) {
+        e.preventDefault();
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).siblings('.form-tickets--passengers-options').toggleClass('active');
+        } else {
+            $('.form-tickets--passengers-select').removeClass('active');
+            $('.form-tickets--passengers-options').removeClass('active');
+            $(this).addClass('active');
+            $(this).siblings('.form-tickets--passengers-options').toggleClass('active');
+        }
+
+    });
 
 
+    // ----- QUANTITY -----
 
+    $('.minus').click(function () {
+
+        var val = parseInt($(this).siblings('input').val());
+        if (val !== 0) {
+            val--;
+            $(this).siblings('input').val(val);
+        }
+    });
+
+    $('.plus').click(function () {
+        var val = parseInt($(this).siblings('input').val());
+        val++;
+        $(this).siblings('input').val(val);
+    });
+
+
+    // ----- TICKET TABS -----
+    $('.tabs-tickets li a').click(function (e) {
+        e.preventDefault();
+        $('.tabs-tickets li a').removeClass('active');
+        $(this).addClass('active');
+
+        var x = $(this).attr('data-tab');
+
+        switch (x) {
+            case '1':
+                $('.form-tickets').removeClass('way-one').removeClass('way-hard');
+                $('.form-tickets--inputs').removeClass('visible');
+                break;
+            case '2':
+                $('.form-tickets').addClass('way-one').removeClass('way-hard');
+                $('.form-tickets--inputs').removeClass('visible');
+                break;
+            case '3':
+                $('.form-tickets').removeClass('way-one').addClass('way-hard');
+                $('.form-tickets--inputs').addClass('visible');
+                break;
+
+            default:
+                $('.form-tickets').removeClass('way-one').removeClass('way-hard');
+                break;
+        }
+    });
+
+    $('.link-more-options').click(function (e) {
+        e.preventDefault();
+        $('.form-tickets--more-options').toggleClass('active');
+        $(this).toggleClass('active');
+    });
+
+    $('.form-tickets--more-options--section-block').slimScroll({
+        height: '97px'
+    });
+
+    $('.form-tickets--more-options--section-block ul li a').click(function (e) {
+        e.preventDefault();
+        $(this).toggleClass('active');
+    });
 
 
     //  ----- SLIDER -----
@@ -69,7 +162,6 @@ $(document).ready(function () {
     //     var i = (currentSlide ? currentSlide : 0) + 1;
     //     $('.slider-counter').text(i + '/' + slick.slideCount);
     // });
-
 
 
     // $(".slider-two").slick({
@@ -120,8 +212,8 @@ $(document).ready(function () {
 
     //CHOSEN
     // $(".chosen-select").chosen({
-        // disable_search_threshold: 10,
-        // no_results_text: "Нічого не знайдено"
+    // disable_search_threshold: 10,
+    // no_results_text: "Нічого не знайдено"
     // });
     // $(".chosen-image").chosenImage({disable_search_threshold: 10});
 
@@ -158,7 +250,6 @@ $(document).ready(function () {
     // });
 
 
-
     // ANCHOR LINKS SCROLLING
     // $(".smooth").click(function (event) {
     //     event.preventDefault();
@@ -168,8 +259,6 @@ $(document).ready(function () {
     //         scrollTop: top
     //     }, 1500);
     // });
-
-
 
 
     // RANGE SLIDER
