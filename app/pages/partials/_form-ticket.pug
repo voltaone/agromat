@@ -33,9 +33,10 @@ header.header-ticket
                                     optgroup(label='Берлин (Все) — Германия')
                                         option Берлин, Тегель (TXL)
                                         option Берлин, Schoenefeld (SXF)
-                            .input-container-datepicker
-                                img(src='img/icons/calendar.svg')
-                                input.datepicker(placeholder='Дата')
+                            .input-group.input-group-datepicker
+                                label(for='datepicker')
+                                    img(src='img/icons/calendar.svg')
+                                input.datepicker(placeholder='Дата')#datepicker
                             .form-tickets--passengers
                                 .form-tickets--passengers-select
                                     img(src='img/icons/human.svg')

@@ -356,23 +356,6 @@ button:focus {
 .button-advantage {
 	margin: 89px auto 8px;
 }
-table, tr, th, td {
-	border: 1px solid #000;
-}
-table {
-	width: 100%;
-	margin-bottom: 1rem;
-}
-table caption {
-	caption-side: top;
-	text-align: right;
-}
-table th {
-	padding: 5px;
-}
-table td {
-	padding: 5px;
-}
 ul {
 	padding: 0;
 	margin: 0;
@@ -503,7 +486,7 @@ ol {
 	    flex: 1 1 calc(25% - 7px);
 	max-width: calc(25% - 7px);
 }
-.form-tickets--inputs .input-container-datepicker, .form-tickets--inputs .form-tickets--passengers {
+.form-tickets--inputs .input-group-datepicker, .form-tickets--inputs .form-tickets--passengers {
 	-webkit-box-flex: 1;
 	-ms-flex: 1 1 calc(25% - 2px);
 	    flex: 1 1 calc(25% - 2px);
@@ -644,15 +627,10 @@ textarea:focus {
 	top: 9px;
 	left: 20px;
 }
-.input-container-datepicker {
-	position: relative;
-}
-.input-container-datepicker img {
-	position: absolute;
-	top: 9px;
+.input-group-datepicker label {
 	left: 27px;
 }
-.input-container-datepicker input {
+.input-group-datepicker input {
 	padding-left: 57px;
 }
 .radiocheck {
@@ -893,6 +871,9 @@ input[type='radio'].error + label {
 }
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single {
 	border: 0;
+}
+.select2-container--open {
+	top: 0 !important;
 }
 .select2-container--open .select2-dropdown--below {
 	border: 0;
@@ -1620,8 +1601,8 @@ footer p a:hover {
 }
 .ui-datepicker-prev, .ui-datepicker-next {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 6px;
+	left: 41px;
 }
 .ui-datepicker-prev span, .ui-datepicker-next span {
 	position: relative;
@@ -1637,11 +1618,11 @@ footer p a:hover {
 	content: '';
 	display: block;
 	position: absolute;
-	width: 10px;
+	width: 8px;
 	height: 2px;
-	background: #f00;
-	top: 6px;
-	left: 0;
+	background: #4f9cff;
+	top: 7px;
+	right: 0;
 }
 .ui-datepicker-prev span:before, .ui-datepicker-next span:before {
 	-webkit-transform: rotate(45deg);
@@ -1655,8 +1636,12 @@ footer p a:hover {
 	top: 12px;
 }
 .ui-datepicker-next {
-	right: 0;
+	right: 41px;
 	left: auto;
+}
+.ui-datepicker-prev span:before, .ui-datepicker-prev span:after {
+	left: 0;
+	right: auto;
 }
 .ui-datepicker-prev span:before {
 	-webkit-transform: rotate(-45deg);
@@ -1671,15 +1656,55 @@ footer p a:hover {
 }
 .ui-datepicker-title {
 	text-align: center;
+	color: #2f2f2f;
+	font-size: .75rem;
 }
 .ui-datepicker {
-	background: #fff;
+	background: #e5f0fc;
+	width: 188.41px;
+	padding-top: 8px;
+	padding-bottom: 11px;
 }
 .ui-state-default {
 	color: #000;
 }
 .ui-state-default.ui-priority-secondary {
 	color: #a9a9a9;
+}
+.ui-datepicker-calendar {
+	margin: 0 auto;
+}
+.ui-datepicker-calendar thead th {
+	padding: 0;
+}
+.ui-datepicker-calendar thead th span {
+	color: #4f9cff;
+	font-size: .75rem;
+	font-weight: 400;
+	text-transform: lowercase;
+}
+.ui-datepicker-calendar tbody td {
+	padding: 0;
+}
+.ui-datepicker-calendar tbody td a {
+	color: #2f2f2f;
+	font-size: .625rem;
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 20px;
+	height: 20px;
+}
+.ui-datepicker-calendar tbody td a:hover {
+	background: #000fcf;
+	color: #fff;
 }
 .volta {
 	float: right;

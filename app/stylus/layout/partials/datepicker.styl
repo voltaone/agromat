@@ -6,8 +6,8 @@
 
 .ui-datepicker-prev, .ui-datepicker-next
   position absolute
-  top 0
-  left 0
+  top 6px
+  left 41px
   span
     position relative
     font-size 0
@@ -19,11 +19,11 @@
     cursor pointer
     &:before, &:after
       pseudo(block, absolute)
-      width 10px
+      width 8px
       height 2px
-      background red
-      top 6px
-      left 0
+      background $blue-lighttext
+      top 7px
+      right 0
     &:before
       transform rotate(45deg)
     &:after
@@ -32,11 +32,14 @@
 
 
 .ui-datepicker-next
-  right 0
+  right 41px
   left auto
 
 
 .ui-datepicker-prev span
+  &:before, &:after
+    left 0
+    right auto
   &:before
     transform rotate(-45deg)
   &:after
@@ -45,12 +48,41 @@
 
 .ui-datepicker-title
   text-align center
+  color $black-text
+  font-size $s12
 
 .ui-datepicker
-  background $white
+  background $blue-back4
+  width 188.41px
+  padding-top: 8px;
+  padding-bottom 11px
 
 .ui-state-default
   color $black
 
 .ui-state-default.ui-priority-secondary
   color $gray
+
+.ui-datepicker-calendar
+  margin: 0 auto
+  thead th
+    padding 0
+    span
+      color $blue-lighttext
+      font-size $s12
+      font-weight 400
+      text-transform lowercase
+  tbody td
+    padding 0
+    a
+      color $black-text
+      font-size $s10
+      text-align center
+      display flex
+      justify-content center
+      align-items center
+      width 20px
+      height 20px
+      &:hover
+        background $blue-darkback
+        color $white
