@@ -19,6 +19,12 @@ a
     width 100%
   &:hover
     opacity .5
+  +mobile()
+    max-width 109px
+    max-height 40px
+    margin 0
+    svg
+      height auto
 
 .link-more-options
   display inline-block
@@ -28,6 +34,8 @@ a
     color: $blue-darkback2
     text-decoration underline
     transitions()
+    +portrait()
+      font-size: .75rem;
   &:hover
     span
       text-decoration none

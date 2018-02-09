@@ -10,10 +10,11 @@
     padding-left 23px
     cursor pointer
     color $white
-    font-size: $s14
+    font-size: $s12
     line-height: 1.07;
     margin-bottom 0
-
+    +portrait()
+      font-size $s10
     &:before, &:after
       pseudo(block, absolute)
       top -1px

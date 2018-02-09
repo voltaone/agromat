@@ -1,8 +1,7 @@
 .form-tickets
   display flex
   justify-content space-between
-  margin-bottom 10px
-
+  margin-bottom 20px
   &--left
     max-width calc(72.75% - 9px)
     flex 1 1 calc(72.75% - 9px)
@@ -11,14 +10,34 @@
     flex 1 1 calc(27% - 9px)
     display flex
     justify-content space-between
-
+    max-height 44px
+    +portrait()
+      max-width calc(28% - 9px)
+      flex 1 1 calc(28% - 9px)
   &--inputs
-    display none
+    display flex
     justify-content space-between
-    margin-bottom 10px
+    height 0
+    opacity 0
+    margin-bottom 0
+    transitions()
+
+    +portrait()
+      flex-wrap wrap
+
     .select-container-select2, .input-group-datepicker, .form-tickets--passengers
       flex 1 1 160px
       max-width 160px
+      +tablet()
+        flex 1 1 130px
+        max-width: 130px;
+
+
+    .select-container-select2
+      +portrait()
+        flex 1 1 calc(50% - 3px)
+        max-width calc(50% - 3px)
+        margin-bottom 5px
 
   &--options
     ul
@@ -26,12 +45,25 @@
         line-height: 1.4;
 
   &--more-options
-    display none
+    display flex
+    height 0
+    opacity 0
+    transitions()
+    +tablet()
+      justify-content: space-between;
+    +portrait()
+      justify-content space-between
     &--section
       flex 1 1 160px
       max-width 160px
       margin-right 5px
       margin-bottom 10px
+      +portrait()
+        flex 1 1 calc(25% - 3px)
+        max-width calc(25% - 3px)
+        margin-right 0
+      &:last-child
+        margin-right: 0;
       &-block
         height 97px
         background #f0f6ff
@@ -46,6 +78,8 @@
               font-size $s12
               display block
               padding: 1px 5px 2px 18px;
+              +portrait()
+                padding-left 10px
               &:hover
                 background $white
             .active
@@ -56,10 +90,17 @@
         align-items center
         opacity: 0.5;
         background-color: #b6d6ff
-        padding: 10px 5px 14px 19px;
+        padding: 10px 5px 14px 18px;
+        +portrait()
+          padding-left 10px
+
         &--text
           color $black-text
           font-size: $s14
+          +portrait()
+            overflow hidden
+            white-space: nowrap;
+            text-overflow: ellipsis;
         &--image
           margin-right 9px
           height 20px
@@ -70,7 +111,9 @@
               opacity 1
 
   &--more-options.active
-    display flex
+    height 151px
+    margin-top 10px
+    opacity 1
 
   &--passengers
     position relative
@@ -84,7 +127,6 @@
       transitions()
       padding 6px 0
       background #f0f6ff
-
       &--option
         padding-left 13px
         padding-top: 3px;
@@ -141,9 +183,13 @@
         right 10px
         top 22px
         transitions()
+        +tablet()
+          right 5px
       &:after
         transform rotate(45deg)
         right 16px
+        +tablet()
+          right 11px
       &:before
         transform rotate(-45deg)
       svg
@@ -154,6 +200,12 @@
   &--submit
     flex 1 1 165px
     max-width 165px
+    +tablet()
+      flex 1 1 125px
+      max-width 125px
+    +portrait()
+      flex 1 1 100px
+      max-width 100px
     .button
       padding-top 11px
       padding-bottom 13px
@@ -173,8 +225,21 @@
   &:before
     transform rotate(45deg)
 
+
+
 .form-tickets--inputs.visible, .form-tickets--inputs.first
-  display flex
+  height 44px
+  opacity 1
+  +portrait()
+    height 103px
+
+.form-tickets--inputs.visible
+  margin-bottom 0
+
+
+.form-tickets--inputs.first.visible
+  margin-bottom 10px
+
 
 .form-tickets.way-one
   .form-tickets--left
@@ -186,13 +251,24 @@
   .form-tickets--options
     flex 1 1 54%
     max-width 54%
+    +tablet()
+      flex 1 1 calc(100% - 155px)
+      max-width calc(100% - 155px)
     ul
       display flex
       justify-content space-between
       align-items center
       height 100%
+      +portrait()
+        flex-direction column
+        align-items flex-start
+    .radiocheck input + label
+      +portrait()
+        font-size .75rem
   .input-group.input-group-datepicker.to
     display none
 
-.form-tickets.way-hard {
-}
+  .input-group-datepicker, .form-tickets--passengers
+    +portrait()
+      flex 1 1 calc(50% - 3px)
+      max-width calc(50% - 3px)

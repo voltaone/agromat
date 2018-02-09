@@ -79,8 +79,17 @@
     bottom 29.5%
   .arrow.left
     left 30%
+    +tablet()
+      left 25%
+    +portrait()
+      left 20%
   .arrow.right
     right 30%
+    +tablet()
+      right: 25%;
+    +portrait()
+      right: 20%;
+
   .slide
     height: 429px
     position relative
@@ -100,6 +109,7 @@
       bottom 0
       z-index 1000
       text-align center
+
       &:after
         pseudo(block, absolute)
         opacity: 0.4;
@@ -130,7 +140,6 @@
               top: 7px;
               width: 2px;
               height: 27px;
-
 
       p
         color $white

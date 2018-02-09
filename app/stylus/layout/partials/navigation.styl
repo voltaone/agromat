@@ -13,34 +13,43 @@ nav
   right 0
   z-index 9999
   transitions()
+  +mobile()
+    padding 16px 0 15px
 
 nav.scroll
-  padding 4px 0
-  background $white
-  box-shadow none
-  box-shadow: 3px 4px 13px 0px rgba(47,47,47, .1);
-  .link-logo
-    max-width 102px
-    svg
-      g
-        fill #6EADFF
-  .menu
-    padding-bottom 0
-    li
-      a
-        color $black-text
-  .menu-address
-    color #6EADFF
-    padding-top 11px
-  .menu-phones
-    height: 100%;
-    padding-top 9px
-    li a
+  +custom-min(768px)
+    padding 4px 0
+    background $white
+    box-shadow none
+    box-shadow: 3px 4px 13px 0px rgba(47,47,47, .1);
+    .link-logo
+      max-width 102px
+      svg
+        g
+          fill #6EADFF
+    .menu
+      padding-bottom 0
+      +tablet()
+        padding-top 20px
+      li
+        a
+          color $black-text
+    .menu-address
       color #6EADFF
-  .menu-social
-    padding-top 10px
-    li a svg g
-      fill #6EADFF
+      padding-top 11px
+      +portrait()
+        padding-top 0
+        align-items center
+        height 100%
+    .menu-phones
+      height: 100%;
+      padding-top 9px
+      li a
+        color #6EADFF
+    .menu-social
+      padding-top 10px
+      li a svg g
+        fill #6EADFF
 
 
 .menu
@@ -50,13 +59,30 @@ nav.scroll
   height 100%
   padding-bottom 16px
   transitions()
+  +tablet()
+    padding-bottom 0
+    align-items flex-start
+    padding-top 10px
+  +mobile()
+    flex-direction column
+    background #D6E8FF
+    min-height 408px
+    justify-content space-around
+    padding-bottom 75px
   li
     a
       display block
       font-size $s14
       color $blue-darktext
+      +portrait()
+        font-size $s12
+      +mobile()
+        display inline-block
+        font-size $s20
+
       &:hover
         color $white
+
 
 .menu-address
   color $white
@@ -64,6 +90,15 @@ nav.scroll
   display flex
   margin-bottom 0
   transitions()
+  +portrait()
+    font-size $s10
+    padding-top 8px
+  +mobile()
+    color #2D80EB
+    font-size 20px
+    text-align center
+    max-width 206px
+    margin 0 auto 57px
 
 .menu-social
   list-flex(row)
@@ -71,17 +106,37 @@ nav.scroll
   align-items center
   padding 3px 0
   transitions()
+  +portrait()
+    flex-direction column
+  +mobile()
+    justify-content center
   li
     margin-left 16px
+    +mobile()
+      margin 0 27px
     a
       display block
+      svg
+        +portrait()
+          max-width 15px
+        +mobile()
+          width auto
+          min-height 30px
+          g
+            fill #4F9CFF
       &:hover
         opacity .5
 
 .menu-phones
   list-flex(col)
   transitions()
+  +mobile()
+    padding-top 50px
+    padding-bottom 33px
   li
+    +mobile()
+      text-align center
+      margin-bottom 22px
     a
       color $white
       display inline-block
@@ -89,6 +144,16 @@ nav.scroll
       font-weight: bold;
       letter-spacing: 0.6px
       line-height 1
+      +tablet()
+        font-size .75rem
+      +portrait()
+        font-size .5rem
+      +mobile()
+        font-size $s20
+        color #2D80EB
+        text-decoration underline
+        font-weight 400
+
       &:hover
         opacity .5
 
@@ -100,10 +165,10 @@ nav.scroll
 
 
 .nav-icon
-  width 30px
+  width 28px
   height 22px
   position relative
-  margin 14px 0
+  margin 9px 0
   cursor pointer
   transitions()
   transform rotate(0deg)
@@ -113,7 +178,7 @@ nav.scroll
     position absolute
     height 3px
     width 100%
-    background $black
+    background $white
     border-radius 2px
     opacity 1
     left 0
@@ -126,17 +191,11 @@ nav.scroll
     &:nth-child(4)
       top 18px
 
-.nav-icon.open
-  span
-    &:nth-child(1)
-      top 18px
-      width 0%
-      left 50%
-    &:nth-child(2)
-      transform rotate(45deg)
-    &:nth-child(3)
-      transform rotate(-45deg)
-    &:nth-child(4)
-      top 18px
-      width 0%
-      left 50%
+
+
+#menu-panel
+  display none
+  background $white
+  margin-top 16px
+  padding-bottom 60px
+  overflow-x hidden !important

@@ -5,7 +5,7 @@ footer
                 include _snazzymap
                 #map
 
-            .offset-md-1.col-3
+            .offset-lg-1.col-md-3
                 h6 Агромат-Тур
                 p 01033,  Украина, г. Киев,
                     br
@@ -22,16 +22,16 @@ footer
                 p
                     a(href='' title='') avia@agromat-tour.com.ua
 
-            .col-md-3
+            .col-lg-3.col-md-4
                 h6 Заказать звонок
                 form.form-call
-                    .input-group
+                    .input-group.error
                         label(for='name')
-                            img(src='img/icons/name.svg')
+                            include ../svgs/name.svg
                         input(type='text' placeholder='Ваше имя' id='name')
                     .input-group
                         label(for='phone')
-                            img(src='img/icons/phone.svg')
+                            include ../svgs/phone.svg
                         input(type='text' placeholder='Телефон' id='phone')
                     button(type='submit').button.button-light Заказать звонок
 

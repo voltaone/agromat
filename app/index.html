@@ -59,7 +59,7 @@
   <body>
     <nav>
       <div class="container">
-        <div class="row">
+        <div class="row" id="menu-desktop">
           <div class="col-6 col-md-2"><a class="link-logo" href="./" title=""><?xml version="1.0" encoding="UTF-8"?>
 <svg width="145px" height="52px" viewBox="0 0 145 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
@@ -105,7 +105,7 @@
           <div class="col-6 nav-mobile">
             <div class="nav-icon" id="menu-trigger"><span></span><span></span><span></span><span></span></div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-5 menu-col order-1 order-md-2">
             <ul class="menu">
               <li><a href="tickets.html" title="">Авиабилеты</a></li>
               <li><a href="tours.html" title="">Туры</a></li>
@@ -115,10 +115,10 @@
               <li><a href="contacts.html" title="">Контакты</a></li>
             </ul>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 menu-col order-3 order-md-3">
             <p class="menu-address">ул. Шота Руставели, 23  09:00 — 20:00</p>
           </div>
-          <div class="col-md-1">
+          <div class="col-md-1 menu-col order-4 order-md-4">
             <ul class="menu-social">
               <li><a href="//www.facebook.com" title=""><?xml version="1.0" encoding="UTF-8"?>
 <svg width="13px" height="22px" viewBox="0 0 13 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -158,7 +158,7 @@
 </svg></a></li>
             </ul>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 menu-col order-2 order-md-5">
             <ul class="menu-phones">
               <li><a href="tel:" title="">+38 (044) 501 02 36</a></li>
               <li><a href="tel:" title="">+38 (044) 501 02 37</a></li>
@@ -166,13 +166,16 @@
           </div>
         </div>
       </div>
+      <div id="menu-panel">
+        <div class="row"></div>
+      </div>
     </nav>
     <main>
       <header></header>
       <header class="header-ticket">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-md-5">
+            <div class="col-lg-5 col-md-6">
               <ul class="tabs-tickets">
                 <li><a class="active" href="" title="" data-tab="1">Туда и обратно</a></li>
                 <li><a href="" title="" data-tab="2">В одну сторону</a></li>
@@ -183,15 +186,15 @@
               <form class="form-tickets">
                 <div class="form-tickets--left">
                   <div class="form-tickets--inputs first">
-                    <div class="select-container-select2 from">
+                    <div class="select-container-select2 from error">
                       <select class="select2-select from">
                         <option></option>
-                        <optgroup label="Киев (Все) — Украина">
+                        <optgroup label="Киев — Украина">
                           <option>Киев (Все) — Украина</option>
                           <option>Киев, Борисполь (KBP)</option>
                           <option>Киев, Жуляны (IEV)</option>
                         </optgroup>
-                        <optgroup label="Берлин (Все) — Германия">
+                        <optgroup label="Берлин — Германия">
                           <option>Берлин (Все) — Германия</option>
                           <option>Берлин, Тегель (TXL)</option>
                           <option>Берлин, Schoenefeld (SXF)</option>
@@ -1222,7 +1225,7 @@
             <div class="col-12">
               <h2>Преимущества работы с Агромат Тур</h2>
             </div>
-            <div class="offset-md-2 col-md-4">
+            <div class="offset-lg-2 col-lg-4 offset-md-1 col-md-5">
               <div class="advantage-block">
                 <div class="advantage-block--image"><img src="img/icons/advantage1.svg" title="" alt=""></div>
                 <div class="advantage-block--text">
@@ -1230,7 +1233,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-5">
               <div class="advantage-block">
                 <div class="advantage-block--image"><img src="img/icons/advantage2.svg" title="" alt=""></div>
                 <div class="advantage-block--text">
@@ -1238,7 +1241,7 @@
                 </div>
               </div>
             </div>
-            <div class="offset-md-2 col-md-4">
+            <div class="offset-lg-2 col-lg-4 offset-md-1 col-md-5">
               <div class="advantage-block">
                 <div class="advantage-block--image"><img src="img/icons/advantage3.svg" title="" alt=""></div>
                 <div class="advantage-block--text">
@@ -1246,7 +1249,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-5">
               <div class="advantage-block">
                 <div class="advantage-block--image"><img src="img/icons/advantage4.svg" title="" alt=""></div>
                 <div class="advantage-block--text">
@@ -1659,21 +1662,57 @@
               <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCghHhOudfnxm7aSYdRnLaR_Wk3-IBQox8&amp;callback=init" async="" defer=""></script>
               <div id="map"></div>
             </div>
-            <div class="offset-md-1 col-3">
+            <div class="offset-lg-1 col-md-3">
               <h6>Агромат-Тур</h6>
               <p>01033,  Украина, г. Киев,<br> ул. Шота Руставели, 23 <br>09:00 — 20:00</p>
               <p>тел.<a href="tel: " title=""> +38 (044) 501 02 36 </a><br>тел.<a href="tel: " title=""> +38 (044) 501 02 37</a></p>
               <p><a href="" title="">avia@agromat-tour.com.ua</a></p>
             </div>
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-4">
               <h6>Заказать звонок</h6>
               <form class="form-call">
-                <div class="input-group">
-                  <label for="name"><img src="img/icons/name.svg"></label>
+                <div class="input-group error">
+                  <label for="name"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="24px" viewBox="0 0 17 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Footer" transform="translate(-978.000000, -112.000000)" fill-rule="nonzero" fill="#2D80EB">
+            <g id="Call_me_back">
+                <g transform="translate(959.000000, 61.000000)">
+                    <g id="Name" transform="translate(0.000000, 42.000000)">
+                        <path d="M27.2139037,10.2834225 C29.0106952,10.2834225 30.486631,11.7593583 30.486631,13.5561497 C30.486631,15.3529412 29.0106952,16.828877 27.2139037,16.828877 C25.4171123,16.828877 23.9411765,15.3529412 23.9411765,13.5561497 C23.9411765,11.7593583 25.4171123,10.2834225 27.2139037,10.2834225 L27.2139037,10.2834225 Z M27.2139037,9 C24.6791444,9 22.657754,11.0534759 22.657754,13.5561497 C22.657754,16.0909091 24.7112299,18.1122995 27.2139037,18.1122995 C29.7486631,18.1122995 31.7700535,16.0588235 31.7700535,13.5561497 C31.7700535,11.0534759 29.7486631,9 27.2139037,9 L27.2139037,9 Z M29.4278075,19.3636364 L25,19.3636364 C21.6951872,19.3636364 19,22.0588235 19,25.3636364 L19,33 L35.459893,33 L35.459893,25.3636364 C35.4278075,22.0588235 32.7647059,19.3636364 29.4278075,19.3636364 Z M34.144385,31.7165775 L31.7058824,31.7165775 L31.7058824,27.0641711 L30.4224599,27.0641711 L30.4224599,31.7165775 L24.0053476,31.7165775 L24.0053476,27.0641711 L22.7219251,27.0641711 L22.7219251,31.7165775 L20.2834225,31.7165775 L20.2834225,25.3636364 C20.2834225,22.7647059 22.4010695,20.6470588 25,20.6470588 L29.459893,20.6470588 C32.0588235,20.6470588 34.1764706,22.7647059 34.1764706,25.3636364 L34.1764706,31.7165775 L34.144385,31.7165775 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+                  </label>
                   <input type="text" placeholder="Ваше имя" id="name">
                 </div>
                 <div class="input-group">
-                  <label for="phone"><img src="img/icons/phone.svg"></label>
+                  <label for="phone"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Footer" transform="translate(-975.000000, -162.000000)" fill-rule="nonzero" fill="#2D80EB">
+            <g id="Call_me_back">
+                <g transform="translate(959.000000, 61.000000)">
+                    <g id="Phone" transform="translate(0.000000, 91.000000)">
+                        <path d="M26.0171073,25.6933473 C26.6253407,26.3307854 27.3592366,26.7243218 28.0521065,26.8033321 C28.7617791,26.871082 29.5112779,26.6368026 30.3399125,25.7118552 C30.596699,25.4252306 30.8780352,25.0933799 31.3512489,24.9348485 C31.8244598,24.7763227 32.3930904,24.8747117 32.9977433,25.2000182 C34.151291,26.0759971 35.3409309,26.9631444 36.4757139,27.8640025 C37.0166914,28.404966 37.1559474,29.1174629 36.981389,29.6769958 C36.8068586,30.2365287 36.4329045,30.6603442 36.0872203,31.0151651 C34.1600957,33.0232648 31.8773882,33.993681 29.6369683,33.654435 C27.4727847,33.2797749 25.378525,31.7639746 23.0571663,29.4426187 C22.0593593,28.4448145 21.2820093,27.6674589 20.294514,26.6799664 C17.9731581,24.3586105 16.4573578,22.2643507 16.0827005,20.1001644 C15.6372375,17.4236303 17.0591251,15.2449993 18.7219564,13.6499151 C19.0767801,13.3042477 19.5005928,12.9302853 20.0601257,12.7557408 C20.6196586,12.5811992 21.3321527,12.7204412 21.873119,13.2614076 C22.7739798,14.3961906 23.6611244,15.5858472 24.5371061,16.7393893 C24.862407,17.3440395 24.9607988,17.9126701 24.8022702,18.3858838 C24.6437416,18.8591031 24.3118909,19.1404365 24.0252663,19.3972229 C23.1003189,20.2258548 22.8660423,20.9753591 22.9337894,21.685029 C23.0127969,22.377896 23.4062356,23.1118896 24.0437742,23.7200254 M23.2544438,24.5093586 C22.5078836,23.7841083 21.9191907,22.8538697 21.8176175,21.7898701 C21.7157709,20.7229095 22.1598357,19.5674362 23.2791108,18.5647203 C23.5517456,18.3204586 23.7002165,18.1517439 23.7415998,18.028233 C23.7822492,17.9069129 23.7935348,17.7304568 23.5627772,17.2943873 L21.0837886,14.0507352 C20.7642114,13.7311608 20.6359926,13.7406353 20.3931346,13.8163917 C20.1502542,13.892162 19.8161654,14.1424154 19.5051277,14.4453991 C17.5071779,16.4433517 16.8794486,18.135583 17.1864621,19.9090543 C17.4934979,21.6825034 18.8305314,23.6374206 21.0837886,25.8906806 C22.0086494,26.8155387 23.0255421,27.8324341 23.8464409,28.6533385 C26.0997009,30.9065929 28.0546209,32.2436264 29.8280727,32.5506594 C31.6015413,32.8576701 33.2937698,32.2299492 35.2917308,30.2319938 C35.5947173,29.9209589 35.8449595,29.5868673 35.920727,29.3439869 C35.9964946,29.1011345 36.005983,28.9729157 35.6863918,28.6533329 L32.4427342,26.174347 C32.0066647,25.9435923 31.8302114,25.9548723 31.7088968,25.9955133 C31.5853776,26.0368743 31.4166601,26.1853536 31.1724095,26.4580023 C30.1696937,27.5772746 29.0142176,28.0213395 27.9472598,27.9194956 C26.8832574,27.8179224 25.9530383,27.2292044 25.2277713,26.4826693 M26.5740281,10.8677446 C26.5900188,11.1600148 26.8704899,11.4113733 27.1627489,11.3953547 C33.6426605,11.3953547 38.8836708,16.6363762 38.8836708,23.1163017 C38.8794848,23.4111673 39.1469177,23.6823956 39.4418112,23.6823956 C39.7367325,23.6823956 40.0041376,23.4111673 39.9999515,23.1163017 C39.9999515,16.0331102 34.2459544,10.279074 27.1627489,10.279074 C26.8284591,10.2762833 26.5684355,10.5790745 26.5740281,10.8677446 Z M26.5740281,14.2165866 C26.5900188,14.5088568 26.8704899,14.7602153 27.1627489,14.7441967 C31.7931425,14.7441967 35.5348288,18.4858858 35.5348288,23.1163017 C35.5306428,23.4111673 35.7980757,23.6823956 36.0929692,23.6823956 C36.3878905,23.6823956 36.6552955,23.4111673 36.6511095,23.1163017 C36.6511095,17.8826198 32.3964253,13.627916 27.1627489,13.627916 C26.8141819,13.6307067 26.5684271,13.9474514 26.5740281,14.2165866 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+                  </label>
                   <input type="text" placeholder="Телефон" id="phone">
                 </div>
                 <button class="button button-light" type="submit">Заказать звонок</button>
@@ -1716,5 +1755,24 @@
       <script type="text/javascript" src="js/vendor.js"></script>
       <script type="text/javascript" src="js/scripts.js"></script>
     </main>
+    <div id="hellopreloader">
+      <div id="hellopreloader_preload"></div>
+    </div>
+    <script type="text/javascript">
+      var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el) {
+          el.style.opacity = 1;
+          var interhellopreloader = setInterval(function () {
+              el.style.opacity = el.style.opacity - 0.05;
+              if (el.style.opacity <= 0.05) {
+                  clearInterval(interhellopreloader);
+                  hellopreloader.style.display = "none";
+              }
+          }, 16);
+      }window.onload = function () {
+          setTimeout(function () {
+              fadeOutnojquery(hellopreloader);
+          }, 1000);
+      };
+    </script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 nav
     .container
-        .row
+        .row#menu-desktop
             .col-6.col-md-2
                 a(href='./' title='').link-logo
                     include ../svgs/logo.svg
@@ -13,7 +13,7 @@ nav
                     span
 
 
-            .col-md-5
+            .col-md-5.menu-col.order-1.order-md-2
                 ul.menu
                     li
                         a(href='tickets.html' title='') Авиабилеты
@@ -27,9 +27,9 @@ nav
                         a(href='about.html' title='') О нас
                     li
                         a(href='contacts.html' title='') Контакты
-            .col-md-2
+            .col-md-2.menu-col.order-3.order-md-3
                 p.menu-address ул. Шота Руставели, 23  09:00 — 20:00
-            .col-md-1
+            .col-md-1.menu-col.order-4.order-md-4
                 ul.menu-social
                     li
                         a(href='//www.facebook.com' title='')
@@ -37,10 +37,11 @@ nav
                     li
                         a(href='//www.instagram.com' title='')
                             include ../svgs/instagram.svg
-
-            .col-md-2
+            .col-md-2.menu-col.order-2.order-md-5
                 ul.menu-phones
                     li
                         a(href='tel:' title='') +38 (044) 501 02 36
                     li
                         a(href='tel:' title='') +38 (044) 501 02 37
+    #menu-panel
+        .row

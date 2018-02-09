@@ -16,3 +16,21 @@ input[type='checkbox'].error + label
 
 input[type='radio'].error + label
   color red
+
+.select-container-select2.error
+  .select2-container--default .select2-selection--single .select2-selection__rendered
+    background $red2
+  .select2-container--default .select2-selection--single .select2-selection__placeholder
+    color rgba(238,87,87,.5)
+    svg g
+      fill $red
+
+.input-group.error
+  label
+    svg g
+      fill $red
+  input
+    background $red2
+    color $red
+    +placeholder()
+      color rgba(238,87,87,.5)
