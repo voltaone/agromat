@@ -29,11 +29,24 @@ button
     color $blue-darkback
     background $blue-back2
 
+  +mobile()
+    font-size: $s22
+    font-weight: bold;
+    letter-spacing: 2px;
+
 .button-switch
   position absolute
   z-index 9998
   right: -17px;
   top: 9px;
+  display block
+  +mobile()
+    right 17px
+    top auto
+    bottom -24px
+    img
+      width 37px
+      transform rotate(270deg)
 
 .button-light
   max-width 320px
@@ -45,7 +58,12 @@ button
   &:hover
     background $blue-darkback
     color $white
+  +mobile()
+    font-size: $s20
+    letter-spacing: 2px;
 
 
 .button-advantage
   margin: 89px auto 8px;
+  +mobile()
+    margin-top 10px

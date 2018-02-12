@@ -5,6 +5,8 @@
     border-radius 0
     height 44px
     transitions()
+    +mobile()
+      height 54px
     &:focus
       outline none
     .select2-selection__clear
@@ -14,6 +16,10 @@
       font-size .875rem
       padding: 12px 10px 11px 20px
       line-height normal
+      +mobile()
+        font-size $s18
+        padding-top: 13px;
+        padding-bottom: 15px;
     .select2-selection__arrow
       display none
 
@@ -69,6 +75,8 @@
   color: rgba(47, 47, 47, .5)
   display: flex;
   align-items: center;
+  +mobile()
+    font-size $s18
   svg
     max-width 33px
     margin-right 7px
@@ -82,5 +90,15 @@
 .select-container-select2.second
   .select2-container--default .select2-selection--single .select2-selection__rendered
     padding-left 29px
+    +mobile()
+      padding-left 20px
+      padding-top: 13px;
+      padding-bottom: 15px;
   .select2-search--dropdown
     padding-left 29px
+    +mobile()
+      padding-left 20px
+
+.select2-search--dropdown .select2-search__field
+  +mobile()
+    font-size $s18

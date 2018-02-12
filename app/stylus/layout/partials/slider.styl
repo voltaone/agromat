@@ -77,22 +77,33 @@
   .arrow
     top auto
     bottom 29.5%
+    +mobile()
+      bottom: 36.5%;
   .arrow.left
     left 30%
     +tablet()
       left 25%
     +portrait()
       left 20%
+    +mobile()
+      left 11px
   .arrow.right
     right 30%
     +tablet()
       right: 25%;
     +portrait()
       right: 20%;
+    +mobile()
+      right: 11px;
 
   .slide
     height: 429px
     position relative
+
+    +mobile()
+      height 400px
+      background $white
+
     .slide-image
       position absolute
       top 0
@@ -100,16 +111,6 @@
       right 0
       bottom 0
       overflow hidden
-      img
-        min-height 100%
-    .slide-description
-      position absolute
-      left 0
-      right 0
-      bottom 0
-      z-index 1000
-      text-align center
-
       &:after
         pseudo(block, absolute)
         opacity: 0.4;
@@ -118,21 +119,44 @@
         right 0
         bottom 0
         height 297px
-        z-index -1
+        z-index 1
+      +mobile()
+        bottom auto
+        height 320px
+      img
+        min-height 100%
+        +mobile()
+          min-height unset
+    .slide-description
+      position absolute
+      left 0
+      right 0
+      bottom 0
+      z-index 1000
+      text-align center
       ul
         display flex
         max-width 360px
         justify-content center
         margin 0 auto
+        +mobile()
+          flex-wrap wrap
+          margin-bottom 5px
         li
           font-size $s30
           color $white
           font-weight 700
           flex 1 1 50%
           max-width 50%
+          +mobile()
+            flex 1 1 100%
+            max-width 100%
+            line-height: 1.2;
           &:first-child
             position relative
             padding-left 20px
+            +mobile()
+              padding-left 0
             &:after
               pseudo(block, absolute)
               background $white
@@ -140,11 +164,18 @@
               top: 7px;
               width: 2px;
               height: 27px;
+              +mobile()
+                display none
 
       p
         color $white
         font-size $s19
         margin-bottom 11px
+        +mobile()
+          margin-bottom 27px
 
       .button
         margin 0 auto 20px
+        +mobile()
+          max-width unset
+          margin-bottom 0

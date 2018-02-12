@@ -187,9 +187,7 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
-    $('.form-tickets--more-options--section-block').slimScroll({
-        height: '97px'
-    });
+
 
     $('.form-tickets--more-options--section-block ul li a').click(function (e) {
         e.preventDefault();
@@ -412,9 +410,15 @@ $(window).on('load resize', function() {
     if (window.matchMedia("(max-width: 767px)").matches) {
         // MENU
         $('.menu-col').appendTo('#menu-panel .row');
+        $('.form-tickets--more-options--section-block').slimScroll({
+            height: '212px'
+        });
 
     } else if (window.matchMedia("(min-width: 768px)").matches) {
         $('.menu-col').appendTo('#menu-desktop');
+        $('.form-tickets--more-options--section-block').slimScroll({
+            height: '97px'
+        });
 
     }
 });

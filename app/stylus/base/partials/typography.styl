@@ -8,12 +8,20 @@ h1
 h2
   font($s30, $blue-text, 700, normal)
   margin-bottom 27px
+  text-align: center
+  +mobile()
+    font-size: $s28
+    line-height: 1.29;
+    margin-bottom 32px
 
-  text-align: center;
 
 h3
   font($s26, $blue-text, 700, 1.15)
   margin-bottom $s22
+
+  +mobile()
+    font-size $s22
+    margin-bottom 8px
 
 
 h4
@@ -27,6 +35,11 @@ h5
 h6
   font($s22, $white, 700, 1.36)
   margin-bottom $s11
+
+  +mobile()
+    font-size: $s28
+    line-height: 1.07;
+    margin-bottom 1rem
 
 
 p

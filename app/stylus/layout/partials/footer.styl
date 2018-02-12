@@ -10,14 +10,22 @@ footer
     font-size: $s14
     line-height: 1.43;
     margin-bottom 1.25rem
+    +mobile()
+      font-size: $s18
+      line-height: 1.5;
     a
       color $white
+      +mobile()
+        text-decoration underline
       &:hover
         color $blue-back3
 
 .footer-border
   position relative
   padding-bottom 31px
+  +mobile()
+    padding-bottom 61px
+
   &:after
     pseudo(block, absolute)
     background $blue-back3
@@ -29,6 +37,8 @@ footer
 .footer-nav
   display flex
   justify-content space-around
+  +mobile()
+    display none
   li
     a
       color $blue-back3

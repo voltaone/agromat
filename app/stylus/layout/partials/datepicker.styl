@@ -5,6 +5,10 @@
   &:valid + label svg g
     fill $black-text
     opacity 1
+  +mobile()
+    height 54px
+    font-size $s18
+
 
 
 .ui-datepicker-prev, .ui-datepicker-next
@@ -60,6 +64,8 @@
   padding-top: 8px;
   padding-bottom 11px
   display none
+  +mobile()
+    width: calc(100% - 30px);
 
 .ui-state-default
   color $black

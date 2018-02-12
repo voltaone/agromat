@@ -36,6 +36,9 @@ a
     transitions()
     +portrait()
       font-size: .75rem;
+    +mobile()
+      font-size $s18
+      font-weight: 700
   &:hover
     span
       text-decoration none
@@ -63,6 +66,8 @@ a
     position relative
     top 3px
     transitions()
+  +mobile()
+    display none
   &:hover
     color $blue-darkback
     opacity .5

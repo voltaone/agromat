@@ -24,6 +24,8 @@
   margin-bottom 18px
   +portrait()
     padding-top 5px
+  +mobile()
+    margin-top 29px
   li
     flex 1 1 129px
     max-width 129px
@@ -37,6 +39,12 @@
       border-top 2px solid $blue-back
       border-bottom 2px solid $blue-back
       background $blue-lightback
+      +mobile()
+        height 60px
+        align-items center
+        display flex
+        justify-content center
+        font-size: $s14;
       &:hover
         background #4a93f0
     .active

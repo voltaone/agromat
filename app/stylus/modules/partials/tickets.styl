@@ -2,9 +2,16 @@
   display flex
   justify-content space-between
   margin-bottom 20px
+  +mobile()
+    flex-wrap wrap
+    margin-bottom 160px
+
   &--left
     max-width calc(72.75% - 9px)
     flex 1 1 calc(72.75% - 9px)
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
   &--right
     max-width calc(27% - 9px)
     flex 1 1 calc(27% - 9px)
@@ -14,15 +21,24 @@
     +portrait()
       max-width calc(28% - 9px)
       flex 1 1 calc(28% - 9px)
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
+      flex-wrap wrap
+      max-height unset
   &--inputs
     display flex
     justify-content space-between
     height 0
     opacity 0
     margin-bottom 0
+    visibility hidden
     transitions()
 
     +portrait()
+      flex-wrap wrap
+
+    +mobile()
       flex-wrap wrap
 
     .select-container-select2, .input-group-datepicker, .form-tickets--passengers
@@ -31,6 +47,10 @@
       +tablet()
         flex 1 1 130px
         max-width: 130px;
+      +mobile()
+        flex 1 1 100%
+        max-width 100%
+        margin-bottom 10px
 
 
     .select-container-select2
@@ -39,7 +59,19 @@
         max-width calc(50% - 3px)
         margin-bottom 5px
 
+    .input-group-datepicker
+      +mobile()
+        flex 1 1 calc(50% - 5px)
+        max-width calc(50% - 5px)
+
   &--options
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
+      padding-left 25px
+      padding-top 7px
+      ul
+        margin-bottom 25px
     ul
       li
         line-height: 1.4;
@@ -48,11 +80,14 @@
     display flex
     height 0
     opacity 0
+    visibility hidden
     transitions()
     +tablet()
       justify-content: space-between;
     +portrait()
       justify-content space-between
+    +mobile()
+      flex-wrap wrap
     &--section
       flex 1 1 160px
       max-width 160px
@@ -61,6 +96,10 @@
       +portrait()
         flex 1 1 calc(25% - 3px)
         max-width calc(25% - 3px)
+        margin-right 0
+      +mobile()
+        flex 1 1 100%
+        max-width 100%
         margin-right 0
       &:last-child
         margin-right: 0;
@@ -80,10 +119,19 @@
               padding: 1px 5px 2px 18px;
               +portrait()
                 padding-left 10px
+              +mobile()
+                font-size $s18
+                padding-top 13px
+                padding-bottom 15px
               &:hover
                 background $white
+                +mobile()
+                  background $trans
             .active
               background $white
+            &:nth-child(odd)
+              a
+                background $white
 
       &-head
         display flex
@@ -93,6 +141,8 @@
         padding: 10px 5px 14px 18px;
         +portrait()
           padding-left 10px
+        +mobile()
+          padding: 12px 5px 16px 18px;
 
         &--text
           color $black-text
@@ -101,6 +151,8 @@
             overflow hidden
             white-space: nowrap;
             text-overflow: ellipsis;
+          +mobile()
+            font-size $s18
         &--image
           margin-right 9px
           height 20px
@@ -114,11 +166,16 @@
     height 151px
     margin-top 10px
     opacity 1
+    visibility visible
+    +mobile()
+      height auto
 
   &--passengers
     position relative
     background $white
     height 44px
+    +mobile()
+      height 54px
     &-options
       position absolute
       visibility hidden
@@ -127,6 +184,8 @@
       transitions()
       padding 6px 0
       background #f0f6ff
+      +mobile()
+        width: 100%
       &--option
         padding-left 13px
         padding-top: 3px;
@@ -171,10 +230,13 @@
     &-select
       height 100%
       position relative
-      padding 12px 36px
+      padding 12px 10px 12px 36px
       font-size $s14
       color rgba(47, 47, 47, .5)
       cursor pointer
+      +mobile()
+        font-size $s18
+        padding-left: 57px;
       &:after, &:before
         pseudo(block, absolute)
         background $blue-lighttext
@@ -192,10 +254,12 @@
           right 11px
       &:before
         transform rotate(-45deg)
-      svg
+      label
         top: 9px;
         left: 17px;
         position absolute
+        +mobile()
+          left 31px
 
   &--submit
     flex 1 1 165px
@@ -206,6 +270,9 @@
     +portrait()
       flex 1 1 100px
       max-width 100px
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
     .button
       padding-top 11px
       padding-bottom 13px
@@ -213,6 +280,11 @@
       font-size $s14
 
       letter-spacing normal
+      +mobile()
+        max-width unset
+        font-size: $s22
+        font-weight: bold;
+        letter-spacing: 2px;
 
 .form-tickets--passengers-options.active
   visibility visible
@@ -230,8 +302,11 @@
 .form-tickets--inputs.visible, .form-tickets--inputs.first
   height 44px
   opacity 1
+  visibility visible
   +portrait()
     height 103px
+  +mobile()
+    height auto
 
 .form-tickets--inputs.visible
   margin-bottom 0
@@ -245,15 +320,24 @@
   .form-tickets--left
     flex 1 1 57.5%
     max-width 57.5%
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
   .form-tickets--right
     flex 1 1 39%
     max-width 39%
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
   .form-tickets--options
     flex 1 1 54%
     max-width 54%
     +tablet()
       flex 1 1 calc(100% - 155px)
       max-width calc(100% - 155px)
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
     ul
       display flex
       justify-content space-between
@@ -262,13 +346,28 @@
       +portrait()
         flex-direction column
         align-items flex-start
+      +mobile()
+        display block
     .radiocheck input + label
       +portrait()
         font-size .75rem
   .input-group.input-group-datepicker.to
     display none
+  .form-tickets--inputs .input-group-datepicker
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
+
 
   .input-group-datepicker, .form-tickets--passengers
     +portrait()
       flex 1 1 calc(50% - 3px)
       max-width calc(50% - 3px)
+
+.form-tickets.way-hard
+  .input-group.input-group-datepicker.to
+    display none
+  .form-tickets--inputs .input-group-datepicker
+    +mobile()
+      flex 1 1 100%
+      max-width 100%

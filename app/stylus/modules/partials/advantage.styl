@@ -8,14 +8,29 @@
   align-items center
   margin-top: 36px;
   margin-bottom: 14px;
+  +mobile()
+    margin-top 0
+    margin-bottom 47px
+
   &--image
     flex 1 1 68px
     max-width 68px
+    +mobile()
+      max-width 53px
+      flex 1 1 53px
     img
       max-width 68px
+      +mobile()
+        max-width 53px
+
   &--text
     flex 1 1 calc(100% - 68px - 29px)
     max-width calc(100% - 68px - 29px)
+    +mobile()
+      flex 1 1 calc(100% - 53px - 22px)
+      max-width calc(100% - 53px - 22px)
     p
       font-size $s14
       margin-bottom 0
+      +mobile()
+        font-size $s16
