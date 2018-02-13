@@ -1,0 +1,57 @@
+//- layouts/layout.pug
+extend layouts/_layout-tours.pug
+
+block title
+    | Главная страница
+
+block content
+
+    include partials/_form-tour
+
+
+
+    section
+        .container
+            .row
+                .col-lg-4.col-md-6
+                    a(href='' title='').tour-block
+                        .tour-block--top
+                            .tour-block--top-image
+                                img(src='img/illus/illus17.png' title='')
+                            .tour-block--top-text
+                                h5 Исландия,  Лавовые водопады
+                                p Modern Mountain Resort
+                                span
+                                    | 5
+                                    img(src='img/icons/star-blue.svg')
+
+                        .tour-block--bottom
+                            .tour-block--bottom-left
+                                ul
+                                    li
+                                        include svgs/calendar.svg
+                                    li от 5 дней
+                            .tour-block--bottom-middle
+                                | от 22 000 грн
+                            .tour-block--bottom-right
+                                | от 12 000 грн
+
+                        .tour-block--panel
+                            p Отель расположен на побережье Исландии, вблизи пляжа с черніми огромными глыбами. В 7 минутах езды — одна из главных остопримечательностей — лавовые водопады.
+                            ul
+                                li
+                                    img(src='')
+                                    | пляж
+                                li
+                                    img(src='')
+                                    | без визы
+                                li
+                                    img(src='')
+                                    | all inclusive
+                                li
+                                    img(src='')
+                                    | пассивный
+                            span.button.button-red Заказать
+
+
+

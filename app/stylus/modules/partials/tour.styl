@@ -1,0 +1,188 @@
+.form-tour
+  display flex
+  justify-content space-between
+  &--left
+    max-width 48.5%
+    flex 1 1 48.5%
+    &-inputs
+      display flex
+      justify-content space-between
+      .select-container-select2, .input-group-datepicker
+        flex 1 1 calc(50% - 3px)
+        max-width calc(50% - 3px)
+        margin-bottom 17px
+    &-sort
+      p
+        font-size $s10
+        line-height: 1.5;
+        color $white
+        opacity .5
+        margin-bottom 2px
+      .select-container-select2
+        max-width 272px
+
+  &--middle
+    max-width 31.5%
+    flex 1 1 31.5%
+    ul
+      display flex
+      align-items center
+      height 44px
+      li
+        margin-right 40px
+        .radiocheck input + label
+          font-size $s14
+
+
+
+  &--right
+    max-width 165px
+    flex 1 1 165px
+    &-submit
+      .button
+        font-size: $s14
+        font-weight: bold
+        letter-spacing: 0.7px
+        padding-top: 11px;
+        padding-bottom: 13px;
+        margin-bottom 20px
+    &-prices
+      display flex
+      flex-wrap wrap
+      justify-content space-between
+      input
+        text-align center
+        flex 1 1 50px
+        max-width 50px
+        font-size: $s10
+        color: #000fcf;
+        padding 2px 0 0
+        height: 15px
+        margin-bottom 17px
+      span
+        opacity: 0.5;
+        font-size: $s14
+        line-height: 1.5
+        color $white
+        position relative
+        top 6px
+
+
+
+
+
+
+.form-tour
+  &--left
+    &-inputs
+      .select2-container--default .select2-selection--single .select2-selection__placeholder
+        padding-left 32px
+        svg
+          position: absolute;
+          left 18px
+          top 8px
+    &-sort
+
+      .select2-container--default .select2-selection--single
+        background $trans
+
+      .select2-container--default .select2-selection--single .select2-selection__rendered
+        padding-top 5px
+        padding-bottom: 6px
+        color: #000fcf;
+        background rgba(255,255,255,.5)
+      .select2-container--default .select2-selection--single
+        height 31px
+
+
+      .select2-container--default .select2-selection--single .select2-selection__arrow
+        display block
+        &:after, &:before
+          pseudo(block, absolute)
+          background $blue-lighttext
+          width 10px
+          height 2px
+          right 20px
+          top 15px
+          transitions()
+          +tablet()
+            right 5px
+        &:after
+          transform rotate(45deg)
+          right 26px
+          +tablet()
+            right 11px
+        &:before
+          transform rotate(-45deg)
+        b
+          display none
+      .select2-container--open
+        top auto !important
+        .select2-selection--single .select2-selection__arrow
+          &:after
+            transform rotate(-45deg)
+          &:before
+            transform rotate(45deg)
+
+
+
+.tour-block
+  display block
+  position relative
+  z-index 10
+  &:after
+    pseudo(block,absolute)
+    background $white
+    box-shadow: 0 3px 54px 0 rgba(0, 0, 0, 0.28);
+    top -15px
+    bottom -15px
+    left -15px
+    right -15px
+    z-index -1
+  &--top
+    height 220px
+    position relative
+    z-index 20
+    &-image
+      position relative
+      display flex
+      align-items center
+      justify-content center
+      overflow hidden
+    &-text
+      position absolute
+      bottom 0
+      left 0
+      right 0
+      padding 0 16px
+      &:after
+        pseudo(block, absolute)
+        opacity: 0.6;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000);
+        height 110px
+        left 0
+        right 0
+        bottom 0
+        z-index 1
+      h5, p
+        position relative
+        z-index 10
+      p
+        font-size $s14
+        margin-bottom $s13
+        color $white
+      span
+        position absolute
+        z-index 10
+        color $white
+        right 11px
+        bottom 9px
+        font-size $s20
+        img
+          position relative
+          left -3px
+          top -1px
+  &--bottom
+    z-index 20
+  &--panel
+    z-index 20

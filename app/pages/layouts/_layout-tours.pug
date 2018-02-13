@@ -1,0 +1,39 @@
+include ../utilities/_mixins.pug
+
+doctype html
+
+html
+
+    include ../partials/_head.pug
+
+    body
+        include ../partials/_navigation.pug
+
+        main
+            include ../partials/_header.pug
+
+            block content
+
+            include ../partials/_footer.pug
+
+            script(type="text/javascript" src="js/noui.js")
+
+
+        #hellopreloader
+            #hellopreloader_preload
+
+        script(type='text/javascript').
+            var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el) {
+                el.style.opacity = 1;
+                var interhellopreloader = setInterval(function () {
+                    el.style.opacity = el.style.opacity - 0.05;
+                    if (el.style.opacity <= 0.05) {
+                        clearInterval(interhellopreloader);
+                        hellopreloader.style.display = "none";
+                    }
+                }, 16);
+            }window.onload = function () {
+                setTimeout(function () {
+                    fadeOutnojquery(hellopreloader);
+                }, 1000);
+            };
