@@ -6,20 +6,35 @@ img {}
 .img-responsive
   width 100%
 
-.vector-plane
+.vector, .plane
   position absolute
+  +mobile()
+    display none
+
+.vector
   bottom -127px
   left 15px
   right 15px
   z-index 1
-  +mobile()
-    display none
-  .plane
-    position absolute
-    right: 13px;
-    top: -113px;
-  .vector
-    +portrait()
-      max-width 100%
-    +tablet()
-      max-width 100%
+  +portrait()
+    max-width 100%
+  +tablet()
+    max-width 100%
+
+.vector2
+  bottom: -72px;
+
+.plane
+  right 28px
+  top 79px
+  z-index 50
+
+.plane2
+  top 60px
+  +tablet()
+    top: 140px;
+    right: 4px;
+  +portrait()
+    bottom: 226px;
+    top: auto;
+    right: -11px;

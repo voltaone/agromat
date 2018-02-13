@@ -9,6 +9,7 @@ button
     outline none
 
 .button
+  cursor pointer
   display block
   max-width 165px
   width 100%
@@ -61,9 +62,17 @@ button
   +mobile()
     font-size: $s20
     letter-spacing: 2px;
+    max-width unset
 
 
 .button-advantage
-  margin: 89px auto 8px;
+  margin: 52px auto 8px;
   +mobile()
     margin-top 10px
+
+.button-blog
+  margin 0 auto 40px
+  +mobile()
+    background #000FCF
+    color $white
+    margin-bottom 48px

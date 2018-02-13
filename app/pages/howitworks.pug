@@ -1,0 +1,135 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | Как это работает?
+
+block content
+
+    include partials/_form-ticket
+
+    section.section-how
+        .container.position-relative
+            .row.justify-content-center
+                .col-md-10
+                    .how-it-works
+                        h2 Как это работает?
+                        .row
+                            .offset-lg-1.col-lg-5.order-md-1.col-md-6
+                                .advantage-block
+                                    .advantage-block--image
+                                        img(src='img/icons/howitworks1.svg' title='' alt='')
+                                    .advantage-block--text
+                                        p Вы осуществляете заказ авиабилетов в комфортном месте и удобное  для вас время
+                            .offset-lg-1.col-lg-5.order-md-3.col-md-6
+                                .advantage-block
+                                    .advantage-block--image
+                                        img(src='img/icons/howitworks2.svg' title='' alt='')
+                                    .advantage-block--text
+                                        p Наш менеджер обрабатывает запрос и консультирует вас по любым вопросам авиаперелета
+                            .col-lg-5.order-md-2.col-md-6
+                                .advantage-block
+                                    .advantage-block--image
+                                        img(src='img/icons/howitworks3.svg' title='' alt='')
+                                    .advantage-block--text
+                                        p Ваш билет мы можем отправить вам в электронном или осуществить доставку курьером
+                            .col-lg-5.order-md-4.col-md-6
+                                .advantage-block
+                                    .advantage-block--image
+                                        img(src='img/icons/howitworks4.svg' title='' alt='')
+                                    .advantage-block--text
+                                        p Вы совершаете безопасный перелет, пользуясь услугами проверенных авиаперевозчиков
+                                            span.blue-text  IATA
+                        a(href='' title='').button.button-light У меня остались вопросы
+            img(src='img/planes/plane.svg').plane.plane2
+            img(src='img/planes/vector2.png').vector.vector2
+
+    section
+        .container
+            .row
+                .col-12
+                    h2 Популярные направления
+                    a(href='' title='').link-blog-all Все туры
+                        include svgs/angle-right-blue.svg
+                .col-md-6.col-lg-4
+                    a(href='' title='').popular-block
+                        .popular-block--image
+                            img(src='img/illus/illus3.png' title='')
+                        .popular-block--text
+                            ul
+                                li Дания
+                                li от 1 200 грн
+                        .popular-block--button
+                            span.button.button-light Хочу в Копенгаген
+                .col-md-6.col-lg-4
+                    a(href='' title='').popular-block
+                        .popular-block--image
+                            img(src='img/illus/illus4.png' title='')
+                        .popular-block--text
+                            ul
+                                li Англия
+                                li от 1 800 грн
+                        .popular-block--button
+                            span.button.button-light Хочу в Лондон
+                .col-md-6.col-lg-4
+                    a(href='' title='').popular-block
+                        .popular-block--image
+                            img(src='img/illus/illus5.png' title='')
+                        .popular-block--text
+                            ul
+                                li Вьетнам
+                                li от 9 800 грн
+                        .popular-block--button
+                            span.button.button-light Хочу в Ханой
+                .col-md-6.col-lg-4
+                    a(href='' title='').popular-block
+                        .popular-block--image
+                            img(src='img/illus/illus6.png' title='')
+                        .popular-block--text
+                            ul
+                                li Египет
+                                li от 2 300 грн
+                        .popular-block--button
+                            span.button.button-light Хочу в Каир
+                .col-md-6.col-lg-4
+                    a(href='' title='').popular-block
+                        .popular-block--image
+                            img(src='img/illus/illus7.png' title='')
+                        .popular-block--text
+                            ul
+                                li Исландия
+                                li от 4 200 грн
+                        .popular-block--button
+                            span.button.button-light Хочу в Рейкьявик
+                .col-md-6.col-lg-4
+                    a(href='' title='').popular-block
+                        .popular-block--image
+                            img(src='img/illus/illus8.png' title='')
+                        .popular-block--text
+                            ul
+                                li Венгрия
+                                li от 600 грн
+                        .popular-block--button
+                            span.button.button-light Хочу в Будапешт
+
+    section
+        .container
+            .row
+                .col-12
+                    h2 Авиакомпании-партнеры
+                    ul.ul-partners
+                        li
+                            img(src='img/agencies/agency1.svg' title='')
+                        li
+                            img(src='img/agencies/agency2.svg' title='')
+                        li
+                            img(src='img/agencies/agency3.svg' title='')
+                        li
+                            img(src='img/agencies/agency4.svg' title='')
+                        li
+                            img(src='img/agencies/agency5.svg' title='')
+                        li
+                            img(src='img/agencies/agency6.svg' title='')
+
+
+

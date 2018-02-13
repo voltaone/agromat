@@ -2,12 +2,14 @@
 @import '../../utilities/mixins'
 
 h1
-  font(2.5rem, $black, 900, normal)
-  margin-bottom 2.5rem
+  font($s30, $white, 700, 1.33)
+  margin-bottom $s30
+  +mobile()
+    margin-bottom $s25
 
 h2
   font($s30, $blue-text, 700, normal)
-  margin-bottom 27px
+  margin-bottom 63px
   text-align: center
   +mobile()
     font-size: $s28
@@ -60,3 +62,7 @@ hr
 
 .gray
   color $gray
+
+.blue-text
+  color #000fcf
+  font-weight 700

@@ -45,3 +45,65 @@ ol
   margin-left 1rem
   li
     margin-bottom 1rem
+
+.ul-partners
+  display flex
+  flex-direction row
+  justify-content center
+  align-items center
+  flex-wrap wrap
+  li
+    flex 1 1 16.666666%
+    max-width 16.666666%
+    text-align center
+    margin-bottom 25px
+
+    +displays()
+      margin-bottom 0
+    +tablet()
+      flex 1 1 20%
+      max-width 20%
+    +portrait()
+      flex 1 1 25%
+      max-width 25%
+    +mobile()
+      flex 1 1 50%
+      max-width 50%
+      margin-bottom 42px
+
+.ul-menu
+  display flex
+  justify-content center
+  +portrait()
+    float right
+  +mobile()
+    flex-wrap wrap
+    margin-bottom 15px
+  li
+    background #6eadff
+    margin 0 7px
+    +portrait()
+      margin 0 5px
+    +mobile()
+      margin-bottom 15px
+    a
+      display block
+      padding 4px 20px
+      border 1px solid rgba(255,255,255,0.5)
+      font-size $s14
+      color rgba(255,255,255,0.5)
+      +portrait()
+        padding-left 15px
+        padding-right 15px
+      +mobile()
+        font-size 1.25rem
+      &:hover
+        background #a7cdff
+        color $white
+    .active
+      background $white
+      color: #000fcf;
+      border-color $white
+      &:hover
+        background $white
+        color: #000fcf;

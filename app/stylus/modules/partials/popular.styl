@@ -1,0 +1,75 @@
+.popular-block
+  position relative
+  height 232px
+  display block
+  margin-bottom 30px
+  &--image
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    display flex
+    overflow hidden
+    align-items center
+    justify-content center
+  &--text
+    position absolute
+    left 0
+    right 0
+    bottom 0
+    padding 6px 16px
+    &:after
+      pseudo(block, absolute)
+      opacity: 0.6;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #000000);
+      height 116px
+      left 0
+      right 0
+      bottom 0
+      z-index 1
+    ul
+      display flex
+      position relative
+      z-index 10
+      align-items center
+      li
+        color $white
+        position relative
+        font-weight 700
+        &:first-child
+          font-size: $s19
+          font-weight: 300;
+          padding-right 21px
+          margin-right 17px
+          &:after
+            pseudo(block,absolute)
+            right 0
+            top 0
+            width 2px
+            height 34px
+            background $white
+  &--button
+    background rgba(0,0,0,.3)
+    position absolute
+    display flex
+    align-items center
+    justify-content center
+    top 0
+    left 0
+    right 0
+    bottom 0
+    z-index -1
+    opacity 0
+    visibility hidden
+    transitions()
+    .button
+      max-width 166px
+      margin 0
+      padding-left 5px
+      padding-right 5px
+  &:hover
+    .popular-block--button
+      z-index 40
+      opacity 1
+      visibility visible
