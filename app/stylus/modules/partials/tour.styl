@@ -1,16 +1,30 @@
 .form-tour
   display flex
   justify-content space-between
+  +mobile()
+    flex-wrap wrap
   &--left
     max-width 48.5%
     flex 1 1 48.5%
+    +mobile()
+      max-width 100%
+      flex 1 1 100%
+    +tablet()
+      max-width 59.2%
+      flex 1 1 59.2%
     &-inputs
       display flex
       justify-content space-between
+      +mobile()
+        flex-wrap wrap
       .select-container-select2, .input-group-datepicker
         flex 1 1 calc(50% - 3px)
         max-width calc(50% - 3px)
         margin-bottom 17px
+        +mobile()
+          max-width 100%
+          flex 1 1 100%
+
     &-sort
       p
         font-size $s10
@@ -24,20 +38,38 @@
   &--middle
     max-width 31.5%
     flex 1 1 31.5%
+    +mobile()
+      max-width 100%
+      flex 1 1 100%
+    +tablet()
+      max-width 21%
+      flex 1 1 21%
+    +portrait()
+      max-width 22.5%
+      flex 1 1 22.5%
     ul
       display flex
       align-items center
       height 44px
+      +tablet()
+        flex-wrap wrap
+      +portrait()
+        flex-wrap wrap
       li
         margin-right 40px
         .radiocheck input + label
           font-size $s14
-
-
+        +tablet()
+          margin-right 0
+        +portrait()
+          margin-right 0
 
   &--right
     max-width 165px
     flex 1 1 165px
+    +mobile()
+      max-width 100%
+      flex 1 1 100%
     &-submit
       .button
         font-size: $s14
@@ -130,19 +162,24 @@
   display block
   position relative
   z-index 10
+  margin-bottom 35px
   &:after
     pseudo(block,absolute)
     background $white
     box-shadow: 0 3px 54px 0 rgba(0, 0, 0, 0.28);
     top -15px
-    bottom -15px
+    bottom auto
     left -15px
     right -15px
     z-index -1
+    opacity 0
+    +mobile()
+      display none
   &--top
     height 220px
     position relative
     z-index 20
+    margin-bottom 13px
     &-image
       position relative
       display flex
@@ -184,5 +221,107 @@
           top -1px
   &--bottom
     z-index 20
+    display flex
+    justify-content space-between
+    &-left
+      ul
+        display flex
+        align-items center
+        li
+          font-size $s14
+          color $black-text
+          margin-right 15px
+          +tablet()
+            margin-right 10px
+
+          &:last-child
+            margin-right 0
+    &-right
+      display flex
+      &--price-new
+        font-size: $s20
+        font-weight: bold;
+        text-align: right;
+        color: #ee5757
+        display none
+        +tablet()
+          font-size $s16
+      &--price-regular
+        font-size: $s20
+        font-weight: bold;
+        text-align: right;
+        color: #4f9cff
+        +tablet()
+          font-size $s16
+      &--price-old
+        color $black-text
+        opacity .5
+        text-decoration line-through
+        margin-right 6px
+        position relative
+        top -4px
+        display none
+        +tablet()
+          font-size $s12
+
   &--panel
-    z-index 20
+    z-index -1000
+    opacity 0
+    visibility hidden
+    position absolute
+    top 100%
+    left 0
+    right 0
+    padding-top 12px
+    padding-bottom 17px
+    background $white
+    height 257px
+    +mobile()
+      display none
+    &-text
+      height 100px
+      overflow hidden
+      p
+        font-size $s14
+        color $black-text
+    .button
+      margin 0 auto
+  &:hover
+    z-index 100
+    &:after
+      bottom -259px
+      opacity 1
+    .tour-block--panel
+      visibility visible
+      z-index 10
+      opacity 1
+
+.tour-discount
+  .tour-block--bottom-right--price-old
+    display block
+  .tour-block--bottom-right--price-new
+    display block
+  .tour-block--bottom-right--price-regular
+    display none
+
+
+.tour-advantages
+  display flex
+  flex-wrap wrap
+  padding-bottom 11px
+  li
+    flex 1 1 50%
+    max-width 50%
+    display flex
+    align-items center
+    margin-bottom 2px
+    .tour-image
+      flex 1 1 35px
+      max-width 35px
+      svg g
+        fill #4F9CFF
+        opacity 1
+    .tour-text
+      font-size $s14
+      color $black-text
+

@@ -1,0 +1,245 @@
+//- layouts/layout.pug
+extend layouts/_layout-tours.pug
+
+block title
+    | Туры
+
+block content
+
+    include partials/_header-overview
+
+    section.section-how
+        .container.position-relative
+            .row.justify-content-center
+                .col-md-10
+                    article.how-it-works.how-it-details
+
+
+                        h2 Детали
+                        p Отель расположен на побережье Италии, в окружении прекрасной тропической зелени, белоснежного пляжа и кристально чистой голубой лагуны.К услугам гостей круглосуточная стойка регистрации,принадлежности для барбекю, бесплатный Wi-Fi, прокат снаряжения для водных видов.
+
+                        p Тур включает в себя завтрак, обед, ужин – шведский стол. В течении дня Вам будут предложены горячие, прохладительные и алкогольные напитки местного производства, а так же в определённое время полдник и закуски. Салон красоты, услуги врача (платно), лифты, сейф на ресепшн (платно), обмен валют, аренда автомобиля (платно)
+
+                        p Deluxe Room оборудован кондиционером и телевизором с плоским экраном и спутниковыми каналами, большой двуспальной кроватью, ванной комнатой с душем. В номерах предоставляется бесплатный Wi-Fi. По запросу предоставляется детская кровать.
+
+
+    section
+        .container
+            .row
+                .col-12
+                    h2.h2-tour Похожие туры
+                    a(href='' title='').link-blog-all Все туры
+                        include svgs/angle-right-blue.svg
+                .col-12
+                    ul.ul-menu
+                        li
+                            a(href='' title='') по стране
+                        li
+                            a(href='' title='') по цене
+
+                .col-lg-4.col-md-6.col-xl-3
+                    a(href='' title='').tour-block
+                        .tour-block--top
+                            .tour-block--top-image
+                                img(src='img/illus/illus17.png' title='')
+                            .tour-block--top-text
+                                h5 Исландия,  Лавовые водопады
+                                p Modern Mountain Resort
+                                span
+                                    | 5
+                                    img(src='img/icons/star-blue.svg')
+
+                        .tour-block--bottom
+                            .tour-block--bottom-left
+                                ul
+                                    li
+                                        include svgs/calendar.svg
+                                    li от 5 дней
+                            .tour-block--bottom-right
+                                .tour-block--bottom-right--price-old
+                                    | от 22 000 грн
+                                .tour-block--bottom-right--price-new
+                                    | от 12 000 грн
+                                .tour-block--bottom-right--price-regular
+                                    | от 12 000 грн
+
+                        .tour-block--panel
+                            .tour-block--panel-text
+                                p Отель расположен на побережье Исландии, вблизи пляжа с черніми огромными глыбами. В 7 минутах езды — одна из главных остопримечательностей — лавовые водопады.
+                            ul.tour-advantages
+                                li
+                                    .tour-image
+                                        include svgs/beach.svg
+                                    .tour-text
+                                        | пляж
+                                li
+                                    .tour-image
+                                        include svgs/visa.svg
+                                    .tour-text
+                                        | без визы
+                                li
+                                    .tour-image
+                                        include svgs/food.svg
+                                    .tour-text
+                                        | all inclusive
+                                li
+                                    .tour-image
+                                        include svgs/passive.svg
+                                    .tour-text
+                                        | пассивный
+                            span.button.button-red Заказать
+                .col-lg-4.col-md-6.col-xl-3
+                    a(href='' title='').tour-block
+                        .tour-block--top
+                            .tour-block--top-image
+                                img(src='img/illus/illus17.png' title='')
+                            .tour-block--top-text
+                                h5 Исландия,  Лавовые водопады
+                                p Modern Mountain Resort
+                                span
+                                    | 5
+                                    img(src='img/icons/star-blue.svg')
+
+                        .tour-block--bottom
+                            .tour-block--bottom-left
+                                ul
+                                    li
+                                        include svgs/calendar.svg
+                                    li от 5 дней
+                            .tour-block--bottom-right
+                                .tour-block--bottom-right--price-old
+                                    | от 22 000 грн
+                                .tour-block--bottom-right--price-new
+                                    | от 12 000 грн
+                                .tour-block--bottom-right--price-regular
+                                    | от 12 000 грн
+
+                        .tour-block--panel
+                            .tour-block--panel-text
+                                p Отель расположен на побережье Исландии, вблизи пляжа с черніми огромными глыбами. В 7 минутах езды — одна из главных остопримечательностей — лавовые водопады.
+                            ul.tour-advantages
+                                li
+                                    .tour-image
+                                        include svgs/beach.svg
+                                    .tour-text
+                                        | пляж
+                                li
+                                    .tour-image
+                                        include svgs/visa.svg
+                                    .tour-text
+                                        | без визы
+                                li
+                                    .tour-image
+                                        include svgs/food.svg
+                                    .tour-text
+                                        | all inclusive
+                                li
+                                    .tour-image
+                                        include svgs/passive.svg
+                                    .tour-text
+                                        | пассивный
+                            span.button.button-red Заказать
+
+
+                .col-lg-4.col-md-6.col-xl-3
+                    a(href='' title='').tour-block
+                        .tour-block--top
+                            .tour-block--top-image
+                                img(src='img/illus/illus17.png' title='')
+                            .tour-block--top-text
+                                h5 Исландия,  Лавовые водопады
+                                p Modern Mountain Resort
+                                span
+                                    | 5
+                                    img(src='img/icons/star-blue.svg')
+
+                        .tour-block--bottom
+                            .tour-block--bottom-left
+                                ul
+                                    li
+                                        include svgs/calendar.svg
+                                    li от 5 дней
+                            .tour-block--bottom-right
+                                .tour-block--bottom-right--price-old
+                                    | от 22 000 грн
+                                .tour-block--bottom-right--price-new
+                                    | от 12 000 грн
+                                .tour-block--bottom-right--price-regular
+                                    | от 12 000 грн
+
+                        .tour-block--panel
+                            .tour-block--panel-text
+                                p Отель расположен на побережье Исландии, вблизи пляжа с черніми огромными глыбами. В 7 минутах езды — одна из главных остопримечательностей — лавовые водопады.
+                            ul.tour-advantages
+                                li
+                                    .tour-image
+                                        include svgs/beach.svg
+                                    .tour-text
+                                        | пляж
+                                li
+                                    .tour-image
+                                        include svgs/visa.svg
+                                    .tour-text
+                                        | без визы
+                                li
+                                    .tour-image
+                                        include svgs/food.svg
+                                    .tour-text
+                                        | all inclusive
+                                li
+                                    .tour-image
+                                        include svgs/passive.svg
+                                    .tour-text
+                                        | пассивный
+                            span.button.button-red Заказать
+                .col-lg-4.col-md-6.col-xl-3
+                    a(href='' title='').tour-block
+                        .tour-block--top
+                            .tour-block--top-image
+                                img(src='img/illus/illus17.png' title='')
+                            .tour-block--top-text
+                                h5 Исландия,  Лавовые водопады
+                                p Modern Mountain Resort
+                                span
+                                    | 5
+                                    img(src='img/icons/star-blue.svg')
+
+                        .tour-block--bottom
+                            .tour-block--bottom-left
+                                ul
+                                    li
+                                        include svgs/calendar.svg
+                                    li от 5 дней
+                            .tour-block--bottom-right
+                                .tour-block--bottom-right--price-old
+                                    | от 22 000 грн
+                                .tour-block--bottom-right--price-new
+                                    | от 12 000 грн
+                                .tour-block--bottom-right--price-regular
+                                    | от 12 000 грн
+
+                        .tour-block--panel
+                            .tour-block--panel-text
+                                p Отель расположен на побережье Исландии, вблизи пляжа с черніми огромными глыбами. В 7 минутах езды — одна из главных остопримечательностей — лавовые водопады.
+                            ul.tour-advantages
+                                li
+                                    .tour-image
+                                        include svgs/beach.svg
+                                    .tour-text
+                                        | пляж
+                                li
+                                    .tour-image
+                                        include svgs/visa.svg
+                                    .tour-text
+                                        | без визы
+                                li
+                                    .tour-image
+                                        include svgs/food.svg
+                                    .tour-text
+                                        | all inclusive
+                                li
+                                    .tour-image
+                                        include svgs/passive.svg
+                                    .tour-text
+                                        | пассивный
+                            span.button.button-red Заказать

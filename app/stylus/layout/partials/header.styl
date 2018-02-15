@@ -34,4 +34,94 @@ header
     left 0
     right 0
     top 100%
-    height: 151px;
+    height: 151px
+
+.header-country
+  background $blue-back
+  padding-top 30px
+  padding-bottom 4px
+  margin-bottom 170px
+  +mobile()
+    margin-bottom 190px
+  h1
+    margin-bottom: 19px
+    +mobile()
+      margin-bottom 15px
+  &--top
+    display flex
+    +mobile()
+      flex-wrap wrap
+    &-text
+      flex 1 1 50%
+      max-width 50%
+      +mobile()
+        flex 1 1 100%
+        max-width 100%
+    &-weather
+      flex 1 1 158px
+      max-width 158px
+      +mobile()
+        flex 1 1 100%
+        max-width 100%
+
+
+  .tour-advantages
+    +mobile()
+      padding-bottom 35px
+    li
+      padding-right 10px
+      +mobile()
+        margin-bottom 25px
+      .tour-image
+        svg g
+          fill $white
+      .tour-text
+        color $white
+
+.header-overview
+  padding-top 7px
+  position relative
+  z-index 1
+  margin-bottom 87px
+  &:after
+    pseudo(block, absolute)
+    background $blue-back
+    left 0
+    right 0
+    top 0
+    height 253px
+    z-index: -1
+  &--top
+    padding-top 23px
+    &-text
+      h1
+        margin-bottom 0
+      p
+        font-size: $s22
+        color $white
+        margin-bottom 6px
+    &-info
+      display flex
+      align-items flex-end
+      margin-bottom 8px
+      &--head
+        flex 1 1 54%
+        max-width 54%
+        h4
+          font-size $s30
+          margin-bottom 4px
+      &--weather
+        flex 1 1 28%
+        max-width 28%
+        .ul-weather
+          padding-top 0
+  &--bottom
+    .button
+      max-width: 263px;
+      box-shadow: 0 2px 35px 0 rgba(21, 24, 62, 0.28);
+    .tour-advantages
+      padding-top 48px
+      li
+        flex 1 1 33.333333%
+        max-width 33.33333%
+        margin-bottom: 5px;

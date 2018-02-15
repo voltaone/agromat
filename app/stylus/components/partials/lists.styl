@@ -106,4 +106,30 @@ ol
       border-color $white
       &:hover
         background $white
-        color: #000fcf;
+        color: #000fcf
+
+.ul-stars
+  display flex
+  li
+    margin-right 23px
+
+.ul-weather
+  display flex
+  padding 8px 0
+  justify-content space-between
+  +mobile()
+    justify-content flex-start
+    padding-bottom 28px
+  li
+    text-align center
+    +mobile()
+      margin-right 30px
+    img, span
+      margin 0 auto
+      display block
+    img
+      margin-bottom 9px
+    span
+      opacity: .5
+      font-size: $s22
+      color: $white

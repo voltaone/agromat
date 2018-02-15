@@ -6,6 +6,17 @@ img {}
 .img-responsive
   width 100%
 
+.img-country
+  position absolute
+  top -24px
+  right 15px
+  max-width 100%
+  +mobile()
+    max-width calc(100% - 30px)
+    right 15px
+    left 15px
+
+
 .vector, .plane
   position absolute
   +mobile()

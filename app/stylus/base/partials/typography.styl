@@ -16,6 +16,9 @@ h2
     line-height: 1.29;
     margin-bottom 32px
 
+h2.h2-tour
+  margin-bottom 10px
+
 
 h3
   font($s26, $blue-text, 700, 1.15)
@@ -27,8 +30,11 @@ h3
 
 
 h4
-  font(1.5rem, $black, 600, normal)
-  margin-bottom 1.75rem
+  font($s20, $black-text, 700, normal)
+  margin-bottom 49px
+  +mobile()
+    margin-bottom 21px
+
 
 h5
   font(1rem, $white, 700, normal)
