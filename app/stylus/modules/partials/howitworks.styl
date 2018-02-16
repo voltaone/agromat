@@ -6,8 +6,7 @@
   position relative
   z-index 30
   +mobile()
-    padding-left 0
-    padding-right 0
+    padding 0
     box-shadow none
   .button
     margin 19px auto 0
@@ -15,4 +14,57 @@
       max-width unset
 
 .how-it-details
-    padding 60px 100px 70px
+  padding 60px 100px 70px
+  +tablet()
+    padding-left 50px
+    padding-right 50px
+  +portrait()
+    padding-left 20px
+    padding-right 20px
+  +mobile()
+    padding 0
+
+.how-it-about
+  margin-top 0
+  padding-top 93px
+  +portrait()
+    padding-left 60px
+    padding-right 60px
+  +mobile()
+    padding-top 40px
+
+.how-it-contacts
+  padding 0
+  margin-top 0
+  +mobile()
+    box-shadow: 0 2px 22px 0 rgba(1, 0, 62, 0.13);
+  .contact
+    padding-left 46px
+    padding-top 56px
+    +tablet()
+      padding-left 26px
+    +portrait()
+      padding-left 0
+      padding-bottom 50px
+    +mobile()
+      padding 25px 21px 40px
+    h6
+      color #2d80eb
+      margin-bottom: 21px;
+    p
+      font-size $s14
+      margin-bottom: 20px;
+    a
+      color #2d80eb
+      &:hover
+        color #80b4f8
+  .contact.contact1
+    padding-left 65px
+    +tablet()
+      padding-left 45px
+    +portrait()
+      padding-left 0
+    +mobile()
+      padding 25px 21px 10px
+
+

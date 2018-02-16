@@ -6,9 +6,16 @@ $(document).ready(function () {
     "use strict";
 
     // SLICK SLIDER
-    $(".slider-full").slick({
+    $(".slider-main").slick({
         prevArrow: "<div class='arrow left'><img src='img/icons/angle-left.svg'></div>",
         nextArrow: "<div class='arrow right'><img src='img/icons/angle-right.svg'></div>",
+        fade: true
+    });
+    // SLICK SLIDER
+    $(".slider-gallery").slick({
+        prevArrow: "<div class='arrow left'><img src='img/icons/angle-left-blue-s.svg'></div>",
+        nextArrow: "<div class='arrow right'><img src='img/icons/angle-right-blue-s.svg'></div>",
+        dots: true,
         fade: true
     });
 

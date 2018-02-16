@@ -21,7 +21,7 @@ input[type='radio'].error + label
   .select2-container--default .select2-selection--single .select2-selection__rendered
     background $red2
   .select2-container--default .select2-selection--single .select2-selection__placeholder
-    color rgba(238,87,87,.5)
+    color rgba(238, 87, 87, .5)
     svg g
       fill $red
 
@@ -33,4 +33,10 @@ input[type='radio'].error + label
     background $red2
     color $red
     +placeholder()
-      color rgba(238,87,87,.5)
+      color rgba(238, 87, 87, .5)
+
+textarea.error
+  background $red2
+  color $red
+  +placeholder()
+    color rgba(238, 87, 87, .5)

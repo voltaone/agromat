@@ -91,8 +91,14 @@ header
     top 0
     height 253px
     z-index: -1
+    +portrait()
+      height: 285px;
+    +mobile()
+      height 500px
   &--top
     padding-top 23px
+    +mobile()
+      padding-top 15px
     &-text
       h1
         margin-bottom 0
@@ -100,28 +106,98 @@ header
         font-size: $s22
         color $white
         margin-bottom 6px
+        +mobile()
+          font-size $s18
+          line-height: 1.39;
     &-info
       display flex
       align-items flex-end
       margin-bottom 8px
+      +mobile()
+        flex-wrap wrap
+        padding-top 28px
       &--head
         flex 1 1 54%
         max-width 54%
+        +portrait()
+          flex 1 1 56%
+          max-width 56%
+        +mobile()
+          flex 1 1 100%
+          max-width 100%
         h4
           font-size $s30
           margin-bottom 4px
+          +mobile()
+            margin-bottom 20px
       &--weather
         flex 1 1 28%
         max-width 28%
+        +portrait()
+          flex 1 1 45%
+          max-width 45%
+        +mobile()
+          flex 1 1 100%
+          max-width 100%
         .ul-weather
           padding-top 0
   &--bottom
     .button
       max-width: 263px;
       box-shadow: 0 2px 35px 0 rgba(21, 24, 62, 0.28);
+      +mobile()
+        max-width 100%
     .tour-advantages
       padding-top 48px
+      +mobile()
+        padding-top 57px
       li
         flex 1 1 33.333333%
         max-width 33.33333%
         margin-bottom: 5px;
+        +portrait()
+          flex 1 1 50%
+          max-width 50%
+        +mobile()
+          flex 1 1 50%
+          max-width 50%
+
+.header-overview--image
+  position absolute
+  top 0
+  left 15px
+  display flex
+  height 380px
+  width 100%
+  overflow hidden
+  display flex
+  align-items center
+  justify-content center
+  img
+    max-width 100%
+  +mobile()
+    position static
+    height 188px
+    margin-bottom 28px
+
+.header-about
+  background $blue-back
+  padding-top 26px
+  padding-bottom 7px
+  &:after
+    pseudo(block, absolute)
+    background $blue-back
+    left 0
+    right 0
+    top 100%
+    height: 120px;
+    +mobile()
+      height 40px
+  h1
+    text-align center
+    margin-bottom 3px
+  p
+    text-align center
+    font-size: $s22
+    color $white
+    line-height: 1

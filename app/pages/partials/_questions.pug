@@ -1,0 +1,19 @@
+section
+    .container.position-relative
+        .row.justify-content-center
+            .col-lg-6.col-md-8
+                h2.h2-question Мы всегда рады вас слышать. Напишите нам!
+                form.form-questions
+                    .input-group.error
+                        input(placeholder='Ваше имя' required='')#quest-name
+                        label(for='quest-name')
+                            include ../svgs/name.svg
+                    .input-group
+                        input(placeholder='Email' required='')#quest-mail
+                        label(for='quest-mail')
+                            include ../svgs/mail.svg
+                    textarea(placeholder='Введите текст письма…').error
+                    button(type='submit').button Отправить
+
+        img(src='img/planes/plane.svg').plane.plane3
+        img(src='img/planes/vector2.png').vector.vector2

@@ -16,7 +16,7 @@
 
 .slider
   position relative
-  overflow hidden
+  //overflow hidden
   .arrow
     position absolute
     text-align center
@@ -50,7 +50,7 @@
 
 
   .slick-dots
-    bottom 0
+    bottom -9px
     left 0
     right 0
     position absolute
@@ -58,20 +58,20 @@
     flex-direction row
     justify-content center
     li
-      margin 5px
+      margin 10px
       button
         padding 0
-        width 15px
-        height 15px
+        width 16px
+        height 16px
+        border 3px solid $white
         border-radius 50%
-        background $gray
+        background #D6E8FF
         color $trans
         &:hover
-          background $black
           opacity .6
     .slick-active
       button
-        background $black
+        border-color #D6E8FF
 
 .slider-full
   .arrow
@@ -111,6 +111,9 @@
       right 0
       bottom 0
       overflow hidden
+      justify-content center
+      display flex
+      align-items center
       &:after
         pseudo(block, absolute)
         opacity: 0.4;
@@ -124,9 +127,7 @@
         bottom auto
         height 320px
       img
-        min-height 100%
-        +mobile()
-          min-height unset
+        height 100%
     .slide-description
       position absolute
       left 0
@@ -179,3 +180,43 @@
         +mobile()
           max-width unset
           margin-bottom 0
+
+.slider-gallery
+  .slick-dots
+    +mobile()
+      display none
+  .slick-list
+    padding-bottom: 47px;
+    +mobile()
+      padding-bottom 0
+  .arrow
+    top: 47%;
+    +mobile()
+      width 100%
+      max-width 130px
+      background #d6e8ff
+      display flex
+      align-items center
+      justify-content center
+      height 44px
+      top auto
+      bottom -27px
+      img
+        height 22px
+
+
+  .arrow.left
+    left: -4.3%;
+    +mobile()
+      left 0
+  .arrow.right
+    right: -4.3%;
+    +mobile()
+      right 0
+  .slide
+    height 490px
+    +mobile()
+      height 340px
+    .slide-image
+      &:after
+        display none

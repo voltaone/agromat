@@ -108,6 +108,31 @@ ol
         background $white
         color: #000fcf
 
+.ul-menu-tours
+  margin-bottom 40px
+  +portrait()
+    float none
+  +mobile()
+    justify-content space-between
+    margin-bottom 29px
+  li
+    margin 0 15px
+    +mobile()
+      margin 0
+    a
+      color #2d80eb
+      border: solid 1px #2d80eb;
+      min-width 165px
+      text-align center
+      background $white
+      +mobile()
+          max-width 130px
+          min-width unset
+      &:hover
+        background #d6e8ff
+        color #2d80eb
+
+
 .ul-stars
   display flex
   li

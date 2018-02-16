@@ -1,5 +1,5 @@
 //- layouts/layout.pug
-extend layouts/_layout-tours.pug
+extend layouts/_layout.pug
 
 block title
     | Туры
@@ -11,7 +11,7 @@ block content
     section.section-how
         .container.position-relative
             .row.justify-content-center
-                .col-md-10
+                .col-lg-10
                     article.how-it-works.how-it-details
 
 
@@ -22,6 +22,24 @@ block content
 
                         p Deluxe Room оборудован кондиционером и телевизором с плоским экраном и спутниковыми каналами, большой двуспальной кроватью, ванной комнатой с душем. В номерах предоставляется бесплатный Wi-Fi. По запросу предоставляется детская кровать.
 
+    section
+        .container
+            .row
+                .col-12
+                    h2 Галерея
+                .col-12
+                    .slider-full.slider.slider-gallery
+                        .slide
+                            .slide-image
+                                img(src='img/illus/illus10.png' title='' alt='')
+                        .slide
+                            .slide-image
+                                img(src='img/illus/illus11.png' title='' alt='')
+                        .slide
+                            .slide-image
+                                img(src='img/illus/illus12.png' title='' alt='')
+
+
 
     section
         .container
@@ -31,7 +49,7 @@ block content
                     a(href='' title='').link-blog-all Все туры
                         include svgs/angle-right-blue.svg
                 .col-12
-                    ul.ul-menu
+                    ul.ul-menu.ul-menu-tours
                         li
                             a(href='' title='') по стране
                         li

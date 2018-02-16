@@ -1,0 +1,29 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | Как это работает?
+
+block content
+
+    include partials/_header-about
+
+    section.section-how.section-about
+        .container.position-relative
+            .row.justify-content-center
+                .col-lg-10
+                    img(src='img/illus/illus24.png' title='').img-responsive
+                    .how-it-works.how-it-about
+                        .row.justify-content-center
+                            .col-lg-10
+                                article
+                                    p Туроператор «Агромат-Тур» — молодая развивающаяся организация, основанная в 2007 году компанией АГРОМАТ, представляющая туристические поездки во многие страны мира и уголки нашей страны, а также полный комплекс услуг, связанных с оформлением паспортов и размещением в отелях.
+
+                                    p Мы уверяем Вас, что Вы останетесь довольны уровнем обслуживания, поскольку качество курортов, предлагаемых туроператором «Агромат-Тур» проверено непосредственно нашими сотрудниками!
+
+                                    p Если у Вас есть вопросы или пожелания, смело обращайтесь к нам! Мы всегда готовы вам помочь и сделать ваш отдых более приятным и беззаботным!
+
+    include partials/_questions
+
+
+

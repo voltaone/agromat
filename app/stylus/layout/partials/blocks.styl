@@ -11,6 +11,9 @@ article
     color $black-text
     font-size $s14
     margin-bottom 20px
+    +mobile()
+      font-size $s16
+      line-height: 1.75;
   h2
     margin-bottom: 47px;
 
@@ -27,4 +30,12 @@ main
   +mobile()
     background $white
     position relative
+
+.section-about
+  margin-bottom 100px
+  background $trans
+
+.section-contacts
+  +mobile()
+    background $trans
 

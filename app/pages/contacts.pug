@@ -1,0 +1,55 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | Как это работает?
+
+block content
+
+    include partials/_header-contacts
+
+    section.section-how.section-contacts
+        .container.position-relative
+            .row.justify-content-center
+                .col-12
+                    .how-it-works.how-it-contacts
+                        .row.justify-content-between
+                            .col-lg-3.col-md-4.offset-md-2.offset-lg-0
+                                .contact.contact1
+                                    h6 Филиал
+                                    p 01033,  Украина, г. Киев,
+                                        br
+                                        |  ул. Шота Руставели, 23 
+                                        br
+                                        | 09:00 — 20:00
+
+                                    p
+                                        a(href='tel: ' title='') тел. +38 (044) 501 02 36 
+                                        br
+                                        a(href='tel: ' title='') тел. +38 (044) 501 02 37
+
+                                    p
+                                        a(href='' title='') avia@agromat-tour.com.ua
+                            .col-lg-3.col-md-5.offset-md-1.offset-lg-0
+                                .contact
+                                    h6 Офис
+                                    p 03115,  Украина, г. Киев,
+                                        br
+                                        |  пр. Победы, 89-А
+                                        br
+                                        | 09:00 — 20:00
+
+                                    p
+                                        a(href='tel: ' title='') тел. +38 (044) 499 10 78 
+                                        br
+                                        a(href='tel: ' title='') тел. +38 (044) 499 22 95
+
+                                    p
+                                        a(href='' title='') mozgovaya.y@agromat.ua
+                            .col-lg-5
+                                #map.map
+
+    include partials/_questions
+
+
+
