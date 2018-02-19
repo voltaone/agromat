@@ -11,7 +11,7 @@ nav
   top 0
   left 0
   right 0
-  z-index 9999
+  z-index 8999
   transitions()
   +mobile()
     padding 16px 0 15px
@@ -65,7 +65,7 @@ nav.scroll
     padding-top 10px
   +mobile()
     flex-direction column
-    background #D6E8FF
+    background #6eadff
     min-height 408px
     justify-content space-around
     padding-bottom 75px
@@ -79,6 +79,7 @@ nav.scroll
       +mobile()
         display inline-block
         font-size $s20
+        color #000fcf
 
       &:hover
         color $white
@@ -94,11 +95,15 @@ nav.scroll
     font-size $s10
     padding-top 8px
   +mobile()
-    color #2D80EB
+    color $black-text
     font-size 20px
     text-align center
-    max-width 206px
-    margin 0 auto 57px
+    max-width unset
+    margin 0 15px
+    background $white
+    padding-left 30px
+    padding-right 30px
+    padding-bottom 57px
 
 .menu-social
   list-flex(row)
@@ -110,6 +115,10 @@ nav.scroll
     flex-direction column
   +mobile()
     justify-content center
+    margin-left 15px
+    margin-right 15px
+    background $white
+    padding-bottom 52px
   li
     margin-left 16px
     +mobile()
@@ -123,7 +132,7 @@ nav.scroll
           width auto
           min-height 30px
           g
-            fill #4F9CFF
+            fill #000fcf
       &:hover
         opacity .5
 
@@ -133,6 +142,9 @@ nav.scroll
   +mobile()
     padding-top 50px
     padding-bottom 33px
+    margin-left 15px
+    margin-right 15px
+    background $white
   li
     +mobile()
       text-align center
@@ -150,9 +162,10 @@ nav.scroll
         font-size .5rem
       +mobile()
         font-size $s20
-        color #2D80EB
+        color #000fcf
         text-decoration underline
         font-weight 400
+
 
       &:hover
         opacity .5
@@ -195,7 +208,7 @@ nav.scroll
 
 #menu-panel
   display none
-  background $white
+  background #6eadff
   margin-top 16px
   padding-bottom 60px
   overflow-x hidden !important

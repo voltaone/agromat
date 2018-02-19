@@ -101,6 +101,14 @@
         flex 1 1 100%
         max-width 100%
         margin-right 0
+        //position relative
+        //&:after
+        //    pseudo(block,absolute)
+        //    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #d5e6fe);
+        //    bottom 0
+        //    left 0
+        //    right 0
+        //    height 54px
       &:last-child
         margin-right: 0;
       &-block
@@ -128,10 +136,20 @@
                 +mobile()
                   background $trans
             .active
-              background $white
+              background #000fcf
+              color $white
+              &:hover
+                background #000fcf
+                color $white
             &:nth-child(odd)
               a
                 background $white
+              .active
+                background #000fcf
+                color $white
+                &:hover
+                  background #000fcf
+                  color $white
 
       &-head
         display flex
@@ -181,9 +199,10 @@
       visibility hidden
       z-index -1
       opacity 0
-      transitions()
+      transition .2s all ease
       padding 6px 0
       background #f0f6ff
+      box-shadow: 0 10px 22px 0 rgba(0, 0, 0, .32);
       +mobile()
         width: 100%
       &--option
@@ -193,6 +212,9 @@
         background #f0f6ff
         transitions()
         display flex
+        +mobile()
+          padding-right 24px
+          padding-left 24px
         &-description
           flex 1 1 80%
           max-width 80%
@@ -202,14 +224,23 @@
             color: #4f9cff;
             line-height 1
             margin-bottom 4px
+            +mobile()
+              font-size 1rem
           &-text
             font-size $s12
             line-height 1
             color $black-text
             font-weight 700
+            +mobile()
+              font-size $s18
         &-counter
           flex 1 1 20%
           max-width 20%
+          +mobile()
+            display flex
+            flex 1 1 30%
+            max-width 30%
+            flex-direction row-reverse
           input
             padding 0
             text-align center
@@ -217,12 +248,21 @@
             color $black-text
             font-size $s14
             display block
+            +mobile()
+              font-size $s18
           .plus, .minus
             cursor pointer
             text-align center
             display flex
             justify-content center
             position relative
+            +mobile()
+              align-items center
+              svg
+                width 22px
+                height auto
+                transform: rotate(90deg);
+
 
         &:hover
           background $white
@@ -247,6 +287,8 @@
         transitions()
         +tablet()
           right 5px
+        +mobile()
+          top 25px
       &:after
         transform rotate(45deg)
         right 16px
@@ -290,6 +332,7 @@
   visibility visible
   opacity 1
   z-index 400
+
 
 .form-tickets--passengers-select.active
   &:after
@@ -365,12 +408,45 @@
       max-width calc(50% - 3px)
 
 .form-tickets.way-hard
-  .select-container-select2, .input-group-datepicker, .form-tickets--passengers
-    flex 1 1 201px
-    max-width 201px
   .input-group.input-group-datepicker.to
     display none
   .form-tickets--inputs .input-group-datepicker
     +mobile()
       flex 1 1 100%
       max-width 100%
+  .form-tickets--left
+    flex: 1 1 57.5%;
+    max-width: 57.5%;
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
+
+  .form-tickets--right
+    flex: 1 1 39%;
+    max-width: 39%;
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
+
+  .form-tickets--options
+    flex 1 1 54%
+    max-width 54%
+    +tablet()
+      flex 1 1 calc(100% - 155px)
+      max-width calc(100% - 155px)
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
+    ul
+      display flex
+      justify-content space-between
+      align-items center
+      height 100%
+      +portrait()
+        flex-direction column
+        align-items flex-start
+      +mobile()
+        display block
+    .radiocheck input + label
+      +portrait()
+        font-size .75rem

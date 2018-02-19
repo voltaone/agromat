@@ -13,7 +13,10 @@ section
                         label(for='quest-mail')
                             include ../svgs/mail.svg
                     textarea(placeholder='Введите текст письма…').error
-                    button(type='submit').button Отправить
+                    //button(type='submit').button Отправить
+                    a(data-fancybox data-src="#modal-thanks" href="javascript:;" title='').button Отправить
 
         img(src='img/planes/plane.svg').plane.plane3
         img(src='img/planes/vector2.png').vector.vector2
+
+

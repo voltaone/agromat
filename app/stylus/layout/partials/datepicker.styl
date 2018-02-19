@@ -15,6 +15,9 @@
   position absolute
   top 6px
   left 27.5px
+  +mobile()
+    left 19px
+    top 18px
   span
     position relative
     font-size 0
@@ -24,6 +27,9 @@
     height 20px
     display block
     cursor pointer
+    +mobile()
+      width 22px
+      height 22px
     &:before, &:after
       pseudo(block, absolute)
       width 8px
@@ -31,16 +37,23 @@
       background $blue-lighttext
       top 7px
       right 0
+      +mobile()
+        width 10px
+        top 9px
     &:before
       transform rotate(45deg)
     &:after
       transform rotate(-45deg)
       top 12px
+      +mobile()
+        top 15px
 
 
 .ui-datepicker-next
   right 27.5px
   left auto
+  +mobile()
+    right 19px
 
 
 .ui-datepicker-prev span
@@ -52,11 +65,17 @@
   &:after
     transform rotate(45deg)
     top 12px
+    +mobile()
+      top 15px
 
 .ui-datepicker-title
   text-align center
   color $black-text
   font-size $s12
+  +mobile()
+    font-size $s18
+    font-weight 700
+    margin-bottom 12px
 
 .ui-datepicker
   background $blue-back4
@@ -64,9 +83,13 @@
   padding-top: 8px;
   padding-bottom 11px
   display none
-  z-index 150 !important
+  z-index 9001 !important
+  box-shadow: 0 10px 22px 0 rgba(0, 0, 0, .32);
   +mobile()
     width: calc(100% - 30px);
+    padding-top 19px
+    left 15px !important
+
 
 .ui-state-default
   color $black
@@ -78,11 +101,16 @@
   margin: 0 auto
   thead th
     padding 0
+    +mobile()
+      text-align center
     span
       color $blue-lighttext
       font-size $s12
       font-weight 400
       text-transform lowercase
+      +mobile()
+        font-size $s18
+
   tbody td
     padding 0
     a
@@ -94,6 +122,10 @@
       align-items center
       width 20px
       height 20px
+      +mobile()
+        font-size $s18
+        width 40px
+        height 40px
       &:hover
         background $blue-darkback
         color $white

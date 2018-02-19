@@ -1,15 +1,74 @@
 @import '../../utilities/vars'
 @import '../../utilities/mixins'
 
+.fancybox-container
+  z-index 9000
+
+.fancybox-bg
+  background #6EADFF
+  opacity .1
+
 .fancybox-slide > div
   width 100%
-  max-width 1170px
-  padding 2rem 0
+  max-width 946px
+  padding: 37px 82px 52px;
   +tablet()
-    max-width 960px
+    max-width 736px
+    padding-left 41px
+    padding-right 41px
   +portrait()
     max-width 720px
+    padding-left 41px
+    padding-right 41px
   +fablet()
     max-width 540px
   +mobile()
     max-width calc(100% - 30px)
+    padding-left 0
+    padding-right 0
+
+  h2
+    font-size: $s22
+    line-height: 1.09;
+    color: #2d80eb;
+    margin-bottom: 35px;
+
+.fancybox-close-small
+  top 10px
+  right 10px
+  &:focus
+    outline none
+  &:hover
+    &:after
+      background none
+      color: #2d80eb;
+      opacity .5
+
+
+.fancybox-close-small:after
+  font-size 3rem
+  color: #2d80eb;
+  transitions()
+
+.order
+  display none
+  h3
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.09;
+    text-align: center;
+    color: #000fcf;
+    margin-bottom 60px
+  p
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.09;
+    text-align: center;
+    color: #2d80eb;
+  .order-success
+    display block
+    margin 35px auto
+
+
+.order.visible
+  display block

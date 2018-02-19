@@ -1,0 +1,31 @@
+#modal-order(style='display:none')
+    .container
+        .row.justify-content-center
+            .col-lg-9
+                .order
+                    img(src='img/icons/success.svg').order-success
+                    h3 Пакуйте чемоданы! 
+                    p  Наш менеджер свяжется с Вами  в ближайшее время.
+                .order.visible
+                    h2 Форма заказа
+                    form.form-order
+                        .input-group.error
+                            label(for='nameOrder')
+                                include ../svgs/name.svg
+                            input(type='text' placeholder='Ваше имя' id='nameOrder')
+                        .input-group.input-group-datepicker
+                            input.datepicker(placeholder='Туда' required='')#datepickerOrder
+                            label(for='datepickerOrder')
+                                include ../svgs/calendar.svg
+                        .input-group
+                            label(for='mailOrder')
+                                include ../svgs/mail.svg
+                            input(type='text' placeholder='E-mail' id='mailOrder')
+                        .input-group
+                            label(for='phoneOrder')
+                                include ../svgs/phone.svg
+                            input(type='text' placeholder='Телефон' id='phoneOrder')
+
+                        textarea(placeholder="Здесь Вы можете оставить комментарии к заказу или задать вопросы менеджеру")
+
+                        button(type='submit').button Отправить заявку

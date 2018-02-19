@@ -37,7 +37,7 @@ button
 
 .button-switch
   position absolute
-  z-index 9998
+  z-index 20
   right: -17px;
   top: 9px;
   display block
@@ -100,6 +100,8 @@ button
     text-align: center;
     color: #000fcf;
     height 100%
+    +mobile()
+      display none
   span.hidden
     display none
   ul
@@ -113,6 +115,9 @@ button
     visibility hidden
     opacity 0
     transitions()
+    +mobile()
+      opacity 1
+      visibility visible
     li
       padding 0
       flex 1 1 25%

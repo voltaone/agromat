@@ -18,7 +18,7 @@
       line-height normal
       +mobile()
         font-size $s18
-        padding-top: 13px;
+        padding-top: 15px;
         padding-bottom: 15px;
     .select2-selection__arrow
       display none
@@ -29,19 +29,27 @@
       color $black-text
       font-size $s12
       transitions()
+      +mobile()
+        font-size 1rem
     .select2-results__options.select2-results__options--nested
       .select2-results__option
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         padding: 2px 5px 2px 18px;
+        +mobile()
+          padding-top 9px
+          padding-bottom 9px
 
-  .select2-results__option[aria-selected=true]
-    background $white
+
 
   .select2-results__option--highlighted[aria-selected]
     color $black-text
     background $white
+
+  .select2-results__option[aria-selected=true]
+    background #000fcf
+    color $white
 
   .select2-results__option.select2-results__message
     color $black-text
@@ -52,6 +60,8 @@
     margin-bottom 0
     padding 0
 
+
+
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single
   border 0
 
@@ -61,6 +71,7 @@
 .select2-container--open .select2-dropdown--below
   border 0
   border-radius 0
+  box-shadow: 0 10px 22px 0 rgba(0, 0, 0, .32);
 
 .select2-results
   background #f0f6ff
@@ -86,13 +97,17 @@
   font-size $s12
   font-weight 400
   padding: 0px 11px;
+  +mobile()
+    font-size: 1rem
+    padding-top 9px
+    padding-bottom 9px
 
 .select-container-select2.second
   .select2-container--default .select2-selection--single .select2-selection__rendered
     padding-left 29px
     +mobile()
-      padding-left 20px
-      padding-top: 13px;
+      padding-left 13px
+      padding-top: 15px;
       padding-bottom: 15px;
   .select2-search--dropdown
     padding-left 29px
@@ -102,3 +117,6 @@
 .select2-search--dropdown .select2-search__field
   +mobile()
     font-size $s18
+
+.select2-dropdown
+  border 0

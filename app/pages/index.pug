@@ -21,7 +21,7 @@ block content
                                     li Испания
                                     li 15 000 грн
                                 p c 15 по 23 ноября
-                                a(href='' title='').button Заказать
+                                a(data-fancybox data-src="#modal-order" href="javascript:;" title='').button Заказать
                         .slide
                             .slide-image
                                 img(src='img/slider-main/slide2.png' title='' alt='')
@@ -30,7 +30,7 @@ block content
                                     li Замбия
                                     li 15 000 грн
                                 p c 15 по 23 ноября
-                                a(href='' title='').button Заказать
+                                a(data-fancybox data-src="#modal-order" href="javascript:;" title='').button Заказать
                         .slide
                             .slide-image
                                 img(src='img/slider-main/slide3.png' title='' alt='')
@@ -39,7 +39,7 @@ block content
                                     li Молдова
                                     li 15 000 грн
                                 p c 15 по 23 ноября
-                                a(href='' title='').button Заказать
+                                a(data-fancybox data-src="#modal-order" href="javascript:;" title='').button Заказать
 
     section
         .container.position-relative
@@ -81,10 +81,10 @@ block content
             .row
                 .col-12
                     h2 Популярное сегодня
-                    a(href='' title='').link-blog-all Все статьи
+                    a(href='blog.html' title='').link-blog-all Все статьи
                         include svgs/angle-right-blue.svg
                 .col-md-6
-                    a(href='' title='').blog-block
+                    a(href='blogin.html' title='').blog-block
                         .blog-block--image
                             img(src='img/illus/illus1.png' title='' alt='')
                         .blog-block--text
@@ -102,7 +102,7 @@ block content
                             .blog-block--panel-right
                                 span.button.button-light Читать больше
                 .col-md-6
-                    a(href='' title='').blog-block
+                    a(href='blogin.html' title='').blog-block
                         .blog-block--image
                             img(src='img/illus/illus2.png' title='' alt='')
                         .blog-block--text
@@ -119,4 +119,9 @@ block content
                                         | 1 101
                             .blog-block--panel-right
                                 span.button.button-light Читать больше
+                .col-12.visible-xs
+                    a(href='blog.html' title='').link-blog-all.link-blog-all2 Все статьи
+                        include svgs/angle-right-blue.svg
+
+    include partials/_form-order
 

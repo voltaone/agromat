@@ -25,11 +25,8 @@ html.open
     overflow hidden !important
 
 body.open
-  .link-logo svg g
-    fill $blue-darkback
   .nav-icon
     span
-      background $blue-darkback
       &:nth-child(1)
         top 18px
         width 0%
@@ -45,9 +42,13 @@ body.open
   nav
     height 100%
     overflow scroll !important
-    background #D6E8FF
+    background #6eadff
     padding-bottom 0
 
+.visible-xs
+  display none
+  +mobile()
+    display block
 
 //preloader
 #hellopreloader_preload

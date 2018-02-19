@@ -3,6 +3,7 @@
   justify-content space-between
   +mobile()
     flex-wrap wrap
+    margin-bottom 100px
   &--left
     max-width 48.5%
     flex 1 1 48.5%
@@ -32,8 +33,14 @@
         color $white
         opacity .5
         margin-bottom 2px
+        +mobile()
+          text-align center
+          font-size $s18
+          margin-bottom 16px
       .select-container-select2
         max-width 272px
+        +mobile()
+          max-width unset
 
   &--middle
     max-width 31.5%
@@ -55,14 +62,23 @@
         flex-wrap wrap
       +portrait()
         flex-wrap wrap
+      +mobile()
+        flex-wrap wrap
+        padding-left: 25px;
+        margin-bottom 25px
       li
         margin-right 40px
         .radiocheck input + label
           font-size $s14
+          +mobile()
+            font-size $s18
         +tablet()
           margin-right 0
         +portrait()
           margin-right 0
+        +mobile()
+          flex 1 1 100%
+          max-width 100%
 
   &--right
     max-width 165px
@@ -70,7 +86,13 @@
     +mobile()
       max-width 100%
       flex 1 1 100%
+      display flex
+      flex-wrap wrap
     &-submit
+      +mobile()
+        order 2
+        max-width 100%
+        flex 1 1 100%
       .button
         font-size: $s14
         font-weight: bold
@@ -78,10 +100,20 @@
         padding-top: 11px;
         padding-bottom: 13px;
         margin-bottom 20px
+        +mobile()
+          max-width 100%
+          font-size $s22
+          letter-spacing: 2px;
     &-prices
       display flex
       flex-wrap wrap
       justify-content space-between
+      +mobile()
+        order 1
+        max-width 100%
+        flex 1 1 100%
+        position relative
+        padding-top 45px
       input
         text-align center
         flex 1 1 50px
@@ -91,6 +123,12 @@
         padding 2px 0 0
         height: 15px
         margin-bottom 17px
+        +mobile()
+          max-width: 129px;
+          flex 1 1 129px
+          font-size $s18
+          height 40px
+          margin-bottom 25px
       span
         opacity: 0.5;
         font-size: $s14
@@ -98,6 +136,14 @@
         color $white
         position relative
         top 6px
+        +mobile()
+          position absolute
+          left 0
+          right 0
+          top 0px
+          text-align center
+          display block
+          font-size $s18
 
 
 
@@ -123,8 +169,15 @@
         padding-bottom: 6px
         color: #000fcf;
         background rgba(255,255,255,.5)
+        +mobile()
+          padding-top 13px
+          padding-bottom 15px
+
       .select2-container--default .select2-selection--single
         height 31px
+        +mobile()
+          height 54px
+          margin-bottom 20px
 
 
       .select2-container--default .select2-selection--single .select2-selection__arrow
@@ -155,6 +208,14 @@
             transform rotate(-45deg)
           &:before
             transform rotate(45deg)
+
+.form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:after, .form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:before
+    +mobile()
+      top 23px
+
+.form-tour--left-sort .select2-container--default .select2-results__options .select2-results__option
+  padding-left 20px
+
 
 
 
@@ -224,6 +285,9 @@
     display flex
     justify-content space-between
     &-left
+      +mobile()
+        flex 1 1 50%
+        max-width 50%
       ul
         display flex
         align-items center
@@ -238,6 +302,10 @@
             margin-right 0
     &-right
       display flex
+      +mobile()
+        flex 1 1 50%
+        max-width 50%
+        flex-wrap wrap
       &--price-new
         font-size: $s20
         font-weight: bold;
@@ -246,6 +314,9 @@
         display none
         +tablet()
           font-size $s16
+        +mobile()
+          flex 1 1 100%
+          max-width 100%
       &--price-regular
         font-size: $s20
         font-weight: bold;
@@ -253,6 +324,9 @@
         color: #4f9cff
         +tablet()
           font-size $s16
+        +mobile()
+          flex 1 1 100%
+          max-width 100%
       &--price-old
         color $black-text
         opacity .5
@@ -263,6 +337,10 @@
         display none
         +tablet()
           font-size $s12
+        +mobile()
+          flex 1 1 100%
+          max-width 100%
+          text-align right
 
   &--panel
     z-index -1000

@@ -12,8 +12,6 @@ form {}
       flex 1 1 100%
       max-width 100%
 
-
-
 .form-call
   .input-group
     margin-bottom 5px
@@ -45,3 +43,30 @@ form {}
         fill #2d80eb
   .button
     max-width unset
+
+.form-order
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  .input-group
+    flex 1 1 calc(50% - 15px)
+    max-width calc(50% - 15px)
+    margin-bottom: 5px;
+    +mobile()
+      flex 1 1 100%
+      max-width 100%
+      margin-bottom 10px
+    input
+      background: #d6e8ff;
+      padding-left 59px
+      +placeholder()
+        color #2d80eb
+        opacity .5
+    label
+      left 20px
+      svg g
+        fill #2d80eb
+        opacity 1
+  .button
+    margin 10px 0
+    max-width 100%
