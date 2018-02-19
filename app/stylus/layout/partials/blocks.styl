@@ -10,12 +10,29 @@ article
   p
     color $black-text
     font-size $s14
-    margin-bottom 20px
+    margin-bottom $s20
     +mobile()
       font-size $s16
       line-height: 1.75;
   h2
     margin-bottom: 47px;
+  ul, ol
+    margin-bottom $s20
+    li
+      color $black-text
+      font-size $s14
+  ul li
+    padding-left 1rem
+    position relative
+    &:before
+      pseudo(block, absolute)
+      width 8px
+      height 1px
+      background $black-text
+      top 9px
+      left 0
+  ol
+    margin-left 1rem
 
 aside {}
 

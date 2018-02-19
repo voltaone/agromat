@@ -123,7 +123,7 @@ $(document).ready(function () {
     });
     $('.select2-select.tour').select2({
         dropdownParent: $('.select-container-select2.tour'),
-        placeholder:  "<svg width=\"25px\" height=\"27px\" viewBox=\"0 0 25 27\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n" +
+        placeholder: "<svg width=\"25px\" height=\"27px\" viewBox=\"0 0 25 27\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n" +
         "    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\" opacity=\"0.5\">\n" +
         "        <g id=\"Large-Device_TourPage_design-Copy\" transform=\"translate(-102.000000, -142.000000)\" fill-rule=\"nonzero\" fill=\"#2F2F2F\">\n" +
         "            <g id=\"Tour_serch_form\" transform=\"translate(72.000000, 134.000000)\">\n" +
@@ -223,7 +223,6 @@ $(document).ready(function () {
     });
 
 
-
     $('.form-tickets--more-options--section-block ul li a').click(function (e) {
         e.preventDefault();
         $(this).toggleClass('active');
@@ -232,10 +231,15 @@ $(document).ready(function () {
     // ----- MENU -----
     $('.nav-icon').click(function (e) {
         e.preventDefault();
-       $('html, body').toggleClass('open');
-       $('#menu-panel').slideToggle();
+        $('html, body').toggleClass('open');
+        $('#menu-panel').slideToggle();
     });
 
+    // ----- ACCORDION -----
+    $('.accordion-item--head').click(function () {
+        $(this).toggleClass('active');
+        $(this).siblings('.accordion-item--content').slideToggle();
+    });
     //  ----- SLIDER -----
 
     // SLICK SLIDER COUNTER
@@ -309,14 +313,6 @@ $(document).ready(function () {
     // new WOW().init();
 
 
-    // ----- ACCORDION -----
-    // $(function () {
-    //     $("#accordion").accordion({
-    //         collapsible: true,
-    //         heightStyle: "content"
-    //     });
-    // });
-
     // ----- TABS -----
     // $(function () {
     //     $("#tabs").tabs();
@@ -345,7 +341,7 @@ $(document).ready(function () {
 
 // !!! RESPONSIVE SCRIPTS !!!
 
-$(window).on('load resize', function() {
+$(window).on('load resize', function () {
     'use strict';
     if (window.matchMedia("(max-width: 767px)").matches) {
         // MENU

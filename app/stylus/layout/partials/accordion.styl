@@ -1,20 +1,54 @@
 @import '../../utilities/vars'
 @import '../../utilities/mixins'
 
-.ui-accordion
-  .ui-accordion-header
-    background $gray
-    color $black
-    cursor pointer
-    padding 1rem
-    transitions()
-    &:focus
-      outline none
-    &:hover
-      background $black
-      color $white
-  .ui-state-active
-    background $black
-    color $white
-  .ui-accordion-content
-    padding-bottom 1rem
+.accordion
+  &-item
+    box-shadow: 0 1px 7px 0 rgba(1, 0, 62, 0.13);
+    background $white
+    margin-bottom $s30
+    &--head
+      padding 17px 61px 18px
+      position relative
+      cursor pointer
+      transitions()
+      +mobile()
+        padding 18px 50px 20px 18px
+      &:hover
+        opacity .8
+      &:after, &:before
+        pseudo(block, absolute)
+        background $blue-lighttext
+        width 10px
+        height 2px
+        right 59px
+        top 28px
+        transitions()
+        +mobile()
+          right 12px
+      &:after
+        transform rotate(45deg)
+        right 65px
+        +mobile()
+          right 18px
+      &:before
+        transform rotate(-45deg)
+      h6
+        font-size 1rem
+        color $black-text
+        margin-bottom 0
+        +mobile()
+          line-height normal
+    &--head.active
+      &:after
+        transform rotate(-45deg)
+      &:before
+        transform rotate(45deg)
+    &--content
+      padding 13px 61px 14px
+      display none
+      +mobile()
+        padding 3px 18px 13px
+
+
+
+
