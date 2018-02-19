@@ -12,11 +12,8 @@
   src: url('../fonts/slick/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick/slick.woff') format('woff'), url('../fonts/slick/slick.ttf') format('truetype'), url('../fonts/slick/slick.svg#slick') format('svg');
 
 
-
-
 .slider
   position relative
-  //overflow hidden
   .arrow
     position absolute
     text-align center
@@ -59,6 +56,9 @@
     justify-content center
     li
       margin 10px
+      padding 0 !important
+      &:before
+        display none !important
       button
         padding 0
         width 16px
@@ -79,6 +79,8 @@
     bottom 29.5%
     +mobile()
       bottom: 36.5%;
+    img
+      margin 0 !important
   .arrow.left
     left 30%
     +tablet()
@@ -128,6 +130,7 @@
         height 320px
       img
         height 100%
+        margin 0 !important
     .slide-description
       position absolute
       left 0

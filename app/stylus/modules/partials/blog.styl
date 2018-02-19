@@ -35,20 +35,7 @@
     justify-content space-between
     +mobile()
       flex-wrap wrap
-    ul
-      display flex
-      margin: 11px 0;
-      +mobile()
-        margin-bottom 40px
-      li
-        color rgba(47,47,47, .5)
-        font-size: $s14
-        letter-spacing: 1px;
-        margin-right 16px
-        display flex
-        align-items center
-        img
-          margin-right 11px
+
 
     &-left
       flex 1 1 calc(100% - 263px)
@@ -83,3 +70,30 @@
       visibility visible
     .blog-block--image
       opacity .7
+
+.blog-panel
+  display flex
+  margin: 11px 0;
+  +mobile()
+    margin-bottom 40px
+  li
+    color rgba(47,47,47, .5)
+    font-size: $s14
+    letter-spacing: 1px;
+    margin-right 16px
+    display flex
+    align-items center
+    svg, img
+      margin-right 11px
+
+.share-block
+  border-top: solid 1px #d6e8ff;
+  text-align center
+  margin 28px 0 0
+  padding-top 54px
+  p
+    font-size: 1rem
+    font-weight: 700
+    letter-spacing: 2px;
+    color: #d6e8ff;
+    margin 0 0 25px

@@ -34,6 +34,34 @@ article
   ol
     margin-left 1rem
 
+  h3
+    position relative
+    font-size: $s20
+    line-height: 1.25;
+    text-align: center;
+    color: #2d80eb
+    z-index 1
+    margin-bottom: $s24
+    margin-top: 50px
+    span
+      background $white
+      display inline-block
+      padding 0 40px
+    &:after
+      pseudo(block, absolute)
+      background #d6e8ff
+      left 0
+      right 0
+      height 1px
+      width 100%
+      top 12px
+      z-index -1
+
+  img
+    width 100%
+    margin 45px 0 15px
+
+
 aside {}
 
 main

@@ -235,3 +235,81 @@ header
         text-align center
         +mobile()
           width auto
+
+.header-blogin
+  background $white
+  padding-top 33px
+  z-index 10
+  &:after
+    pseudo(block, absolute)
+    background $blue-back
+    left 0
+    right 0
+    top 0
+    height: 245px;
+    z-index -1
+
+.header-blogin--container
+  height 429px
+  position relative
+  z-index 10
+  +portrait()
+    height: 359px;
+
+.header-blogin
+  margin-bottom 16px
+  &--image
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+    display flex
+    align-items center
+    justify-content center
+    z-index -2
+    overflow hidden
+    &:after
+      pseudo(block, absolute)
+      opacity: 0.4;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), #00000d);
+      left 0
+      right 0
+      bottom 0
+      height 297px
+      z-index 1
+    img
+      min-height 100%
+  &--text
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    z-index 2
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    padding-left 35px
+    padding-right 50px
+    padding-bottom 30px
+    +mobile()
+      padding-left 20px
+      padding-right 20px
+    &-head
+      flex 1 1 100%
+      max-width 100%
+      h1
+        margin-bottom 2px
+    &-left
+      p
+        margin 0
+        color $white
+    &-right
+      .blog-panel
+        margin 0
+        li
+          color $white
+          svg
+            g
+              fill $white
+              opacity 1
