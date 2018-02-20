@@ -123,6 +123,8 @@ ol
     margin 0 15px
     +mobile()
       margin 0
+      flex 1 1 calc(50% - 15px)
+      max-width calc(50% - 15px)
     a
       color #2d80eb
       border: solid 1px #2d80eb;
@@ -130,7 +132,7 @@ ol
       text-align center
       background $white
       +mobile()
-          max-width 130px
+
           min-width unset
       &:hover
         background #d6e8ff

@@ -504,6 +504,12 @@ button:focus {
 	     -o-transition: all .4s ease;
 	        transition: all .4s ease;
 }
+@media (max-width: 767px) {
+	.button {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
 .button:hover {
 	color: #000fcf;
 	background: #d6e8ff;
@@ -570,6 +576,7 @@ button:focus {
 		background: #000fcf;
 		color: #fff;
 		margin-bottom: 48px;
+		max-width: 320px;
 	}
 }
 .button-red {
@@ -881,6 +888,10 @@ ol {
 @media (max-width: 767px) {
 	.ul-menu-tours li {
 		margin: 0;
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 calc(50% - 15px);
+		    flex: 1 1 calc(50% - 15px);
+		max-width: calc(50% - 15px);
 	}
 }
 .ul-menu-tours li a {
@@ -892,7 +903,6 @@ ol {
 }
 @media (max-width: 767px) {
 	.ul-menu-tours li a {
-		max-width: 130px;
 		min-width: unset;
 	}
 }
@@ -1233,11 +1243,6 @@ label {
 }
 .input-group-datepicker label {
 	left: 19px;
-}
-@media (max-width: 767px) {
-	.input-group-datepicker label {
-		left: 27px;
-	}
 }
 .input-group-datepicker label svg g {
 	-webkit-transition: all .4s ease;
@@ -1666,9 +1671,9 @@ textarea.error::-webkit-input-placeholder {
 }
 @media (max-width: 767px) {
 	.select-container-select2.second .select2-container--default .select2-selection--single .select2-selection__rendered {
-		padding-left: 13px;
 		padding-top: 15px;
 		padding-bottom: 15px;
+		padding-left: 20px;
 	}
 }
 .select-container-select2.second .select2-search--dropdown {
@@ -1701,6 +1706,17 @@ textarea.error::-webkit-input-placeholder {
 		max-width: calc(100% - 30px);
 		right: 15px;
 		left: 15px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.img-country {
+		top: 100px;
+	}
+}
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.img-country {
+		top: auto;
+		bottom: 40px;
 	}
 }
 .vector, .plane {
@@ -1789,6 +1805,11 @@ video {
 		margin-top: 40px;
 		margin-bottom: 60px;
 		height: 220px;
+	}
+}
+@media (max-device-width: 767px) and (orientation: landscape) {
+	#map {
+		margin-bottom: 0;
 	}
 }
 #map.map {
@@ -2665,6 +2686,11 @@ header {
 		height: 359px;
 	}
 }
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.header-blogin--container {
+		height: 290px;
+	}
+}
 .header-blogin {
 	margin-bottom: 16px;
 }
@@ -3208,8 +3234,13 @@ footer p a:hover {
 	}
 }
 @media (max-width: 767px) {
+	.slider-gallery {
+		margin-bottom: 30px;
+	}
+}
+@media (max-width: 767px) {
 	.slider-gallery .slick-dots {
-		display: none;
+		display: none !important;
 	}
 }
 .slider-gallery .slick-list {
@@ -3559,8 +3590,13 @@ footer p a:hover {
 }
 @media (max-width: 767px) {
 	#range-slider {
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 265px;
+		    flex: 1 1 265px;
 		max-width: 265px;
 		margin-bottom: 36px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 .noUi-horizontal .noUi-handle {
@@ -4162,11 +4198,7 @@ footer p a:hover {
 	background: #f0f6ff;
 	-webkit-box-shadow: 0 10px 22px 0 rgba(0,0,0,.32);
 	        box-shadow: 0 10px 22px 0 rgba(0,0,0,.32);
-}
-@media (max-width: 767px) {
-	.form-tickets--passengers-options {
-		width: 100%;
-	}
+	width: 100%;
 }
 .form-tickets--passengers-options--option {
 	padding-left: 13px;
@@ -4289,6 +4321,8 @@ footer p a:hover {
 	.form-tickets--passengers-select {
 		font-size: 1.125rem;
 		padding-left: 57px;
+		padding-top: 14px;
+		padding-bottom: 14px;
 	}
 }
 .form-tickets--passengers-select:after, .form-tickets--passengers-select:before {
@@ -4337,7 +4371,8 @@ footer p a:hover {
 }
 @media (max-width: 767px) {
 	.form-tickets--passengers-select label {
-		left: 31px;
+		left: 20px;
+		top: 12px;
 	}
 }
 .form-tickets--submit {
@@ -4525,6 +4560,14 @@ footer p a:hover {
 .form-tickets.way-hard .input-group.input-group-datepicker.to {
 	display: none;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+	.form-tickets.way-hard .input-group-datepicker, .form-tickets.way-hard .form-tickets--passengers {
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 calc(50% - 3px);
+		    flex: 1 1 calc(50% - 3px);
+		max-width: calc(50% - 3px);
+	}
+}
 @media (max-width: 767px) {
 	.form-tickets.way-hard .form-tickets--inputs .input-group-datepicker {
 		-webkit-box-flex: 1;
@@ -4635,6 +4678,9 @@ footer p a:hover {
 @media (max-width: 767px) {
 	.advantage-block {
 		margin-bottom: 47px;
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
 	}
 }
 .advantage-block--image {
@@ -4729,7 +4775,7 @@ footer p a:hover {
 }
 @media (max-width: 767px) {
 	.blog-block--text {
-		height: 244px;
+		height: auto;
 	}
 }
 .blog-block--text p {
@@ -4778,6 +4824,14 @@ footer p a:hover {
 		max-width: 100%;
 	}
 }
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.blog-block--panel-left {
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 50%;
+		    flex: 1 1 50%;
+		max-width: 50%;
+	}
+}
 .blog-block--panel-right {
 	-webkit-box-flex: 1;
 	-ms-flex: 1 1 263px;
@@ -4807,6 +4861,14 @@ footer p a:hover {
 		max-width: 100%;
 		opacity: 1;
 		visibility: visible;
+	}
+}
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.blog-block--panel-right {
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 50%;
+		    flex: 1 1 50%;
+		max-width: 50%;
 	}
 }
 .blog-block:hover .blog-block--panel-right {
@@ -5327,7 +5389,7 @@ footer p a:hover {
 		-ms-flex: 1 1 100%;
 		    flex: 1 1 100%;
 		position: relative;
-		padding-top: 45px;
+		padding-top: 35px;
 	}
 }
 .form-tour--right-prices input {
@@ -5351,6 +5413,14 @@ footer p a:hover {
 		font-size: 1.125rem;
 		height: 40px;
 		margin-bottom: 25px;
+	}
+}
+@media (max-device-width: 767px) and (orientation: landscape) {
+	.form-tour--right-prices input {
+		max-width: 160px;
+		-webkit-box-flex: 1;
+		-ms-flex: 1 1 160px;
+		    flex: 1 1 160px;
 	}
 }
 .form-tour--right-prices span {

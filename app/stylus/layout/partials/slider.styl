@@ -185,9 +185,11 @@
           margin-bottom 0
 
 .slider-gallery
+  +mobile()
+    margin-bottom: 30px;
   .slick-dots
     +mobile()
-      display none
+      display none !important
   .slick-list
     padding-bottom: 47px;
     +mobile()

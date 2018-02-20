@@ -195,8 +195,7 @@
       padding 6px 0
       background #f0f6ff
       box-shadow: 0 10px 22px 0 rgba(0, 0, 0, .32);
-      +mobile()
-        width: 100%
+      width 100%
       &--option
         padding-left 13px
         padding-top: 3px;
@@ -269,6 +268,8 @@
       +mobile()
         font-size $s18
         padding-left: 57px;
+        padding-top: 14px;
+        padding-bottom 14px
       &:after, &:before
         pseudo(block, absolute)
         background $blue-lighttext
@@ -293,7 +294,8 @@
         left: 17px;
         position absolute
         +mobile()
-          left 31px
+          left 20px
+          top 12px
 
   &--submit
     flex 1 1 165px
@@ -402,6 +404,10 @@
 .form-tickets.way-hard
   .input-group.input-group-datepicker.to
     display none
+  .input-group-datepicker, .form-tickets--passengers
+    +portrait()
+      flex 1 1 calc(50% - 3px)
+      max-width calc(50% - 3px)
   .form-tickets--inputs .input-group-datepicker
     +mobile()
       flex 1 1 100%
