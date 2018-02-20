@@ -1079,6 +1079,9 @@ ol {
 	fill: #2d80eb;
 	opacity: 1;
 }
+.form-order .input-group .datepicker {
+	height: 39px;
+}
 .form-order .button {
 	margin: 10px 0;
 	max-width: 100%;
@@ -1226,6 +1229,7 @@ label {
 	-ms-flex-pack: center;
 	justify-content: center;
 	height: 100%;
+	width: 24px;
 }
 .input-group-datepicker label {
 	left: 19px;
@@ -3898,9 +3902,6 @@ footer p a:hover {
 	opacity: 0;
 	margin-bottom: 0;
 	visibility: hidden;
-	-webkit-transition: all .4s ease;
-	     -o-transition: all .4s ease;
-	        transition: all .4s ease;
 }
 @media (min-width: 768px) and (max-width: 991px) {
 	.form-tickets--inputs {
@@ -3977,9 +3978,6 @@ footer p a:hover {
 	height: 0;
 	opacity: 0;
 	visibility: hidden;
-	-webkit-transition: all .4s ease;
-	     -o-transition: all .4s ease;
-	        transition: all .4s ease;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	.form-tickets--more-options {
@@ -4687,6 +4685,7 @@ footer p a:hover {
 .blog-block {
 	display: block;
 	margin-bottom: 41px;
+	background: #fff;
 }
 @media (max-width: 767px) {
 	.blog-block {
@@ -5498,7 +5497,7 @@ footer p a:hover {
 	margin-bottom: 13px;
 }
 .tour-block--top-image {
-	position: relative;
+	position: absolute;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -5509,6 +5508,13 @@ footer p a:hover {
 	-ms-flex-pack: center;
 	justify-content: center;
 	overflow: hidden;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.tour-block--top-image img {
+	height: 100%;
 }
 .tour-block--top-text {
 	position: absolute;
@@ -5563,6 +5569,12 @@ footer p a:hover {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 }
+.tour-block--bottom-left {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 0 140px;
+	    flex: 1 0 140px;
+	max-width: 140px;
+}
 @media (max-width: 767px) {
 	.tour-block--bottom-left {
 		-webkit-box-flex: 1;
@@ -5596,6 +5608,12 @@ footer p a:hover {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	text-align: right;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
 }
 @media (max-width: 767px) {
 	.tour-block--bottom-right {
@@ -5625,6 +5643,9 @@ footer p a:hover {
 		-ms-flex: 1 1 100%;
 		    flex: 1 1 100%;
 		max-width: 100%;
+		-webkit-box-ordinal-group: 2;
+		-ms-flex-order: 1;
+		order: 1;
 	}
 }
 .tour-block--bottom-right--price-regular {
@@ -5667,6 +5688,10 @@ footer p a:hover {
 		    flex: 1 1 100%;
 		max-width: 100%;
 		text-align: right;
+		-webkit-box-ordinal-group: 3;
+		-ms-flex-order: 2;
+		order: 2;
+		margin-right: 0;
 	}
 }
 .tour-block--panel {

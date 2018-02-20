@@ -242,11 +242,17 @@
     z-index 20
     margin-bottom 13px
     &-image
-      position relative
+      position absolute
       display flex
       align-items center
       justify-content center
       overflow hidden
+      top 0
+      left 0
+      right 0
+      bottom 0
+      img
+        height 100%
     &-text
       position absolute
       bottom 0
@@ -285,6 +291,8 @@
     display flex
     justify-content space-between
     &-left
+      flex: 1 0 140px;
+      max-width: 140px;
       +mobile()
         flex 1 1 50%
         max-width 50%
@@ -302,6 +310,9 @@
             margin-right 0
     &-right
       display flex
+      flex-wrap wrap
+      text-align right
+      justify-content flex-end
       +mobile()
         flex 1 1 50%
         max-width 50%
@@ -317,6 +328,7 @@
         +mobile()
           flex 1 1 100%
           max-width 100%
+          order 1
       &--price-regular
         font-size: $s20
         font-weight: bold;
@@ -341,6 +353,8 @@
           flex 1 1 100%
           max-width 100%
           text-align right
+          order 2
+          margin-right 0
 
   &--panel
     z-index -1000
