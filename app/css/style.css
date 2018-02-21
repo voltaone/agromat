@@ -792,6 +792,9 @@ ol {
 		max-width: 50%;
 		margin-bottom: 42px;
 	}
+	.ul-partners li img {
+		max-width: 100%;
+	}
 }
 .ul-menu {
 	display: -webkit-box;
@@ -1719,6 +1722,10 @@ textarea.error::-webkit-input-placeholder {
 		bottom: 40px;
 	}
 }
+.img-404 {
+	margin: 0 auto 5px;
+	display: block;
+}
 .vector, .plane {
 	position: absolute;
 }
@@ -1780,6 +1787,15 @@ textarea.error::-webkit-input-placeholder {
 	.plane3 {
 		top: 10px;
 		right: 0;
+	}
+}
+.plane4 {
+	top: -52px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.plane4 {
+		top: 30px;
+		right: 5px;
 	}
 }
 #map {
@@ -1925,7 +1941,7 @@ nav {
 }
 @media (max-width: 767px) {
 	nav {
-		padding: 16px 0 15px;
+		padding: 10px 0 9px;
 	}
 }
 @media (min-width: 768px) {
@@ -2069,6 +2085,15 @@ nav {
 		padding-left: 30px;
 		padding-right: 30px;
 		padding-bottom: 57px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
 	}
 }
 .menu-social {
@@ -2249,6 +2274,25 @@ nav {
 }
 header {
 	position: relative;
+}
+.header-404 {
+	background: #6eadff;
+	height: 69px;
+}
+@media (max-width: 767px) {
+	.header-404 {
+		background: #fff;
+	}
+}
+.header-404:after {
+	content: '';
+	display: block;
+	position: absolute;
+	background: #6eadff;
+	left: 0;
+	right: 0;
+	top: 100%;
+	height: 176px;
 }
 .header-ticket {
 	background: #6eadff;
@@ -3523,7 +3567,7 @@ footer p a:hover {
 	position: absolute;
 	height: 5px;
 	border-radius: 7px;
-	background: #f0f6ff;
+	background: #b6d6ff;
 	width: calc(100% + 17px);
 	left: 0;
 	top: 0;
@@ -3544,7 +3588,7 @@ footer p a:hover {
 	-webkit-box-shadow: 0 1px 4px 0 rgba(14,53,102,.38);
 	        box-shadow: 0 1px 4px 0 rgba(14,53,102,.38);
 	border-radius: 50%;
-	background: #d6e8ff;
+	background: #b6d6ff;
 }
 .noUi-horizontal .noUi-handle:before, .noUi-horizontal .noUi-handle:after {
 	display: none;
@@ -5174,6 +5218,8 @@ footer p a:hover {
 @media (max-width: 767px) {
 	.form-tour--left-sort .select-container-select2 {
 		max-width: unset;
+		position: relative;
+		z-index: 600;
 	}
 }
 .form-tour--middle {
@@ -5343,6 +5389,7 @@ footer p a:hover {
 	padding: 2px 0 0;
 	height: 15px;
 	margin-bottom: 17px;
+	background: #b6d6ff;
 }
 @media (max-width: 767px) {
 	.form-tour--right-prices input {
@@ -5397,7 +5444,7 @@ footer p a:hover {
 	padding-top: 5px;
 	padding-bottom: 6px;
 	color: #000fcf;
-	background: rgba(255,255,255,.5);
+	background: #b6d6ff;
 }
 @media (max-width: 767px) {
 	.form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -5454,9 +5501,6 @@ footer p a:hover {
 .form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow b {
 	display: none;
 }
-.form-tour--left-sort .select2-container--open {
-	top: auto !important;
-}
 .form-tour--left-sort .select2-container--open .select2-selection--single .select2-selection__arrow:after {
 	-webkit-transform: rotate(-45deg);
 	    -ms-transform: rotate(-45deg);
@@ -5467,6 +5511,9 @@ footer p a:hover {
 	    -ms-transform: rotate(45deg);
 	        transform: rotate(45deg);
 }
+.form-tour--left-sort .select2-dropdown.select2-dropdown--below {
+	top: 54px !important;
+}
 @media (max-width: 767px) {
 	.form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:after, .form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:before {
 		top: 23px;
@@ -5474,6 +5521,17 @@ footer p a:hover {
 }
 .form-tour--left-sort .select2-container--default .select2-results__options .select2-results__option {
 	padding-left: 20px;
+	background: #b6d6ff;
+}
+.form-tour--left-sort .select2-container--default .select2-results__options .select2-results__option:hover {
+	background: #000fcf;
+	color: #fff;
+}
+.form-tour--left-sort .select2-results {
+	background: #b6d6ff;
+}
+.form-tour--left-sort .select2-container--default .select2-results__option[aria-selected=true] {
+	background: #000fcf;
 }
 .tour-block {
 	display: block;

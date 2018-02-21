@@ -1,0 +1,28 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | Как это работает?
+
+block content
+
+    include partials/_header
+
+    section.section-how
+        .container.position-relative
+            .row.justify-content-center
+                .col-lg-10
+                    .how-it-works.how-it-about
+                        .row.justify-content-center
+                            .col-lg-10
+                                img(src='img/icons/503.svg').img-404
+                                blockquote
+                                    | Кажется, на этой страничке все рейсы отменены,  но на главной отличная погода
+                                a(href='./' title='').button На главную
+
+            img(src='img/planes/plane.svg').plane.plane4
+            img(src='img/planes/vector2.png').vector.vector2
+
+
+
+

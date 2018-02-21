@@ -63,6 +63,11 @@ $(document).ready(function () {
         "        </g>\n" +
         "    </g>\n" +
         "</svg> Откуда",
+        "language": {
+            "noResults": function(){
+                return "Ничего не найдено";
+            }
+        },
         escapeMarkup: function (markup) {
             return markup;
         }
@@ -81,6 +86,11 @@ $(document).ready(function () {
         "        </g>\n" +
         "    </g>\n" +
         "</svg> Куда",
+        "language": {
+            "noResults": function(){
+                return "Ничего не найдено";
+            }
+        },
         escapeMarkup: function (markup) {
             return markup;
         }
@@ -99,6 +109,11 @@ $(document).ready(function () {
         "        </g>\n" +
         "    </g>\n" +
         "</svg> Откуда",
+        "language": {
+            "noResults": function(){
+                return "Ничего не найдено";
+            }
+        },
         escapeMarkup: function (markup) {
             return markup;
         }
@@ -117,6 +132,11 @@ $(document).ready(function () {
         "        </g>\n" +
         "    </g>\n" +
         "</svg> Куда",
+        "language": {
+            "noResults": function(){
+                return "Ничего не найдено";
+            }
+        },
         escapeMarkup: function (markup) {
             return markup;
         }
@@ -134,6 +154,11 @@ $(document).ready(function () {
         "        </g>\n" +
         "    </g>\n" +
         "</svg> Куда",
+        "language": {
+            "noResults": function(){
+                return "Ничего не найдено";
+            }
+        },
         escapeMarkup: function (markup) {
             return markup;
         }
@@ -347,7 +372,8 @@ $(window).on('load resize', function () {
         // MENU
         $('.menu-col').appendTo('#menu-panel .row');
         $('.form-tickets--more-options--section-block').slimScroll({
-            height: '212px'
+            height: '212px',
+            touchScrollStep : 50
         });
 
     } else if (window.matchMedia("(min-width: 768px)").matches) {

@@ -41,6 +41,8 @@
         max-width 272px
         +mobile()
           max-width unset
+          position relative
+          z-index 600
 
   &--middle
     max-width 31.5%
@@ -123,6 +125,7 @@
         padding 2px 0 0
         height: 15px
         margin-bottom 17px
+        background #B6D6FF
         +mobile()
           max-width: 129px;
           flex 1 1 129px
@@ -171,7 +174,8 @@
         padding-top 5px
         padding-bottom: 6px
         color: #000fcf;
-        background rgba(255,255,255,.5)
+        //background rgba(255,255,255,.5)
+        background #B6D6FF
         +mobile()
           padding-top 13px
           padding-bottom 15px
@@ -205,12 +209,14 @@
         b
           display none
       .select2-container--open
-        top auto !important
+        //top auto !important
         .select2-selection--single .select2-selection__arrow
           &:after
             transform rotate(-45deg)
           &:before
             transform rotate(45deg)
+      .select2-dropdown.select2-dropdown--below
+        top 54px !important
 
 .form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:after, .form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:before
     +mobile()
@@ -218,6 +224,16 @@
 
 .form-tour--left-sort .select2-container--default .select2-results__options .select2-results__option
   padding-left 20px
+  background #B6D6FF
+  &:hover
+    background $blue-darkback
+    color $white
+
+.form-tour--left-sort .select2-results
+  background #B6D6FF
+
+.form-tour--left-sort .select2-container--default .select2-results__option[aria-selected=true]
+  background $blue-darkback
 
 
 
