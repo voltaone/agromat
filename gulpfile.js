@@ -60,9 +60,7 @@ gulp.task("pug", function buildHTML() {
 gulp.task("scripts1", function () {
     return gulp.src([
         "app/libs/jquery/dist/jquery.js",
-        // "app/libs/popper.js/dist/popper.js",
         "app/libs/jquery-ui/jquery-ui.js",
-        // "app/libs/tether/dist/js/tether.js",
     ])
         .pipe(concat("jquery.js"))
         .pipe(gulp.dest("app/js"));
@@ -72,16 +70,11 @@ gulp.task("scripts1", function () {
 gulp.task("scripts2", function () {
     return gulp.src([
         // "app/libs/bootstrap/dist/js/bootstrap.js",
-        // "app/libs/bootstrap3/dist/js/bootstrap.js",
         "app/libs/font-awesome5/svg-with-js/js/fontawesome-all.js",
         // "app/libs/chosen/chosen.jquery.js",
-        // "app/libs/chosen-image/chosenImage/chosenImage.jquery.js",
         "app/libs/slick-carousel/slick/slick.js",
         "app/libs/fancybox/dist/jquery.fancybox.js",
-        // "app/libs/wow/dist/wow.js",
-        // "app/libs/jquery-scrollspy/jquery-scrollspy.js",
         // "app/libs/jquery.maskedinput/dist/jquery.maskedinput.js",
-        // "app/libs/jquery-validation/dist/jquery.validate.js",
         'app/libs/jquery-slimscroll/jquery.slimscroll.js',
         'app/libs/nouislider/distribute/nouislider.js',
         'app/libs/wnumb/wNumb.js',

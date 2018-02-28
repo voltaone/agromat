@@ -16,11 +16,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "font-awesome": "Font-Awesome#^4.7.0",
-  },
   "devDependencies": {
-    "chosen": "^1.8.2",
     "bootstrap": "v4.0.0-beta",
     "jquery-ui": "^1.12.1",
     "chosen-image": "https://github.com/djgrant/chosen-image.git#^0.9.9",
