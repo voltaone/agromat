@@ -7,14 +7,6 @@ html
     include ../partials/_head.pug
 
     body
-        include ../partials/_navigation.pug
-
-        main
-
-            block content
-
-            include ../partials/_footer.pug
-
 
         #hellopreloader
             #hellopreloader_preload
@@ -34,3 +26,14 @@ html
                     fadeOutnojquery(hellopreloader);
                 }, 1000);
             };
+
+        include ../partials/_navigation.pug
+
+        main
+
+            block content
+
+            include ../partials/_footer.pug
+
+
+

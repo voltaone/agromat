@@ -64,7 +64,7 @@ $(document).ready(function () {
         "    </g>\n" +
         "</svg> Откуда",
         "language": {
-            "noResults": function(){
+            "noResults": function () {
                 return "Ничего не найдено";
             }
         },
@@ -87,7 +87,7 @@ $(document).ready(function () {
         "    </g>\n" +
         "</svg> Куда",
         "language": {
-            "noResults": function(){
+            "noResults": function () {
                 return "Ничего не найдено";
             }
         },
@@ -110,7 +110,7 @@ $(document).ready(function () {
         "    </g>\n" +
         "</svg> Откуда",
         "language": {
-            "noResults": function(){
+            "noResults": function () {
                 return "Ничего не найдено";
             }
         },
@@ -133,7 +133,7 @@ $(document).ready(function () {
         "    </g>\n" +
         "</svg> Куда",
         "language": {
-            "noResults": function(){
+            "noResults": function () {
                 return "Ничего не найдено";
             }
         },
@@ -155,7 +155,7 @@ $(document).ready(function () {
         "    </g>\n" +
         "</svg> Куда",
         "language": {
-            "noResults": function(){
+            "noResults": function () {
                 return "Ничего не найдено";
             }
         },
@@ -197,20 +197,39 @@ $(document).ready(function () {
 
     // ----- QUANTITY -----
 
-    $('.minus').click(function () {
 
+
+    $('.minus').click(function () {
         var val = parseInt($(this).siblings('input').val());
         if (val !== 0) {
             val--;
             $(this).siblings('input').val(val);
         }
+        tickets();
     });
 
     $('.plus').click(function () {
         var val = parseInt($(this).siblings('input').val());
         val++;
         $(this).siblings('input').val(val);
+        tickets();
     });
+
+    $('#passenger1').change(tickets);
+    $('#passenger2').change(tickets);
+    $('#passenger3').change(tickets);
+    $('#passenger4').change(tickets);
+    $('#passenger5').change(tickets);
+
+    function tickets() {
+        var pass1 = $('#passenger1').val() + "М, ";
+        var pass2 = $('#passenger2').val() + "Р, ";
+        var pass3 = $('#passenger3').val() + "Ю, ";
+        var pass4 = $('#passenger4').val() + "В, ";
+        var pass5 = $('#passenger5').val() + "П";
+        $('.form-tickets--passengers-select').addClass('focus');
+        $('.form-tickets--passengers-select span').html(pass1 + pass2  + pass3 + pass4 + pass5);
+    }
 
 
     // ----- TICKET TABS -----
@@ -265,102 +284,6 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $(this).siblings('.accordion-item--content').slideToggle();
     });
-    //  ----- SLIDER -----
-
-    // SLICK SLIDER COUNTER
-    // $('#link3 .slider').on('init reInit afterChange', function (event, slick, currentSlide) {
-    //     var i = (currentSlide ? currentSlide : 0) + 1;
-    //     $('.slider-counter').text(i + '/' + slick.slideCount);
-    // });
-
-
-    // $(".slider-two").slick({
-    //     dots: true,
-    //     slidesToShow: 2,
-    //     slidesToScroll: 2,
-    //     prevArrow: "<div class='arrow left'><i class='fa fa-angle-left'></i></div>",
-    //     nextArrow: "<div class='arrow right'><i class='fa fa-angle-right'></i></div>",
-    //     responsive: [
-    //         {
-    //             breakpoint: 991,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1
-    //             }
-    //         }
-    //     ]
-    // });
-    //
-    //
-    // $(".slider-three").slick({
-    //     dots: true,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 3,
-    //     prevArrow: "<div class='arrow left'><i class='fa fa-angle-left'></i></div>",
-    //     nextArrow: "<div class='arrow right'><i class='fa fa-angle-right'></i></div>",
-    //     responsive: [
-    //         {
-    //             breakpoint: 991,
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 slidesToScroll: 2
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 767,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1
-    //             }
-    //         }
-    //     ],
-    //
-    //
-    // });
-
-    // ----- SELECT -----
-
-    //CHOSEN
-    // $(".chosen-select").chosen({
-    // disable_search_threshold: 10,
-    // no_results_text: "Нічого не знайдено"
-    // });
-    // $(".chosen-image").chosenImage({disable_search_threshold: 10});
-
-    // ----- MODAL -----
-
-    // MODAAL PLUGIN
-    // $(".inline").modaal();
-
-    // ----- ANIMATION -----
-
-    // WOW JS
-    // new WOW().init();
-
-
-    // ----- TABS -----
-    // $(function () {
-    //     $("#tabs").tabs();
-    // });
-
-    // ----- SCROLLSPY -----
-
-    // $(function(){ // on document load
-    //     $('.menu').ddscrollSpy({ // initialize first demo
-    //         scrolltopoffset: -50
-    //     });
-    // });
-
-
-    // ANCHOR LINKS SCROLLING
-    // $(".smooth").click(function (event) {
-    //     event.preventDefault();
-    //     var id = $(this).attr("href"),
-    //         top = $(id).offset().top - 70;
-    //     $("body,html").animate({
-    //         scrollTop: top
-    //     }, 1500);
-    // });
 
 });
 
@@ -373,7 +296,7 @@ $(window).on('load resize', function () {
         $('.menu-col').appendTo('#menu-panel .row');
         $('.form-tickets--more-options--section-block').slimScroll({
             height: '212px',
-            touchScrollStep : 50
+            touchScrollStep: 50
         });
 
     } else if (window.matchMedia("(min-width: 768px)").matches) {

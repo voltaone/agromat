@@ -57,6 +57,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
   </head>
   <body>
+    <div id="hellopreloader">
+      <div id="hellopreloader_preload"></div>
+    </div>
+    <script type="text/javascript">
+      var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el) {
+          el.style.opacity = 1;
+          var interhellopreloader = setInterval(function () {
+              el.style.opacity = el.style.opacity - 0.05;
+              if (el.style.opacity <= 0.05) {
+                  clearInterval(interhellopreloader);
+                  hellopreloader.style.display = "none";
+              }
+          }, 16);
+      }window.onload = function () {
+          setTimeout(function () {
+              fadeOutnojquery(hellopreloader);
+          }, 1000);
+      };
+      
+    </script>
     <nav>
       <div class="container">
         <div class="row" id="menu-desktop">
@@ -275,7 +295,7 @@
         </g>
     </g>
 </svg>
-                        </label>Пассажиры
+                        </label><span>Пассажиры</span>
                       </div>
                       <div class="form-tickets--passengers-options">
                         <div class="form-tickets--passengers-options--option">
@@ -302,7 +322,7 @@
     </g>
 </svg>
                             </div>
-                            <input type="number" value="0">
+                            <input type="number" value="0" id="passenger1">
                             <div class="minus"><svg width="12px" height="6px" viewBox="0 0 12 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="FORMA_Various" transform="translate(-878.000000, -410.000000)" fill="#4F9CFF">
@@ -347,7 +367,7 @@
     </g>
 </svg>
                             </div>
-                            <input type="number" value="0">
+                            <input type="number" value="0" id="passenger2">
                             <div class="minus"><svg width="12px" height="6px" viewBox="0 0 12 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="FORMA_Various" transform="translate(-878.000000, -410.000000)" fill="#4F9CFF">
@@ -392,7 +412,7 @@
     </g>
 </svg>
                             </div>
-                            <input type="number" value="0">
+                            <input type="number" value="0" id="passenger3">
                             <div class="minus"><svg width="12px" height="6px" viewBox="0 0 12 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="FORMA_Various" transform="translate(-878.000000, -410.000000)" fill="#4F9CFF">
@@ -437,7 +457,7 @@
     </g>
 </svg>
                             </div>
-                            <input type="number" value="0">
+                            <input type="number" value="0" id="passenger4">
                             <div class="minus"><svg width="12px" height="6px" viewBox="0 0 12 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="FORMA_Various" transform="translate(-878.000000, -410.000000)" fill="#4F9CFF">
@@ -482,7 +502,7 @@
     </g>
 </svg>
                             </div>
-                            <input type="number" value="0">
+                            <input type="number" value="0" id="passenger5">
                             <div class="minus"><svg width="12px" height="6px" viewBox="0 0 12 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="FORMA_Various" transform="translate(-878.000000, -410.000000)" fill="#4F9CFF">
@@ -1415,24 +1435,5 @@
       <script type="text/javascript" src="js/vendor.js"></script>
       <script type="text/javascript" src="js/scripts.js"></script>
     </main>
-    <div id="hellopreloader">
-      <div id="hellopreloader_preload"></div>
-    </div>
-    <script type="text/javascript">
-      var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el) {
-          el.style.opacity = 1;
-          var interhellopreloader = setInterval(function () {
-              el.style.opacity = el.style.opacity - 0.05;
-              if (el.style.opacity <= 0.05) {
-                  clearInterval(interhellopreloader);
-                  hellopreloader.style.display = "none";
-              }
-          }, 16);
-      }window.onload = function () {
-          setTimeout(function () {
-              fadeOutnojquery(hellopreloader);
-          }, 1000);
-      };
-    </script>
   </body>
 </html>
