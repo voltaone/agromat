@@ -66,7 +66,7 @@ $(document).ready(function () {
             inputTooShort: function (args) {
                 var remainingChars = args.minimum - args.input.length;
 
-                var message = "Пожалуйста, введите" + remainingChars + "или более символов";
+                var message = "Пожалуйста, введите " + remainingChars + " или более символов";
 
                 return message;
             }
@@ -97,7 +97,7 @@ $(document).ready(function () {
             inputTooShort: function (args) {
                 var remainingChars = args.minimum - args.input.length;
 
-                var message = "Пожалуйста, введите" + remainingChars + "или более символов";
+                var message = "Пожалуйста, введите " + remainingChars + " или более символов";
 
                 return message;
             }
@@ -128,7 +128,7 @@ $(document).ready(function () {
             inputTooShort: function (args) {
                 var remainingChars = args.minimum - args.input.length;
 
-                var message = "Пожалуйста, введите" + remainingChars + "или более символов";
+                var message = "Пожалуйста, введите " + remainingChars + " или более символов";
 
                 return message;
             }
@@ -159,7 +159,7 @@ $(document).ready(function () {
             inputTooShort: function (args) {
                 var remainingChars = args.minimum - args.input.length;
 
-                var message = "Пожалуйста, введите" + remainingChars + "или более символов";
+                var message = "Пожалуйста, введите " + remainingChars + " или более символов";
 
                 return message;
             }
@@ -189,7 +189,7 @@ $(document).ready(function () {
             inputTooShort: function (args) {
                 var remainingChars = args.minimum - args.input.length;
 
-                var message = "Пожалуйста, введите" + remainingChars + "или более символов";
+                var message = "Пожалуйста, введите " + remainingChars + " или более символов";
 
                 return message;
             }
