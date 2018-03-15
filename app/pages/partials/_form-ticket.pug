@@ -103,7 +103,7 @@ header.header-ticket
                                             input(type='number' value='0')#passenger5
                                             .minus
                                                 include ../svgs/angle-down.svg
-                        .form-tickets--inputs
+                        .form-tickets--inputs.hardway
                             .select-container-select2.from2
                                 select.select2-select.from2
                                     option
@@ -131,69 +131,9 @@ header.header-ticket
                                         option Берлин, Schoenefeld (SXF)
                                         option Берлин, Schoenefeld-Schoenefeld (SXF)
                             .input-group.input-group-datepicker.from
-                                input.datepicker(placeholder='Туда' required='')#datepicker3
+                                input.datepicker(placeholder='Обратно' required='')#datepicker3
                                 label(for='datepicker3')
                                     include ../svgs/calendar.svg
-                            .input-group.input-group-datepicker.to
-                                input.datepicker(placeholder='Обратно' required='')#datepicker4
-                                label(for='datepicker4')
-                                    include ../svgs/calendar.svg
-                            .form-tickets--passengers
-                                .form-tickets--passengers-select
-                                    label
-                                        include ../svgs/human.svg
-                                    | Пассажиры
-                                .form-tickets--passengers-options
-                                    .form-tickets--passengers-options--option
-                                        .form-tickets--passengers-options--option-description
-                                            .form-tickets--passengers-options--option-description-head Младенец  (М)
-                                            .form-tickets--passengers-options--option-description-text от 0 до 2 лет
-                                        .form-tickets--passengers-options--option-counter
-                                            .plus
-                                                include ../svgs/angle-up.svg
-                                            input(type='number' value='0')
-                                            .minus
-                                                include ../svgs/angle-down.svg
-                                    .form-tickets--passengers-options--option
-                                        .form-tickets--passengers-options--option-description
-                                            .form-tickets--passengers-options--option-description-head Ребенок  (Р)
-                                            .form-tickets--passengers-options--option-description-text от 2 до 11 лет
-                                        .form-tickets--passengers-options--option-counter
-                                            .plus
-                                                include ../svgs/angle-up.svg
-                                            input(type='number' value='0')
-                                            .minus
-                                                include ../svgs/angle-down.svg
-                                    .form-tickets--passengers-options--option
-                                        .form-tickets--passengers-options--option-description
-                                            .form-tickets--passengers-options--option-description-head Юный  (Ю)
-                                            .form-tickets--passengers-options--option-description-text от 12 до 24 лет
-                                        .form-tickets--passengers-options--option-counter
-                                            .plus
-                                                include ../svgs/angle-up.svg
-                                            input(type='number' value='0')
-                                            .minus
-                                                include ../svgs/angle-down.svg
-                                    .form-tickets--passengers-options--option
-                                        .form-tickets--passengers-options--option-description
-                                            .form-tickets--passengers-options--option-description-head Взрослый  (В)
-                                            .form-tickets--passengers-options--option-description-text от 25 до 59 лет
-                                        .form-tickets--passengers-options--option-counter
-                                            .plus
-                                                include ../svgs/angle-up.svg
-                                            input(type='number' value='0')
-                                            .minus
-                                                include ../svgs/angle-down.svg
-                                    .form-tickets--passengers-options--option
-                                        .form-tickets--passengers-options--option-description
-                                            .form-tickets--passengers-options--option-description-head Пожилой  (П)
-                                            .form-tickets--passengers-options--option-description-text от 60 лет
-                                        .form-tickets--passengers-options--option-counter
-                                            .plus
-                                                include ../svgs/angle-up.svg
-                                            input(type='number' value='0')
-                                            .minus
-                                                include ../svgs/angle-down.svg
                         .form-tickets--more-options
                             .form-tickets--more-options--section
                                 .form-tickets--more-options--section-head

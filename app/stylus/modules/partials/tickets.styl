@@ -411,6 +411,16 @@
       max-width calc(50% - 3px)
 
 .form-tickets.way-hard
+  .hardway
+    justify-content flex-start
+    +portrait()
+      justify-content space-between
+    input, .select-container-select2
+      margin-right 5px
+      +portrait()
+        margin-right 0
+      +mobile()
+        margin-right 0
   .input-group.input-group-datepicker.to
     display none
   .input-group-datepicker, .form-tickets--passengers

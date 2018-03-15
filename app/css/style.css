@@ -4430,6 +4430,31 @@ footer p a:hover {
 		max-width: calc(50% - 3px);
 	}
 }
+.form-tickets.way-hard .hardway {
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.form-tickets.way-hard .hardway {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+}
+.form-tickets.way-hard .hardway input, .form-tickets.way-hard .hardway .select-container-select2 {
+	margin-right: 5px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.form-tickets.way-hard .hardway input, .form-tickets.way-hard .hardway .select-container-select2 {
+		margin-right: 0;
+	}
+}
+@media (max-width: 767px) {
+	.form-tickets.way-hard .hardway input, .form-tickets.way-hard .hardway .select-container-select2 {
+		margin-right: 0;
+	}
+}
 .form-tickets.way-hard .input-group.input-group-datepicker.to {
 	display: none;
 }
