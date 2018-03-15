@@ -340,10 +340,39 @@ $(document).ready(function () {
     });
 
 
-    $('.form-tickets--more-options--section-block ul li a').click(function (e) {
-        e.preventDefault();
-        $(this).toggleClass('active');
+    $('#optionTime1 li a').click(function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $('#optionTime1 li a').removeClass('active');
+            $(this).addClass('active');
+        }
     });
+    $('#optionTime2 li a').click(function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $('#optionTime2 li a').removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+    $('#optionClass li a').click(function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $('#optionClass li a').removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+    $('#optionAvia li a').click(function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $('#optionAvia li a').removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+
 
     // ----- MENU -----
     $('.nav-icon').click(function (e) {
