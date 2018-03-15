@@ -254,11 +254,33 @@ $(document).ready(function () {
         tickets();
     });
 
+    $('.minus2').click(function () {
+        var val = parseInt($(this).siblings('input').val());
+        if (val !== 0) {
+            val--;
+            $(this).siblings('input').val(val);
+        }
+        tickets2();
+    });
+
+    $('.plus2').click(function () {
+        var val = parseInt($(this).siblings('input').val());
+        val++;
+        $(this).siblings('input').val(val);
+        tickets2();
+    });
+
     $('#passenger1').change(tickets);
     $('#passenger2').change(tickets);
     $('#passenger3').change(tickets);
     $('#passenger4').change(tickets);
     $('#passenger5').change(tickets);
+
+    $('#passenger6').change(tickets2);
+    $('#passenger7').change(tickets2);
+    $('#passenger8').change(tickets2);
+    $('#passenger9').change(tickets2);
+    $('#passenger10').change(tickets2);
 
     function tickets() {
         var pass1 = $('#passenger1').val() + "М, ";
@@ -268,6 +290,18 @@ $(document).ready(function () {
         var pass5 = $('#passenger5').val() + "П";
         $('.form-tickets--passengers-select').addClass('focus');
         $('.form-tickets--passengers-select span').html(pass1 + pass2 + pass3 + pass4 + pass5);
+        $('#tickets1').removeClass('error');
+    }
+
+    function tickets2() {
+        var pass1 = $('#passenger6').val() + "М, ";
+        var pass2 = $('#passenger7').val() + "Р, ";
+        var pass3 = $('#passenger8').val() + "Ю, ";
+        var pass4 = $('#passenger9').val() + "В, ";
+        var pass5 = $('#passenger10').val() + "П";
+        $('.form-tickets--passengers-select').addClass('focus');
+        $('.form-tickets--passengers-select span').html(pass1 + pass2 + pass3 + pass4 + pass5);
+        $('#tickets2').removeClass('error');
     }
 
 
