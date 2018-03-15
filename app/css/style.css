@@ -1400,6 +1400,16 @@ textarea.error:-ms-input-placeholder {
 textarea.error::-webkit-input-placeholder {
 	color: rgba(238,87,87,.5);
 }
+.form-tickets--passengers.error .form-tickets--passengers-select {
+	background: #ffecec;
+	color: rgba(238,87,87,.5);
+}
+.form-tickets--passengers.error .form-tickets--passengers-select label svg g {
+	fill: #ee5757;
+}
+.form-tickets--passengers.error .form-tickets--passengers-select:after, .form-tickets--passengers.error .form-tickets--passengers-select:before {
+	background: rgba(238,87,87,.5);
+}
 .select2-container--default {
 	width: 100% !important;
 }
