@@ -234,7 +234,7 @@ $(document).ready(function () {
     // ----- QUANTITY -----
 
 
-    $('.minus').click(function () {
+    $('.minus1').click(function () {
         var val = parseInt($(this).siblings('input').val());
         if (val !== 0) {
             val--;
@@ -243,7 +243,7 @@ $(document).ready(function () {
         tickets();
     });
 
-    $('.plus').click(function () {
+    $('.plus1').click(function () {
         var val = parseInt($(this).siblings('input').val());
         val++;
         $(this).siblings('input').val(val);
@@ -284,8 +284,8 @@ $(document).ready(function () {
         var pass3 = $('#passenger3').val() + "Ю, ";
         var pass4 = $('#passenger4').val() + "В, ";
         var pass5 = $('#passenger5').val() + "П";
-        $('.form-tickets--passengers-select').addClass('focus');
-        $('.form-tickets--passengers-select span').html(pass1 + pass2 + pass3 + pass4 + pass5);
+        $('#tickets1 .form-tickets--passengers-select').addClass('focus');
+        $('#tickets1 .form-tickets--passengers-select span').html(pass1 + pass2 + pass3 + pass4 + pass5);
         $('#tickets1').removeClass('error');
     }
 
@@ -295,8 +295,8 @@ $(document).ready(function () {
         var pass3 = $('#passenger8').val() + "Ю, ";
         var pass4 = $('#passenger9').val() + "В, ";
         var pass5 = $('#passenger10').val() + "П";
-        $('.form-tickets--passengers-select').addClass('focus');
-        $('.form-tickets--passengers-select span').html(pass1 + pass2 + pass3 + pass4 + pass5);
+        $('#tickets2 .form-tickets--passengers-select').addClass('focus');
+        $('#tickets2 .form-tickets--passengers-select span').html(pass1 + pass2 + pass3 + pass4 + pass5);
         $('#tickets2').removeClass('error');
     }
 
