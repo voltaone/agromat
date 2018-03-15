@@ -62,11 +62,19 @@ $(document).ready(function () {
         "language": {
             "noResults": function () {
                 return "Ничего не найдено";
+            },
+            inputTooShort: function (args) {
+                var remainingChars = args.minimum - args.input.length;
+
+                var message = "Пожалуйста, введите" + remainingChars + "или более символов";
+
+                return message;
             }
         },
         escapeMarkup: function (markup) {
             return markup;
-        }
+        },
+        minimumInputLength: 3
     });
 
     $('.select2-select.to').select2({
@@ -85,11 +93,19 @@ $(document).ready(function () {
         "language": {
             "noResults": function () {
                 return "Ничего не найдено";
+            },
+            inputTooShort: function (args) {
+                var remainingChars = args.minimum - args.input.length;
+
+                var message = "Пожалуйста, введите" + remainingChars + "или более символов";
+
+                return message;
             }
         },
         escapeMarkup: function (markup) {
             return markup;
-        }
+        },
+        minimumInputLength: 3
     });
     $('.select2-select.from2').select2({
         dropdownParent: $('.select-container-select2.from2'),
@@ -108,11 +124,19 @@ $(document).ready(function () {
         "language": {
             "noResults": function () {
                 return "Ничего не найдено";
+            },
+            inputTooShort: function (args) {
+                var remainingChars = args.minimum - args.input.length;
+
+                var message = "Пожалуйста, введите" + remainingChars + "или более символов";
+
+                return message;
             }
         },
         escapeMarkup: function (markup) {
             return markup;
-        }
+        },
+        minimumInputLength: 3
     });
 
     $('.select2-select.to2').select2({
@@ -131,11 +155,19 @@ $(document).ready(function () {
         "language": {
             "noResults": function () {
                 return "Ничего не найдено";
+            },
+            inputTooShort: function (args) {
+                var remainingChars = args.minimum - args.input.length;
+
+                var message = "Пожалуйста, введите" + remainingChars + "или более символов";
+
+                return message;
             }
         },
         escapeMarkup: function (markup) {
             return markup;
-        }
+        },
+        minimumInputLength: 3
     });
     $('.select2-select.tour').select2({
         dropdownParent: $('.select-container-select2.tour'),
@@ -153,11 +185,19 @@ $(document).ready(function () {
         "language": {
             "noResults": function () {
                 return "Ничего не найдено";
+            },
+            inputTooShort: function (args) {
+                var remainingChars = args.minimum - args.input.length;
+
+                var message = "Пожалуйста, введите" + remainingChars + "или более символов";
+
+                return message;
             }
         },
         escapeMarkup: function (markup) {
             return markup;
-        }
+        },
+        minimumInputLength: 3
     });
     $('.select2-select.sort').select2({
         dropdownParent: $('.select-container-select2.sort'),
@@ -194,7 +234,6 @@ $(document).ready(function () {
     // ----- QUANTITY -----
 
 
-
     $('.minus').click(function () {
         var val = parseInt($(this).siblings('input').val());
         if (val !== 0) {
@@ -224,7 +263,7 @@ $(document).ready(function () {
         var pass4 = $('#passenger4').val() + "В, ";
         var pass5 = $('#passenger5').val() + "П";
         $('.form-tickets--passengers-select').addClass('focus');
-        $('.form-tickets--passengers-select span').html(pass1 + pass2  + pass3 + pass4 + pass5);
+        $('.form-tickets--passengers-select span').html(pass1 + pass2 + pass3 + pass4 + pass5);
     }
 
 
