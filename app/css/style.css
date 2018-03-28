@@ -1775,6 +1775,7 @@ article h3:after {
 }
 article img {
 	width: 150%;
+	height: auto;
 	margin: 45px 0 15px -25%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
