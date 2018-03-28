@@ -425,6 +425,7 @@ a:focus {
 button {
 	border: none;
 	cursor: pointer;
+	font-weight: 500;
 	-webkit-transition: all .4s ease;
 	     -o-transition: all .4s ease;
 	        transition: all .4s ease;
@@ -442,7 +443,7 @@ button:focus {
 	color: #fff;
 	padding-top: 14px;
 	padding-bottom: 14px;
-	letter-spacing: 2.6px;
+	letter-spacing: 1.9px;
 	font-size: 1.125rem;
 	-webkit-transition: all .4s ease;
 	     -o-transition: all .4s ease;
@@ -1773,8 +1774,20 @@ article h3:after {
 	z-index: -1;
 }
 article img {
-	width: 100%;
-	margin: 45px 0 15px;
+	width: 150%;
+	margin: 45px 0 15px -25%;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	article img {
+		width: 120%;
+		margin-left: -10%;
+	}
+}
+@media (max-width: 767px) {
+	article img {
+		width: 100%;
+		margin-left: 0;
+	}
 }
 main {
 	background: #fff;
@@ -3004,7 +3017,7 @@ footer p a:hover {
 	}
 }
 .slider-full .slide .slide-image img {
-	height: 100%;
+	width: 100%;
 	margin: 0 !important;
 }
 .slider-full .slide .slide-description {
@@ -5343,10 +5356,7 @@ footer p a:hover {
 		font-size: 1.125rem;
 	}
 }
-.form-tour--left-inputs .select2-container--default .select2-selection--single .select2-selection__placeholder {
-	padding-left: 32px;
-}
-.form-tour--left-inputs .select2-container--default .select2-selection--single .select2-selection__placeholder svg {
+.form-tour--left-inputs .select2-container--default .select2-selection--single .select2-selection__placeholder, .form-tour--left-inputs padding-left 32px, .form-tour--left-inputs svg {
 	position: absolute;
 	left: 18px;
 	top: 8px;
@@ -5354,31 +5364,31 @@ footer p a:hover {
 .form-tour--left-sort .select2-container--default .select2-selection--single {
 	background: transparent;
 }
-.form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__rendered {
+.form-tour--left .select2-container--default .select2-selection--single .select2-selection__rendered {
 	padding-top: 5px;
 	padding-bottom: 6px;
 	color: #000fcf;
 	background: #b6d6ff;
 }
 @media (max-width: 767px) {
-	.form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__rendered {
+	.form-tour--left .select2-container--default .select2-selection--single .select2-selection__rendered {
 		padding-top: 13px;
 		padding-bottom: 15px;
 	}
 }
-.form-tour--left-sort .select2-container--default .select2-selection--single {
+.form-tour--left .select2-container--default .select2-selection--single {
 	height: 31px;
 }
 @media (max-width: 767px) {
-	.form-tour--left-sort .select2-container--default .select2-selection--single {
+	.form-tour--left .select2-container--default .select2-selection--single {
 		height: 54px;
 		margin-bottom: 20px;
 	}
 }
-.form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow {
+.form-tour--left .select2-container--default .select2-selection--single .select2-selection__arrow {
 	display: block;
 }
-.form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:after, .form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:before {
+.form-tour--left .select2-container--default .select2-selection--single .select2-selection__arrow:after, .form-tour--left .select2-container--default .select2-selection--single .select2-selection__arrow:before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -5392,40 +5402,40 @@ footer p a:hover {
 	        transition: all .4s ease;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-	.form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:after, .form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:before {
+	.form-tour--left .select2-container--default .select2-selection--single .select2-selection__arrow:after, .form-tour--left .select2-container--default .select2-selection--single .select2-selection__arrow:before {
 		right: 5px;
 	}
 }
-.form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:after {
+.form-tour--left .select2-container--default .select2-selection--single .select2-selection__arrow:after {
 	-webkit-transform: rotate(45deg);
 	    -ms-transform: rotate(45deg);
 	        transform: rotate(45deg);
 	right: 26px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-	.form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:after {
+	.form-tour--left .select2-container--default .select2-selection--single .select2-selection__arrow:after {
 		right: 11px;
 	}
 }
-.form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:before {
+.form-tour--left .select2-container--default .select2-selection--single .select2-selection__arrow:before {
 	-webkit-transform: rotate(-45deg);
 	    -ms-transform: rotate(-45deg);
 	        transform: rotate(-45deg);
 }
-.form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow b {
+.form-tour--left .select2-container--default .select2-selection--single .select2-selection__arrow b {
 	display: none;
 }
-.form-tour--left-sort .select2-container--open .select2-selection--single .select2-selection__arrow:after {
+.form-tour--left .select2-container--open .select2-selection--single .select2-selection__arrow:after {
 	-webkit-transform: rotate(-45deg);
 	    -ms-transform: rotate(-45deg);
 	        transform: rotate(-45deg);
 }
-.form-tour--left-sort .select2-container--open .select2-selection--single .select2-selection__arrow:before {
+.form-tour--left .select2-container--open .select2-selection--single .select2-selection__arrow:before {
 	-webkit-transform: rotate(45deg);
 	    -ms-transform: rotate(45deg);
 	        transform: rotate(45deg);
 }
-.form-tour--left-sort .select2-dropdown.select2-dropdown--below {
+.form-tour--left .select2-dropdown.select2-dropdown--below {
 	top: 54px !important;
 }
 @media (max-width: 767px) {
@@ -5760,4 +5770,15 @@ footer p a:hover {
 .tour-advantages li .tour-text {
 	font-size: .875rem;
 	color: #2f2f2f;
+}
+@media (min-width: 1200px) {
+	.tour-block.tour-block-small .tour-block--panel-text {
+		display: none;
+	}
+	.tour-block.tour-block-small .tour-block--panel {
+		height: 159px;
+	}
+	.tour-block.tour-block-small:hover:after {
+		bottom: -159px;
+	}
 }
