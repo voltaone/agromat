@@ -155,61 +155,61 @@
   &--left
     &-inputs
       .select2-container--default .select2-selection--single .select2-selection__placeholder
-      padding-left 32px
-      svg
-        position: absolute;
-        left 18px
-        top 8px
+        padding-left 32px
+        svg
+          position: absolute;
+          left 18px
+          top 8px
     &-sort
 
       .select2-container--default .select2-selection--single
         background $trans
 
-    .select2-container--default .select2-selection--single .select2-selection__rendered
-      padding-top 5px
-      padding-bottom: 6px
-      color: #000fcf;
-      background #B6D6FF
-      +mobile()
-        padding-top 13px
-        padding-bottom 15px
+      .select2-container--default .select2-selection--single .select2-selection__rendered
+        padding-top 5px
+        padding-bottom: 6px
+        color: #000fcf;
+        background #B6D6FF
+        +mobile()
+          padding-top 13px
+          padding-bottom 15px
 
-    .select2-container--default .select2-selection--single
-      height 31px
-      +mobile()
-        height 54px
-        margin-bottom 20px
+      .select2-container--default .select2-selection--single
+        height 31px
+        +mobile()
+          height 54px
+          margin-bottom 20px
 
-    .select2-container--default .select2-selection--single .select2-selection__arrow
-      display block
-      &:after, &:before
-        pseudo(block, absolute)
-        background $blue-lighttext
-        width 10px
-        height 2px
-        right 20px
-        top 15px
-        transitions()
-        +tablet()
-          right 5px
-      &:after
-        transform rotate(45deg)
-        right 26px
-        +tablet()
-          right 11px
-      &:before
-        transform rotate(-45deg)
-      b
-        display none
-    .select2-container--open
-      //top auto !important
-      .select2-selection--single .select2-selection__arrow
+      .select2-container--default .select2-selection--single .select2-selection__arrow
+        display block
+        &:after, &:before
+          pseudo(block, absolute)
+          background $blue-lighttext
+          width 10px
+          height 2px
+          right 20px
+          top 15px
+          transitions()
+          +tablet()
+            right 5px
         &:after
-          transform rotate(-45deg)
-        &:before
           transform rotate(45deg)
-    .select2-dropdown.select2-dropdown--below
-      top 54px !important
+          right 26px
+          +tablet()
+            right 11px
+        &:before
+          transform rotate(-45deg)
+        b
+          display none
+      .select2-container--open
+        //top auto !important
+        .select2-selection--single .select2-selection__arrow
+          &:after
+            transform rotate(-45deg)
+          &:before
+            transform rotate(45deg)
+      .select2-dropdown.select2-dropdown--below
+        top 31px !important
 
 .form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:after, .form-tour--left-sort .select2-container--default .select2-selection--single .select2-selection__arrow:before
   +mobile()
