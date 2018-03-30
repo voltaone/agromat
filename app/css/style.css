@@ -1691,12 +1691,19 @@ textarea.error::-webkit-input-placeholder {
 		margin-bottom: 0;
 	}
 }
-#map.map {
+#map-contacts {
 	height: 328px;
+	width: 100%;
 }
 @media (max-width: 767px) {
-	#map.map {
+	#map-contacts {
 		margin-top: 0;
+		margin-bottom: 0;
+		height: 220px;
+	}
+}
+@media (max-device-width: 767px) and (orientation: landscape) {
+	#map-contacts {
 		margin-bottom: 0;
 	}
 }
