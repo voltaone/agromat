@@ -4583,6 +4583,32 @@ footer p a:hover {
 	position: relative;
 	z-index: 20;
 }
+.row-advantage .col-lg-4:nth-child(even) {
+	margin-left: 8.3333%;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.row-advantage .col-lg-4:nth-child(even) {
+		margin-left: 0;
+	}
+}
+@media (max-width: 767px) {
+	.row-advantage .col-lg-4:nth-child(even) {
+		margin-left: 0;
+	}
+}
+.row-advantage .col-lg-4:nth-child(odd) {
+	margin-right: 8.3333%;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.row-advantage .col-lg-4:nth-child(odd) {
+		margin-right: 0;
+	}
+}
+@media (max-width: 767px) {
+	.row-advantage .col-lg-4:nth-child(odd) {
+		margin-right: 0;
+	}
+}
 .advantage-block {
 	display: -webkit-box;
 	display: -ms-flexbox;
