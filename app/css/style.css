@@ -3025,8 +3025,9 @@ footer p a:hover {
 	}
 }
 .slider-full .slide .slide-image img {
-	width: 100%;
+	width: auto;
 	margin: 0 !important;
+	height: 100%;
 }
 .slider-full .slide .slide-description {
 	position: absolute;
